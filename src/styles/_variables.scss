@@ -1,0 +1,33 @@
+// Colors
+$color-background: #FDFBF7; // Cream
+$color-card-background: #EBEBE6; // Beige
+$color-brand: #8B1E24; // Maroon
+$color-brand-hover: #6d171c;
+$color-sage: #8F9B85; // Sage Green
+$color-sage-hover: #7a8671;
+$color-text-primary: #1F1F1F; // Dark Gray
+$color-text-secondary: #4A4A4A; // Medium Gray
+$color-text-tertiary: #6B7280; // Light Gray text
+$color-border: #D1D1D1; // Light Gray
+$color-danger: #8B1E24;
+$color-danger-bg: rgba(239, 68, 68, 0.1);
+$color-white: #FFFFFF;
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+
+// Border Radius
+$radius-sm: 0.25rem;
+$radius-md: 0.5rem;
+$radius-lg: 1rem;
+$radius-xl: 2rem;
+$radius-full: 9999px;
+
+// Shadows
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);

@@ -1,0 +1,117 @@
+@import './variables';
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin btn-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-sm;
+    padding: $spacing-sm $spacing-lg;
+    border-radius: $radius-md;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+@mixin btn-primary {
+    @include btn-base;
+    background-color: $color-brand;
+    color: $color-white;
+
+    &:hover:not(:disabled) {
+        background-color: $color-brand-hover;
+    }
+}
+
+@mixin btn-secondary {
+    @include btn-base;
+    background-color: $color-sage;
+    color: $color-white;
+
+    &:hover:not(:disabled) {
+        background-color: $color-sage-hover;
+    }
+}
+
+@mixin btn-neutral {
+    @include btn-base;
+    background-color: $color-border;
+    color: $color-text-secondary;
+
+    &:hover:not(:disabled) {
+        background-color: darken($color-border, 10%);
+    }
+}
+
+@mixin btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $spacing-sm;
+    border-radius: $radius-md;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    color: $color-text-tertiary;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+        color: $color-text-primary;
+    }
+}
+
+@mixin btn-danger-icon {
+    @include btn-icon;
+    color: $color-danger;
+
+    &:hover {
+        background-color: $color-danger-bg;
+    }
+}
+
+@mixin input-base {
+    width: 100%;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $radius-md;
+    border: 2px solid $color-border;
+    background-color: $color-white;
+    color: $color-text-primary;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: inherit;
+
+    &:focus {
+        border-color: $color-brand;
+    }
+
+    &::placeholder {
+        color: $color-text-tertiary;
+    }
+}
+
+@mixin card-base {
+    background-color: $color-card-background;
+    border-radius: $radius-xl;
+    padding: $spacing-lg;
+    box-shadow: $shadow-md;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
