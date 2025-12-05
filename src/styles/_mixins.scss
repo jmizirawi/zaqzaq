@@ -1,0 +1,131 @@
+@import './variables';
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin btn-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-sm;
+    padding: $spacing-md $spacing-xl;
+    border-radius: $radius-full;
+    border: none;
+    font-weight: $font-weight-bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+@mixin btn-primary {
+    @include btn-base;
+    background-color: $color-bg-accent-primary;
+    color: $color-fg-on-color;
+
+    &:hover:not(:disabled) {
+        filter: brightness(0.9);
+    }
+}
+
+@mixin btn-secondary {
+    @include btn-base;
+    background-color: $color-bg-secondary;
+    color: $color-fg-primary;
+
+    &:hover:not(:disabled) {
+        filter: brightness(0.9);
+    }
+}
+
+@mixin btn-link-primary {
+    @include btn-base;
+    background-color: transparent;
+    color: $color-fg-accent-primary;
+
+    &:hover:not(:disabled) {
+        filter: brightness(0.9);
+    }
+}
+
+@mixin btn-link-secondary {
+    @include btn-base;
+    background-color: transparent;
+    color: $color-fg-accent-secondary;
+
+    &:hover:not(:disabled) {
+        filter: brightness(0.9);
+    }
+}
+
+@mixin btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $spacing-md;
+    border-radius: $radius-full;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    color: $color-fg-accent-secondary;
+
+    &:hover {
+        filter: brightness(0.9);
+    }
+
+    &.active {
+        background: color-mix(in srgb, $color-bg-accent-secondary 20%, transparent);
+    }
+}
+
+@mixin btn-danger-icon {
+    @include btn-icon;
+    color: $color-fg-accent-primary;
+
+    &:hover {
+        filter: brightness(0.9);
+    }
+}
+
+@mixin input-base {
+    width: 100%;
+    padding: $spacing-sm $spacing-lg;
+    border-radius: $radius-full;
+    border: 2px solid $color-border;
+    background-color: $color-bg-input;
+    color: $color-fg-primary;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: inherit;
+    font-size: $font-size-base;
+
+    &:focus {
+        border-color: $color-bg-accent-primary;
+    }
+
+    &::placeholder {
+        color: $color-fg-secondary;
+    }
+}
+
+@mixin card-base {
+    background-color: $color-bg-secondary;
+    border-radius: $radius-xl;
+    padding: $spacing-lg;
+    box-shadow: $shadow-md;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
