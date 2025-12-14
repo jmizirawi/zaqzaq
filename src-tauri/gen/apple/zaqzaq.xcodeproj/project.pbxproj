@@ -149,6 +149,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECB52E359851A6A86042D6B3 /* Build configuration list for PBXNativeTarget "zaqzaq_iOS" */;
 			buildPhases = (
+				5B093C32B3442AAB5638BBB3 /* Run Script */,
 				307625D9112499800256B4AF /* Build Rust Code */,
 				56EF68E94D9E361A8339A9A0 /* Sources */,
 				DB96BC110EF3969481DAC4C4 /* Resources */,
@@ -226,7 +227,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\nset -x\necho \"Build Script Started\"\necho \"User: $(whoami)\"\necho \"PATH: $PATH\"\n\n# Try to source cargo env if it exists\nif [ -f \"$HOME/.cargo/env\" ]; then \n  echo \"Sourcing cargo env...\"\n  source \"$HOME/.cargo/env\"\nelse\n  echo \"Cargo env not found at $HOME/.cargo/env\"\nfi\n\n# Add common paths explicitly\nexport PATH=\"$HOME/.cargo/bin:/opt/homebrew/bin:/usr/local/bin:$PATH\"\necho \"Updated PATH: $PATH\"\n\n# Debug binary locations\nwhich node || echo \"node not found\"\nwhich npm || echo \"npm not found\"\nwhich cargo || echo \"cargo not found\"\n\n# Run the actual command\nnpm run -- tauri ios xcode-script -v --platform ${PLATFORM_DISPLAY_NAME:?} --sdk-root ${SDKROOT:?} --framework-search-paths \"${FRAMEWORK_SEARCH_PATHS:?}\" --header-search-paths \"${HEADER_SEARCH_PATHS:?}\" --gcc-preprocessor-definitions \"${GCC_PREPROCESSOR_DEFINITIONS:-}\" --configuration ${CONFIGURATION:?} ${FORCE_COLOR} ${ARCHS:?}\n";
+			shellScript = "set -e\nset -x\necho \"Build Script Started\"\necho \"User: $(whoami)\"\necho \"Original PATH: $PATH\"\necho \"Workspace Root: $SRCROOT\"\n\n# Check if ci_scripts exists\nif [ -d \"$SRCROOT/../../ci_scripts\" ]; then\n  echo \"ci_scripts directory found.\"\n  ls -l \"$SRCROOT/../../ci_scripts\"\nelse\n  echo \"WARNING: ci_scripts directory NOT found. Are you on the 'fix/ios-icon' branch?\"\nfi\n\n# Sourcing cargo env\nif [ -f \"$HOME/.cargo/env\" ]; then \n  source \"$HOME/.cargo/env\"\nfi\n\n# Attempt to find Homebrew\nif [ -x \"/opt/homebrew/bin/brew\" ]; then\n  eval \"$(/opt/homebrew/bin/brew shellenv)\"\nelif [ -x \"/usr/local/bin/brew\" ]; then\n  eval \"$(/usr/local/bin/brew shellenv)\"\nelif [ -x \"$HOME/Homebrew/bin/brew\" ]; then\n  eval \"$($HOME/Homebrew/bin/brew shellenv)\"\nelse\n   echo \"Brew not found in standard locations.\"\nfi\n\n# Check installed packages\nif command -v brew >/dev/null 2>&1; then\n   echo \"Brew found at $(which brew)\"\n   echo \"Installed formulae:\"\n   brew list --formula || echo \"Failed to list brew formulae\"\n   \n   # Try to find node prefix\n   if brew list node >/dev/null 2>&1; then\n     NODE_PREFIX=$(brew --prefix node)\n     export PATH=\"$NODE_PREFIX/bin:$PATH\"\n     echo \"Added Node binary path: $NODE_PREFIX/bin\"\n   fi\nfi\n\necho \"Final PATH: $PATH\"\n\n# Debug binary locations again\nwhich node || echo \"node still not found\"\nwhich npm || echo \"npm still not found\"\nwhich cargo || echo \"cargo still not found\"\n\n# Run the actual command\nnpm run -- tauri ios xcode-script -v --platform ${PLATFORM_DISPLAY_NAME:?} --sdk-root ${SDKROOT:?} --framework-search-paths \"${FRAMEWORK_SEARCH_PATHS:?}\" --header-search-paths \"${HEADER_SEARCH_PATHS:?}\" --gcc-preprocessor-definitions \"${GCC_PREPROCESSOR_DEFINITIONS:-}\" --configuration ${CONFIGURATION:?} ${FORCE_COLOR} ${ARCHS:?}\n";
+		};
+		5B093C32B3442AAB5638BBB3 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

@@ -82,27 +82,58 @@ targets:
     preBuildScripts:
       - script: |
           set -e
+      - script: |
+          set -e
           set -x
           echo "Build Script Started"
           echo "User: $(whoami)"
-          echo "PATH: $PATH"
+          echo "Original PATH: $PATH"
+          echo "Workspace Root: $SRCROOT"
           
-          # Try to source cargo env if it exists
-          if [ -f "$HOME/.cargo/env" ]; then 
-            echo "Sourcing cargo env..."
-            source "$HOME/.cargo/env"
+          # Check if ci_scripts exists
+          if [ -d "$SRCROOT/../../ci_scripts" ]; then
+            echo "ci_scripts directory found."
+            ls -l "$SRCROOT/../../ci_scripts"
           else
-            echo "Cargo env not found at $HOME/.cargo/env"
+            echo "WARNING: ci_scripts directory NOT found. Are you on the 'fix/ios-icon' branch?"
           fi
 
-          # Add common paths explicitly
-          export PATH="$HOME/.cargo/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
-          echo "Updated PATH: $PATH"
+          # Sourcing cargo env
+          if [ -f "$HOME/.cargo/env" ]; then 
+            source "$HOME/.cargo/env"
+          fi
 
-          # Debug binary locations
-          which node || echo "node not found"
-          which npm || echo "npm not found"
-          which cargo || echo "cargo not found"
+          # Attempt to find Homebrew
+          if [ -x "/opt/homebrew/bin/brew" ]; then
+            eval "$(/opt/homebrew/bin/brew shellenv)"
+          elif [ -x "/usr/local/bin/brew" ]; then
+            eval "$(/usr/local/bin/brew shellenv)"
+          elif [ -x "$HOME/Homebrew/bin/brew" ]; then
+            eval "$($HOME/Homebrew/bin/brew shellenv)"
+          else
+             echo "Brew not found in standard locations."
+          fi
+
+          # Check installed packages
+          if command -v brew >/dev/null 2>&1; then
+             echo "Brew found at $(which brew)"
+             echo "Installed formulae:"
+             brew list --formula || echo "Failed to list brew formulae"
+             
+             # Try to find node prefix
+             if brew list node >/dev/null 2>&1; then
+               NODE_PREFIX=$(brew --prefix node)
+               export PATH="$NODE_PREFIX/bin:$PATH"
+               echo "Added Node binary path: $NODE_PREFIX/bin"
+             fi
+          fi
+
+          echo "Final PATH: $PATH"
+
+          # Debug binary locations again
+          which node || echo "node still not found"
+          which npm || echo "npm still not found"
+          which cargo || echo "cargo still not found"
           
           # Run the actual command
           npm run -- tauri ios xcode-script -v --platform ${PLATFORM_DISPLAY_NAME:?} --sdk-root ${SDKROOT:?} --framework-search-paths "${FRAMEWORK_SEARCH_PATHS:?}" --header-search-paths "${HEADER_SEARCH_PATHS:?}" --gcc-preprocessor-definitions "${GCC_PREPROCESSOR_DEFINITIONS:-}" --configuration ${CONFIGURATION:?} ${FORCE_COLOR} ${ARCHS:?}
