@@ -81,8 +81,30 @@ targets:
       - sdk: WebKit.framework
     preBuildScripts:
       - script: |
+          set -e
+          set -x
+          echo "Build Script Started"
+          echo "User: $(whoami)"
+          echo "PATH: $PATH"
+          
+          # Try to source cargo env if it exists
+          if [ -f "$HOME/.cargo/env" ]; then 
+            echo "Sourcing cargo env..."
+            source "$HOME/.cargo/env"
+          else
+            echo "Cargo env not found at $HOME/.cargo/env"
+          fi
+
+          # Add common paths explicitly
           export PATH="$HOME/.cargo/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
-          if [ -f "$HOME/.cargo/env" ]; then source "$HOME/.cargo/env"; fi
+          echo "Updated PATH: $PATH"
+
+          # Debug binary locations
+          which node || echo "node not found"
+          which npm || echo "npm not found"
+          which cargo || echo "cargo not found"
+          
+          # Run the actual command
           npm run -- tauri ios xcode-script -v --platform ${PLATFORM_DISPLAY_NAME:?} --sdk-root ${SDKROOT:?} --framework-search-paths "${FRAMEWORK_SEARCH_PATHS:?}" --header-search-paths "${HEADER_SEARCH_PATHS:?}" --gcc-preprocessor-definitions "${GCC_PREPROCESSOR_DEFINITIONS:-}" --configuration ${CONFIGURATION:?} ${FORCE_COLOR} ${ARCHS:?}
         name: Build Rust Code
         basedOnDependencyAnalysis: false

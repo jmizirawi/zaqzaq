@@ -226,7 +226,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$HOME/.cargo/bin:/opt/homebrew/bin:/usr/local/bin:$PATH\"\nif [ -f \"$HOME/.cargo/env\" ]; then source \"$HOME/.cargo/env\"; fi\nnpm run -- tauri ios xcode-script -v --platform ${PLATFORM_DISPLAY_NAME:?} --sdk-root ${SDKROOT:?} --framework-search-paths \"${FRAMEWORK_SEARCH_PATHS:?}\" --header-search-paths \"${HEADER_SEARCH_PATHS:?}\" --gcc-preprocessor-definitions \"${GCC_PREPROCESSOR_DEFINITIONS:-}\" --configuration ${CONFIGURATION:?} ${FORCE_COLOR} ${ARCHS:?}\n";
+			shellScript = "set -e\nset -x\necho \"Build Script Started\"\necho \"User: $(whoami)\"\necho \"PATH: $PATH\"\n\n# Try to source cargo env if it exists\nif [ -f \"$HOME/.cargo/env\" ]; then \n  echo \"Sourcing cargo env...\"\n  source \"$HOME/.cargo/env\"\nelse\n  echo \"Cargo env not found at $HOME/.cargo/env\"\nfi\n\n# Add common paths explicitly\nexport PATH=\"$HOME/.cargo/bin:/opt/homebrew/bin:/usr/local/bin:$PATH\"\necho \"Updated PATH: $PATH\"\n\n# Debug binary locations\nwhich node || echo \"node not found\"\nwhich npm || echo \"npm not found\"\nwhich cargo || echo \"cargo not found\"\n\n# Run the actual command\nnpm run -- tauri ios xcode-script -v --platform ${PLATFORM_DISPLAY_NAME:?} --sdk-root ${SDKROOT:?} --framework-search-paths \"${FRAMEWORK_SEARCH_PATHS:?}\" --header-search-paths \"${HEADER_SEARCH_PATHS:?}\" --gcc-preprocessor-definitions \"${GCC_PREPROCESSOR_DEFINITIONS:-}\" --configuration ${CONFIGURATION:?} ${FORCE_COLOR} ${ARCHS:?}\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
