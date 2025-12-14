@@ -55,6 +55,9 @@ const savedWords = computed(() => store.savedWords);
 </template>
 
 <style scoped lang="scss">
+@import '../styles/variables';
+@import '../styles/mixins';
+
 .saved-tab {
   display: flex;
   flex-direction: column;
@@ -67,7 +70,7 @@ const savedWords = computed(() => store.savedWords);
 }
 
 .subtitle {
-  color: #4A4A4A;
+  color: $color-fg-secondary;
   font-size: 0.875rem;
   font-weight: 500;
 }
@@ -78,7 +81,7 @@ const savedWords = computed(() => store.savedWords);
 }
 
 .empty-icon {
-  color: #8F9B85; // Sage Green
+  color: $color-fg-accent-secondary; // Sage Green
   margin-bottom: 1rem;
 }
 
@@ -91,19 +94,19 @@ const savedWords = computed(() => store.savedWords);
 .empty-title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1F1F1F;
+  color: $color-fg-primary;
   margin-bottom: 0.5rem;
 }
 
 .empty-text {
-  color: #4A4A4A;
+  color: $color-fg-secondary;
 }
 
 .cta-button {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1.5rem;
-  background-color: #8B1E24; // Brand Maroon
+  background-color: $color-bg-accent-primary; // Brand Maroon
   color: white;
   border-radius: 9999px;
   transition: background-color 0.2s;
@@ -111,7 +114,7 @@ const savedWords = computed(() => store.savedWords);
   font-weight: 600;
 
   &:hover {
-    background-color: #6d171c;
+    filter: brightness(0.9);
   }
 }
 

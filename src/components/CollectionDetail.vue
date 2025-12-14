@@ -59,6 +59,7 @@ async function saveTitle() {
 onMounted(loadData);
 
 watch(() => props.collectionId, loadData);
+watch(() => store.savedWords, loadData, { deep: true });
 </script>
 
 <template>
@@ -128,14 +129,14 @@ watch(() => props.collectionId, loadData);
   display: flex;
   align-items: center;
   gap: $spacing-sm;
-  color: $color-text-secondary;
+  color: $color-fg-secondary;
   font-weight: 500;
   transition: color 0.2s;
   position: absolute;
   left: 0;
   
   &:hover {
-    color: $color-text-primary;
+    color: $color-fg-primary;
   }
 
   @media (max-width: 640px) {
@@ -168,13 +169,13 @@ watch(() => props.collectionId, loadData);
 }
 
 .icon {
-  color: $color-brand;
+  color: $color-fg-accent-primary;
 }
 
 .title {
   font-size: 2rem;
   font-weight: 600;
-  color: $color-text-primary;
+  color: $color-fg-primary;
   margin: 0;
 }
 
@@ -193,7 +194,7 @@ watch(() => props.collectionId, loadData);
   font-size: 2rem;
   font-weight: 600;
   border: none;
-  border-bottom: 2px solid $color-brand;
+  border-bottom: 2px solid $color-fg-accent-primary;
   background: transparent;
   border-radius: 0;
   text-align: center;
@@ -203,14 +204,14 @@ watch(() => props.collectionId, loadData);
   margin: 0;
   
   &:focus {
-    border-color: $color-brand;
+    border-color: $color-fg-accent-primary;
   }
 }
 
 .empty-state {
   text-align: center;
   padding: 3rem 0;
-  color: $color-text-tertiary;
+  color: $color-fg-secondary;
 }
 
 .words-list {

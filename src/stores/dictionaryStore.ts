@@ -60,6 +60,7 @@ export const useDictionaryStore = defineStore('dictionary', () => {
 
             // 3. Reload saved words to update UI
             await loadSavedWords();
+            await loadCollections();
         } catch (error) {
             console.error('Failed to save word:', error);
             throw error;
@@ -70,6 +71,7 @@ export const useDictionaryStore = defineStore('dictionary', () => {
         try {
             await databaseService.deleteWord(wordId);
             await loadSavedWords();
+            await loadCollections();
         } catch (error) {
             console.error('Failed to delete word:', error);
             throw error;

@@ -190,7 +190,7 @@ defineEmits<{
 }
 
 .new-collection-form {
-  background-color: $color-card-background;
+  background-color: $color-bg-secondary;
   border-radius: $radius-lg;
   padding: $spacing-md;
   margin-bottom: $spacing-md;
@@ -211,7 +211,7 @@ defineEmits<{
 }
 
 .cancel-btn {
-  @include btn-neutral;
+  @include btn-secondary;
 }
 
 .empty-state {
@@ -220,7 +220,7 @@ defineEmits<{
 }
 
 .empty-icon {
-  color: $color-sage;
+  color: $color-fg-accent-secondary;
   margin-bottom: $spacing-md;
 }
 
@@ -233,12 +233,12 @@ defineEmits<{
 .empty-title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: $color-text-primary;
+  color: $color-fg-primary;
   margin-bottom: $spacing-sm;
 }
 
 .empty-text {
-  color: $color-text-secondary;
+  color: $color-fg-secondary;
 }
 
 .collections-grid {
@@ -274,18 +274,18 @@ defineEmits<{
 }
 
 .folder-icon {
-  color: $color-brand;
+  color: $color-fg-accent-primary;
 }
 
 .collection-name {
   font-size: 1.25rem;
   font-weight: 600;
-  color: $color-text-primary;
+  color: $color-fg-primary;
 }
 
 .collection-count {
   font-size: 0.875rem;
-  color: $color-text-tertiary;
+  color: $color-fg-secondary;
 }
 
 .card-actions {
@@ -314,6 +314,6 @@ defineEmits<{
   padding: $spacing-xs;
   font-size: 1.25rem;
   font-weight: 600;
-  border-color: $color-brand;
+  border-color: $color-fg-accent-primary;
 }
 </style>

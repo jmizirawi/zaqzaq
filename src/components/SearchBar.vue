@@ -10,17 +10,18 @@
       enterkeyhint="search"
       dir="auto"
     />
-    <!-- <button
+    <button
       v-if="modelValue"
       @click="handleClear"
       class="clear-button"
     >
       <X :size="24" />
-    </button>-->
+    </button>
   </div>
 </template>
 
 <script setup lang="ts">
+import { X } from 'lucide-vue-next';
 
 defineProps<{
   modelValue: string;
@@ -44,13 +45,16 @@ function handleSearch() {
   emit('search');
 }
 
-// function handleClear() {
-//   emit('update:modelValue', '');
-//   emit('clear');
-// }
+function handleClear() {
+  emit('update:modelValue', '');
+  emit('clear');
+}
 </script>
 
 <style scoped lang="scss">
+@import '../styles/variables';
+@import '../styles/mixins';
+
 .search-container {
   margin: 0 auto;
   position: relative;
@@ -64,14 +68,14 @@ function handleSearch() {
   text-align: center;
   border-radius: 9999px; // Pill shape
   border: none;
-  background-color: white; // Or slightly off-white if needed
-  color: #1F1F1F;
+  background-color: $color-bg-input;
+  color: $color-fg-primary;
   outline: none;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   transition: box-shadow 0.2s;
 
   &::placeholder {
-    color: #9CA3AF;
+    color: $color-fg-secondary;
     font-weight: 500;
   }
 
@@ -87,7 +91,7 @@ function handleSearch() {
   transform: translateY(-50%);
   background: none;
   border: none;
-  color: #9CA3AF;
+  color: $color-fg-secondary;
   cursor: pointer;
   padding: 0;
   display: flex;
@@ -96,7 +100,7 @@ function handleSearch() {
   transition: color 0.2s;
 
   &:hover {
-    color: #4B5563;
+    filter: brightness(1.2);
   }
 }
 </style>

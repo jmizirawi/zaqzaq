@@ -40,7 +40,7 @@ npm run tauri build
 
 ```
 zaqzaq/
-├── src/                    # Vue 3 frontend
+├── src/                   # Vue 3 frontend
 │   ├── assets/            # Static assets (fonts, images)
 │   ├── components/        # Reusable UI components
 │   ├── router/            # Vue Router configuration

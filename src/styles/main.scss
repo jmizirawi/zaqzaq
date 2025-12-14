@@ -17,10 +17,15 @@ button {
     outline: inherit;
 }
 
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
 body {
-    font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: $color-background;
-    color: $color-text-primary;
+    font-family: $font-family;
+    background-color: $color-bg-primary;
+    color: $color-fg-primary;
     line-height: 1.5;
     transition: background-color 0.3s, color 0.3s;
     max-width: 800px;
@@ -37,8 +42,12 @@ body {
     @include btn-secondary;
 }
 
-.btn-neutral {
-    @include btn-neutral;
+.btn-link-primary {
+    @include btn-link-primary;
+}
+
+.btn-link-secondary {
+    @include btn-link-secondary;
 }
 
 .btn-icon {
@@ -55,4 +64,85 @@ body {
 
 .card {
     @include card-base;
+}
+
+.error-message {
+    color: $color-fg-accent-primary;
+    font-size: $font-size-sm;
+    margin-top: $spacing-sm;
+}
+
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(1px);
+}
+
+.dialog-content {
+    background-color: $color-bg-primary;
+    border-radius: $radius-lg;
+    width: 90%;
+    max-width: 400px;
+    max-height: calc(100vh - 32px);
+    box-shadow: $shadow-lg;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+// Vue Transition Classes
+.dialog-enter-active,
+.dialog-leave-active {
+    transition: opacity 0.2s ease-out;
+
+    .dialog-content {
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+}
+
+.dialog-enter-from,
+.dialog-leave-to {
+    opacity: 0;
+
+    .dialog-content {
+        opacity: 0;
+        transform: translateY(20px) scale(0.96);
+    }
+}
+
+.dialog-header {
+    @include flex-between;
+    padding: $spacing-md $spacing-lg;
+    flex-shrink: 0;
+}
+
+.dialog-title {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: $color-fg-primary;
+    margin: 0;
+}
+
+.close-btn {
+    @include btn-icon;
+}
+
+.dialog-body {
+    padding: $spacing-lg;
+    overflow-y: auto;
+}
+
+.dialog-footer {
+    padding: $spacing-md $spacing-lg;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
 }

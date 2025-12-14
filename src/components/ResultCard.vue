@@ -103,7 +103,7 @@
     </div>
 
     <AddToCollectionDialog
-      v-if="showCollectionDialog"
+      :is-open="showCollectionDialog"
       :word-id="result.id"
       :initial-collection-ids="currentCollections"
       @close="showCollectionDialog = false"
@@ -157,8 +157,7 @@ async function handleSaveToCollections(collectionIds: number[]) {
 
 .result-card {
   @include card-base;
-  background: linear-gradient(to bottom right, $color-card-background, #F2F2ED);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: $color-bg-secondary;
   position: relative;
   margin-bottom: $spacing-lg;
   direction: rtl;
@@ -182,14 +181,14 @@ async function handleSaveToCollections(collectionIds: number[]) {
 
 .bookmark-btn {
   @include btn-icon;
-  color: $color-text-tertiary;
+  color: $color-fg-secondary;
 
   &:hover {
-    color: $color-brand;
+    color: $color-fg-accent-primary;
   }
 
   .filled {
-    color: $color-brand;
+    color: $color-fg-accent-primary;
   }
 }
 
@@ -204,32 +203,34 @@ async function handleSaveToCollections(collectionIds: number[]) {
 }
 
 .tags-container {
-  margin-bottom: 0.75rem;
+  margin-bottom: $spacing-md;
 }
 
 .tag {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: $spacing-xs 0.75rem;
-  margin-right: $spacing-sm;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-sm;
+  line-height: 1;
+  font-weight: $font-weight-normal;
+  padding: $spacing-sm $spacing-md;
+  margin-left: $spacing-sm;
   border-radius: $radius-full;
-  background-color: rgba(143, 155, 133, 0.15);
-  color: #4A5540;
-  border: 1px solid rgba(143, 155, 133, 0.2);
+  background-color: $color-bg-accent-secondary;
+  color: $color-fg-on-color;
 }
 
 .term {
-  font-size: 2rem;
-  font-weight: 700;
-  color: $color-text-primary;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-fg-primary;
   margin-bottom: 0;
   line-height: 1.5;
 }
 
 .definition {
-  font-size: 1.5rem;
-  color: $color-text-primary;
+  font-size: $font-size-lg;
+  color: $color-fg-primary;
   margin-bottom: $spacing-md;
   line-height: 1.5;
 }
@@ -253,18 +254,18 @@ async function handleSaveToCollections(collectionIds: number[]) {
 }
 
 .detail-label {
-  font-size: 0.75rem;
+  font-size: $font-size-sm;
   letter-spacing: 0.05em;
-  font-weight: 700;
-  color: $color-sage;
+  font-weight: $font-weight-bold;
+  color: $color-fg-accent-secondary;
   text-transform: uppercase;
   text-align: right;
   margin-bottom: $spacing-xs;
 }
 
 .detail-value {
-  font-size: 1.1rem;
-  color: #2D2D2D;
+  font-size: $font-size-base;
+  color: $color-fg-secondary;
   text-align: right;
   line-height: 1.6;
 }
@@ -272,7 +273,7 @@ async function handleSaveToCollections(collectionIds: number[]) {
 .details-toggle {
   background: none;
   border: none;
-  color: $color-brand;
+  color: $color-fg-accent-primary;
   font-size: 0.875rem;
   font-weight: 600;
   cursor: pointer;
@@ -281,7 +282,7 @@ async function handleSaveToCollections(collectionIds: number[]) {
   text-decoration: none;
   
   &:hover {
-    color: $color-brand-hover;
+    filter: brightness(0.9);
   }
 }
 </style>

@@ -26,3 +26,8 @@ dist-ssr
 # Keystore files
 *.jks
 *.keystore
+
+# Tools
+xcodegen/
+mock_bin/
+ios-wrapper.sh

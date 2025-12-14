@@ -39,7 +39,7 @@ function handleBack() {
 @import '../styles/variables';
 @import '../styles/mixins';
 
-.library-container {
+.library-view {
   display: flex;
   flex-direction: column;
   gap: $spacing-lg;
@@ -49,12 +49,12 @@ function handleBack() {
 
 .header {
   text-align: center;
-  margin-bottom: $spacing-md;
+  margin-bottom: $spacing-sm;
 }
 
 .title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: $color-text-primary;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-fg-primary;
 }
 </style>

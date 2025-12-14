@@ -42,23 +42,25 @@ import logo from '../assets/bird-logo.svg';
 </script>
 
 <style scoped lang="scss">
+@import '../styles/variables';
+@import '../styles/mixins';
+
 .navbar {
   background-color: transparent;
   padding-top: calc(1rem + env(safe-area-inset-top));
-  margin-bottom: 2rem;
 }
 
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 $spacing-md;
 }
 
 .nav-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5rem;
+  height: $spacing-xxl;
 }
 
 .logo-container {
@@ -69,24 +71,24 @@ import logo from '../assets/bird-logo.svg';
 }
 
 .logo-image {
-  width: 64px;
-  height: auto;
+  height: $spacing-xxl;
+  width: auto;
 }
 
 .logo {
-  font-size: 1.75rem;
-  font-weight: 300;
-  color: #8B1E24; // Brand Maroon
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  color: $color-fg-accent-primary;
   line-height: 1;
   margin-bottom: 0;
   text-align: left;
 }
 
 .logo-subtitle {
-  font-size: 1rem;
-  font-weight: 300;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-normal;
   display: block;
-  color: #8B1E24; // Brand Maroon
+  color: $color-fg-accent-primary;
   line-height: 1;
   margin-bottom: 0;
   margin-top: 0.5rem;
@@ -95,21 +97,12 @@ import logo from '../assets/bird-logo.svg';
 
 .nav-links {
   display: flex;
-  gap: 1rem;
+  gap: $spacing-md;
 }
 
 .nav-link {
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  transition: color 0.2s;
-  color: #8F9B85; // Sage Green (inactive)
-  
-  &:hover {
-    color: #6b7280;
-  }
+  @include btn-icon;
+  padding: $spacing-sm $spacing-lg;
 
-  &.active {
-    color: #8B1E24; // Brand Maroon (active)
-  }
 }
 </style>

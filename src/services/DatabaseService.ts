@@ -1,11 +1,12 @@
 
 import Database from "@tauri-apps/plugin-sql";
 import { Collection, Word } from '../types';
-import { exists, remove, stat, readFile, writeFile, BaseDirectory } from '@tauri-apps/plugin-fs';
-import { resolveResource } from '@tauri-apps/api/path';
+import { exists, remove, stat, readFile, writeFile, mkdir, BaseDirectory } from '@tauri-apps/plugin-fs';
+
 
 export class DatabaseService {
     private db: Database | null = null;
+    public initError: string | null = null;
 
     async initialize(): Promise<void> {
         const dbName = 'arabic-dictionary.db';
@@ -57,8 +58,9 @@ export class DatabaseService {
 
             await this.initializeTables();
 
-        } catch (error) {
+        } catch (error: any) {
             console.error('Failed to initialize database:', error);
+            this.initError = error.toString();
             throw error;
         }
     }
@@ -88,10 +90,19 @@ export class DatabaseService {
 
     private async copyDatabase(dbName: string): Promise<void> {
         try {
-            const resourcePath = await resolveResource('resources/arabic-dictionary.db');
-            console.log('Reading database from:', resourcePath);
-            const data = await readFile(resourcePath);
+            console.log('Reading database from resources...');
+            const data = await readFile('resources/arabic-dictionary.db', { baseDir: BaseDirectory.Resource });
             console.log('Database file read, size:', data.length);
+
+            // Ensure AppData directory exists by creating a dummy directory
+            try {
+                await mkdir('init_check', { baseDir: BaseDirectory.AppData, recursive: true });
+            } catch (e: any) {
+                console.log('AppData directory creation failed:', e);
+                this.initError = `Mkdir Error: ${e.toString()}`;
+                // Don't throw, try to write anyway
+            }
+
             await writeFile(dbName, data, { baseDir: BaseDirectory.AppData });
             console.log('Database copied successfully');
         } catch (error) {
@@ -499,6 +510,32 @@ VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $1
                 annotator: r.ANNOTATOR || r.annotator
             };
         });
+    }
+    async getDebugInfo(): Promise<string> {
+        try {
+            if (!this.db) return `Database not initialized. Init Error: ${this.initError}`;
+
+            const dbName = 'arabic-dictionary.db';
+            const existsResult = await exists(dbName, { baseDir: BaseDirectory.AppData });
+            let size = -1;
+            if (existsResult) {
+                const info = await stat(dbName, { baseDir: BaseDirectory.AppData });
+                size = info.size;
+            }
+
+            const tableResult = await this.db.select<any[]>('SELECT name FROM sqlite_master WHERE type="table" AND name="data"');
+            const tableExists = tableResult.length > 0;
+
+            let rowCount = -1;
+            if (tableExists) {
+                const countResult = await this.db.select<Array<{ count: number }>>('SELECT COUNT(*) as count FROM data');
+                rowCount = countResult[0]?.count || 0;
+            }
+
+            return `DB Exists: ${existsResult}\nSize: ${size}\nTable 'data': ${tableExists}\nRows: ${rowCount}`;
+        } catch (e: any) {
+            return `Debug Error: ${e.toString()}`;
+        }
     }
 }
 

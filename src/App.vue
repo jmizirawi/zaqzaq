@@ -56,7 +56,7 @@ onMounted(async () => {
 .main-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: $spacing-lg $spacing-md;
+  padding: $spacing-xl $spacing-md;
   width: 100%;
   flex: 1;
 }
@@ -68,7 +68,7 @@ onMounted(async () => {
   
   p {
     font-size: 0.75rem;
-    color: $color-text-tertiary;
+    color: $color-fg-secondary;
   }
   
   a {
@@ -78,7 +78,7 @@ onMounted(async () => {
     transition: color 0.2s;
     
     &:hover {
-      color: $color-text-secondary;
+      color: $color-fg-primary;
     }
   }
 }

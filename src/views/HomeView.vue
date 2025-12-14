@@ -29,6 +29,7 @@
       No results found
     </div>
 
+
   </div>
 </template>
 
@@ -41,8 +42,7 @@ import ResultCard from '../components/ResultCard.vue';
 const store = useDictionaryStore();
 const searchQuery = ref('');
 
-// Ensure initial state is empty
-onMounted(() => {
+onMounted(async () => {
   store.searchResults = [];
   searchQuery.value = '';
 });
@@ -63,6 +63,7 @@ function handleClear() {
 }
 
 
+
 </script>
 
 <style scoped lang="scss">
@@ -72,8 +73,8 @@ function handleClear() {
 .home-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding-bottom: 4rem;
+  gap: $spacing-lg;
+  padding-bottom: $spacing-xxl;
 }
 
 .search-section {
@@ -82,24 +83,24 @@ function handleClear() {
 
 .results-count {
   text-align: center;
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: $color-text-primary;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-fg-primary;
   margin-bottom: $spacing-md;
 }
 
 .loading-state {
   text-align: center;
-  padding: 2rem 0;
+  padding: $spacing-lg 0;
 }
 
 .spinner {
   display: inline-block;
-  height: 3rem;
-  width: 3rem;
+  height: $spacing-lg;
+  width: $spacing-lg;
   border-radius: $radius-full;
   border: 4px solid $color-border;
-  border-top-color: $color-brand;
+  border-top-color: $color-fg-accent-primary;
   animation: spin 1s linear infinite;
 }
 
@@ -110,10 +111,12 @@ function handleClear() {
 
 .empty-state {
   text-align: center;
-  padding: 2rem 0;
-  color: $color-text-tertiary;
-  font-weight: 500;
+  padding: $spacing-lg 0;
+  color: $color-fg-secondary;
+  font-weight: $font-weight-normal;
 }
+
+
 
 
 
