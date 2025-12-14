@@ -90,12 +90,13 @@ targets:
           echo "Original PATH: $PATH"
           echo "Workspace Root: $SRCROOT"
           
+          
           # Check if ci_scripts exists
-          if [ -d "$SRCROOT/../../ci_scripts" ]; then
+          if [ -d "$SRCROOT/../../../ci_scripts" ]; then
             echo "ci_scripts directory found."
-            ls -l "$SRCROOT/../../ci_scripts"
+            ls -l "$SRCROOT/../../../ci_scripts"
           else
-            echo "WARNING: ci_scripts directory NOT found. Are you on the 'fix/ios-icon' branch?"
+            echo "WARNING: ci_scripts directory NOT found at $SRCROOT/../../../ci_scripts. Are you building the correct branch?"
           fi
 
           # Sourcing cargo env
