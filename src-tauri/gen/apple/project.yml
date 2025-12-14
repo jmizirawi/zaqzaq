@@ -90,12 +90,13 @@ targets:
           echo "Original PATH: $PATH"
           echo "Workspace Root: $SRCROOT"
           
+          
           # Check if ci_scripts exists
-          if [ -d "$SRCROOT/../../ci_scripts" ]; then
+          if [ -d "$SRCROOT/../../../ci_scripts" ]; then
             echo "ci_scripts directory found."
-            ls -l "$SRCROOT/../../ci_scripts"
+            ls -l "$SRCROOT/../../../ci_scripts"
           else
-            echo "WARNING: ci_scripts directory NOT found. Are you on the 'fix/ios-icon' branch?"
+            echo "WARNING: ci_scripts directory NOT found at $SRCROOT/../../../ci_scripts. Are you building the correct branch?"
           fi
 
           # Sourcing cargo env
@@ -130,7 +131,30 @@ targets:
 
           echo "Final PATH: $PATH"
 
+          # Install Node.js if missing
+          if ! command -v node >/dev/null 2>&1; then
+            echo "Node.js not found. Installing via Homebrew..."
+            if command -v brew >/dev/null 2>&1; then
+              brew install node
+              NODE_PREFIX=$(brew --prefix node)
+              export PATH="$NODE_PREFIX/bin:$PATH"
+              echo "Node.js installed and added to PATH: $NODE_PREFIX/bin"
+            else
+              echo "Error: Homebrew not found. Cannot install Node.js."
+              exit 1
+            fi
+          fi
+
+          # Install Rust if missing
+          if ! command -v cargo >/dev/null 2>&1; then
+             echo "Cargo not found. Installing via Rustup..."
+             curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+             source "$HOME/.cargo/env"
+             echo "Rust installed."
+          fi
+
           # Debug binary locations again
+          echo "Checking binaries after potential installation:"
           which node || echo "node still not found"
           which npm || echo "npm still not found"
           which cargo || echo "cargo still not found"

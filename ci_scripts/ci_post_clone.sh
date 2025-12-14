@@ -3,7 +3,9 @@
 # Fail on error
 set -e
 
-echo "Starting ci_post_clone.sh..."
+echo "Starting ci_post_clone.sh execution..."
+echo "Current User: $(whoami)"
+echo "Current Path: $PATH"
 
 # Install Node.js using Homebrew
 echo "Installing Node.js..."
