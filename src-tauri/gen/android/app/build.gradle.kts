@@ -21,7 +21,7 @@ android {
         applicationId = "com.zaqzaq_palestinian_dictionary.app"
         minSdk = 24
         targetSdk = 36
-        versionCode = 1001
+        versionCode = 1003003
         versionName = tauriProperties.getProperty("tauri.android.versionName", "1.0")
     }
     val keystorePropertiesFile = rootProject.file("key.properties")
