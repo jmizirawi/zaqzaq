@@ -23,6 +23,7 @@ onMounted(async () => {
     store.isInitialized = true;
   } catch (error) {
     console.error('Failed to initialize database:', error);
+    alert(`Failed to init DB: ${error instanceof Error ? error.message : String(error)}`);
   }
 });
 </script>

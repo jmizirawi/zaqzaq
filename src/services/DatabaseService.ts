@@ -1,8 +1,8 @@
 
 import Database from "@tauri-apps/plugin-sql";
 import { Collection, Word } from '../types';
-import { exists, remove, stat, readFile, writeFile, BaseDirectory } from '@tauri-apps/plugin-fs';
-import { resolveResource } from '@tauri-apps/api/path';
+import { exists, remove, stat, readFile, writeFile, mkdir, BaseDirectory } from '@tauri-apps/plugin-fs';
+import { resolveResource, appDataDir } from '@tauri-apps/api/path';
 
 export class DatabaseService {
     private db: Database | null = null;
@@ -92,10 +92,24 @@ export class DatabaseService {
             console.log('Reading database from:', resourcePath);
             const data = await readFile(resourcePath);
             console.log('Database file read, size:', data.length);
+
+            // Get the actual app data directory path and ensure it exists
+            try {
+                const appDataPath = await appDataDir();
+                console.log('AppData directory path:', appDataPath);
+                // Create the directory using the resolved path
+                await mkdir(appDataPath, { recursive: true });
+                console.log('AppData directory created/ensured');
+            } catch (mkdirError) {
+                // Directory might already exist, which is fine
+                console.log('mkdir result (may already exist):', mkdirError);
+            }
+
             await writeFile(dbName, data, { baseDir: BaseDirectory.AppData });
             console.log('Database copied successfully');
         } catch (error) {
             console.error('Failed to copy database from resources:', error);
+            alert(`Copy failed: ${error instanceof Error ? error.message : String(error)}`);
             throw error;
         }
     }
