@@ -5,31 +5,45 @@ import { openUrl } from '@tauri-apps/plugin-opener';
 import { useDictionaryStore } from './stores/dictionaryStore';
 import { databaseService } from './services/DatabaseService';
 import Navigation from './components/Navigation.vue';
+// import ErrorOverlay from './components/ErrorOverlay.vue';
+import { errorState } from './utils/errorLogger';
 
 const store = useDictionaryStore();
 
 async function openAttribution() {
-  await openUrl('https://sites.google.com/nyu.edu/palestine-lexicon');
+  try {
+    await openUrl('https://sites.google.com/nyu.edu/palestine-lexicon');
+  } catch (e) {
+    console.error('Failed to open URL', e);
+    errorState.addError('Failed to open attribution URL', 'App.vue', String(e));
+  }
 }
 
 onMounted(async () => {
   try {
-    // Wait a brief moment for Tauri to be ready
-    await new Promise(resolve => setTimeout(resolve, 100));
+    // Removed setTimeout. Tauri plugins should be ready on mount.
+    console.log('App mounted, initializing services...');
     
     await databaseService.initialize();
     await store.loadSavedWords();
     await store.loadCollections();
+    
     store.isInitialized = true;
+    console.log('Initialization complete');
   } catch (error) {
-    console.error('Failed to initialize database:', error);
-    alert(`Failed to init DB: ${error instanceof Error ? error.message : String(error)}`);
+    console.error('Failed to initialize app:', error);
+    errorState.addError(
+      `Initialization Error: ${error instanceof Error ? error.message : String(error)}`,
+      'App.vue:onMounted',
+      error instanceof Error ? error.stack : undefined
+    );
   }
 });
 </script>
 
 <template>
   <div class="app-wrapper">
+    <!-- <ErrorOverlay /> -->
     <Navigation />
     <main class="main-content">
       <RouterView />
