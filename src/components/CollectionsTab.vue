@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, nextTick } from 'vue';
 import { useDictionaryStore } from '../stores/dictionaryStore';
-import { Plus, Folder, Trash2, Pencil } from 'lucide-vue-next';
+import { Plus, Bookmark, Trash2, Pencil } from 'lucide-vue-next';
 import { Collection } from '../types';
 import ConfirmDialog from './ConfirmDialog.vue';
 import CreateCollectionDialog from './CreateCollectionDialog.vue';
@@ -95,7 +95,7 @@ defineEmits<{
 
     <div v-if="collections.length === 0" class="empty-state">
       <div class="empty-icon">
-        <Folder class="icon" />
+        <Bookmark :size="48" />
       </div>
       <h3 class="empty-title">
         No collections yet
@@ -220,7 +220,7 @@ defineEmits<{
 }
 
 .empty-icon {
-  color: $color-fg-accent-secondary;
+  color: $color-fg-secondary;
   margin-bottom: $spacing-md;
 }
 

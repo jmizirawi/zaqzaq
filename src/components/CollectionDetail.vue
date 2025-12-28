@@ -130,7 +130,7 @@ watch(() => store.savedWords, loadData, { deep: true });
   align-items: center;
   gap: $spacing-sm;
   color: $color-fg-secondary;
-  font-weight: 500;
+  font-weight: $font-weight-normal;
   transition: color 0.2s;
   position: absolute;
   left: 0;
@@ -147,7 +147,7 @@ watch(() => store.savedWords, loadData, { deep: true });
 .title-container {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: $spacing-sm;
   cursor: pointer;
   padding: $spacing-xs $spacing-sm;
   border-radius: $radius-md;
@@ -165,7 +165,7 @@ watch(() => store.savedWords, loadData, { deep: true });
 .title-edit-container {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: $spacing-sm;
 }
 
 .icon {
@@ -173,8 +173,8 @@ watch(() => store.savedWords, loadData, { deep: true });
 }
 
 .title {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
   color: $color-fg-primary;
   margin: 0;
 }
@@ -191,21 +191,7 @@ watch(() => store.savedWords, loadData, { deep: true });
 
 .title-input {
   @include input-base;
-  font-size: 2rem;
-  font-weight: 600;
-  border: none;
-  border-bottom: 2px solid $color-fg-accent-primary;
-  background: transparent;
-  border-radius: 0;
   text-align: center;
-  width: auto;
-  min-width: 200px;
-  padding: 0;
-  margin: 0;
-  
-  &:focus {
-    border-color: $color-fg-accent-primary;
-  }
 }
 
 .empty-state {
