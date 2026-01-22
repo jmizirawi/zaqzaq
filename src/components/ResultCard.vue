@@ -18,6 +18,9 @@
         <h3 class="term" dir="rtl">
           {{ result.term }}
         </h3>
+        <p dir="ltr" v-if="result.transliteration" class="transliteration">
+          {{ formatTransliteration(result.transliteration) }}
+        </p>
         
         <h4 class="definition" dir="ltr">
           {{ result.definition }} 
@@ -119,6 +122,7 @@ import { SearchResult } from '../types';
 import AddToCollectionDialog from './AddToCollectionDialog.vue';
 import { useDictionaryStore } from '../stores/dictionaryStore';
 import { getReadableAnalysis } from '../utils/analysisMapping';
+import { formatTransliteration } from '../utils/transliterationFormatter';
 
 const props = defineProps<{
   result: SearchResult;
@@ -233,6 +237,13 @@ async function handleSaveToCollections(collectionIds: number[]) {
   color: $color-fg-primary;
   margin-bottom: $spacing-md;
   line-height: 1.5;
+}
+
+.transliteration {
+  color: $color-fg-secondary;
+  margin-bottom: $spacing-sm;
+  font-size: $font-size-base;
+  letter-spacing: 0.1em;
 }
 
 .details-grid {
