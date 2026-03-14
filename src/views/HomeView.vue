@@ -1,6 +1,6 @@
 <template>
   <div class="home-container">
-    <div class="search-section">
+    <div v-if="!store.activeTopic" :class="['search-section', { 'search-sticky': searchQuery }]">
       <SearchBar
         v-model="searchQuery"
         :loading="store.isSearching"
@@ -116,6 +116,16 @@ function handleClear() {
 
 .search-section {
   margin-bottom: $spacing-md;
+}
+
+.search-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  padding: $spacing-sm 0;
+  margin: 0 (-$spacing-md);
+  padding-left: $spacing-md;
+  padding-right: $spacing-md;
 }
 
 .results-count {

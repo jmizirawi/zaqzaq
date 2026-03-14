@@ -11,6 +11,7 @@ export const useDictionaryStore = defineStore('dictionary', () => {
     const topics = ref<Topic[]>([]);
     const activeTopic = ref<Topic | null>(null);
     const topicWords = ref<Word[]>([]);
+    const activeCollectionId = ref<number | null>(null);
 
     const isSearching = ref(false);
     const isLoadingTopics = ref(false);
@@ -232,6 +233,7 @@ export const useDictionaryStore = defineStore('dictionary', () => {
         topics,
         activeTopic,
         topicWords,
+        activeCollectionId,
         isSearching,
         isLoadingTopics,
         isInitialized,

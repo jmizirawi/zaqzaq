@@ -1,35 +1,29 @@
-```vue
 <script setup lang="ts">
-import { ref } from 'vue';
+import { useDictionaryStore } from '../stores/dictionaryStore';
 import CollectionsTab from '../components/CollectionsTab.vue';
 import CollectionDetail from '../components/CollectionDetail.vue';
 
-const selectedCollectionId = ref<number | null>(null);
+const store = useDictionaryStore();
 
 function handleSelectCollection(id: number) {
-  selectedCollectionId.value = id;
-}
-
-function handleBack() {
-  selectedCollectionId.value = null;
+  store.activeCollectionId = id;
 }
 </script>
 
 <template>
   <div class="library-view">
-    <div class="header" v-if="!selectedCollectionId">
+    <div class="header" v-if="store.activeCollectionId === null">
       <h1 class="title">Collections • مجموعات</h1>
     </div>
 
     <div class="content">
       <CollectionsTab
-        v-if="!selectedCollectionId"
+        v-if="store.activeCollectionId === null"
         @select="handleSelectCollection"
       />
       <CollectionDetail
         v-else
-        :collection-id="selectedCollectionId"
-        @back="handleBack"
+        :collection-id="store.activeCollectionId"
       />
     </div>
   </div>
