@@ -3,6 +3,7 @@ import Database from "@tauri-apps/plugin-sql";
 import { Collection, Word, Topic } from '../types';
 import { exists, remove, stat, readFile, writeFile, mkdir, BaseDirectory } from '@tauri-apps/plugin-fs';
 import { resolveResource, appDataDir } from '@tauri-apps/api/path';
+import { normalizeArabic, sqlNormalizeExpr } from '../utils/arabicNormalizer';
 
 export class DatabaseService {
     private db: Database | null = null;
@@ -605,31 +606,44 @@ VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $1
         if (!this.db) throw new Error('Database not initialized');
 
         const isArabic = /[\u0600-\u06FF]/.test(query);
-        const exactQuery = query;
-        const startsWithQuery = `${query}%`;
-        const containsQuery = `%${query}%`;
 
-        console.log('Searching for:', query);
-        console.log('Patterns:', { exactQuery, startsWithQuery, containsQuery });
+        // Normalize Arabic input (strip diacritics, unify Alif/Yeh/Teh-Marbuta)
+        const normalizedQuery = isArabic ? normalizeArabic(query) : query;
+
+        const exactQuery = normalizedQuery;
+        const startsWithQuery = `${normalizedQuery}%`;
+        const containsQuery = `%${normalizedQuery}%`;
+
+        console.log('Searching for:', query, isArabic ? `(normalized: ${normalizedQuery})` : '');
+
+        // For Arabic queries, wrap column refs in REPLACE() chains so that
+        // variant letter forms in the DB data also match the normalized input.
+        const nFORM          = isArabic ? sqlNormalizeExpr('FORM')          : 'FORM';
+        const nGLOSS         = isArabic ? sqlNormalizeExpr('GLOSS')         : 'GLOSS';
+        const nCAPHI         = isArabic ? sqlNormalizeExpr('CAPHI__')       : 'CAPHI__';
+        const nROOT          = isArabic ? sqlNormalizeExpr('ROOT')          : 'ROOT';
+        const nLEMMA         = isArabic ? sqlNormalizeExpr('LEMMA')         : 'LEMMA';
+        const nLEMMA_SEARCH  = isArabic ? sqlNormalizeExpr('LEMMA_SEARCH')  : 'LEMMA_SEARCH';
+        const nGLOSS_MSA     = isArabic ? sqlNormalizeExpr('GLOSS_MSA')     : 'GLOSS_MSA';
 
         let orderByClause = '';
         if (isArabic) {
             // Prioritize LEMMA_SEARCH for Arabic
             orderByClause = `
                 ORDER BY 
-                CASE WHEN LEMMA_SEARCH = $2 THEN 0 ELSE 1 END,
-    CASE WHEN LEMMA_SEARCH LIKE $3 THEN 0 ELSE 1 END,
-        CASE WHEN LEMMA_SEARCH LIKE $4 THEN 0 ELSE 1 END,
-            LENGTH(LEMMA_SEARCH) ASC
+                CASE WHEN ${nLEMMA_SEARCH} = $2 THEN 0 ELSE 1 END,
+                CASE WHEN ${nLEMMA_SEARCH} LIKE $3 THEN 0 ELSE 1 END,
+                CASE WHEN ${nLEMMA_SEARCH} LIKE $4 THEN 0 ELSE 1 END,
+                LENGTH(LEMMA_SEARCH) ASC
                 `;
         } else {
             // Prioritize GLOSS for English
             orderByClause = `
                 ORDER BY 
                 CASE WHEN GLOSS = $2 THEN 0 ELSE 1 END,
-    CASE WHEN GLOSS LIKE $3 THEN 0 ELSE 1 END,
-        CASE WHEN GLOSS LIKE $4 THEN 0 ELSE 1 END,
-            LENGTH(GLOSS) ASC
+                CASE WHEN GLOSS LIKE $3 THEN 0 ELSE 1 END,
+                CASE WHEN GLOSS LIKE $4 THEN 0 ELSE 1 END,
+                LENGTH(GLOSS) ASC
             `;
         }
 
@@ -653,13 +667,13 @@ VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $1
             ANNOTATOR: string;
         }>>(
             `SELECT * FROM data 
-       WHERE FORM LIKE $1 
-       OR GLOSS LIKE $1 
-       OR CAPHI__ LIKE $1
-       OR ROOT LIKE $1
-       OR LEMMA LIKE $1
-       OR LEMMA_SEARCH LIKE $1
-       OR GLOSS_MSA LIKE $1
+       WHERE ${nFORM} LIKE $1 
+       OR ${nGLOSS} LIKE $1 
+       OR ${nCAPHI} LIKE $1
+       OR ${nROOT} LIKE $1
+       OR ${nLEMMA} LIKE $1
+       OR ${nLEMMA_SEARCH} LIKE $1
+       OR ${nGLOSS_MSA} LIKE $1
        ${orderByClause}
        LIMIT 50`,
             [containsQuery, exactQuery, startsWithQuery, containsQuery]
