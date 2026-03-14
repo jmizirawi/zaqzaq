@@ -1,12 +1,13 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import ViteYAML from '@modyfi/vite-plugin-yaml';
 
 // @ts-expect-error process is a nodejs global
 const host = process.env.TAURI_DEV_HOST;
 
 // https://vite.dev/config/
 export default defineConfig(async () => ({
-  plugins: [vue()],
+  plugins: [vue(), ViteYAML()],
 
   // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
   //

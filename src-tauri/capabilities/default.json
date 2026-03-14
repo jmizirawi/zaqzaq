@@ -11,6 +11,7 @@
     "sql:default",
     "sql:allow-execute",
     "sql:allow-select",
+    "mcp-bridge:default",
     {
       "identifier": "fs:default",
       "allow": [
