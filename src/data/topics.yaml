@@ -1,0 +1,3199 @@
+- section: "Foundations • الأساسيات"
+  topics:
+    - title: "Prepositions & Particles"
+      icon: "Paperclip"
+      wordIds:
+        - 31213 # مِن - because of
+        - 31215 # مِن - from
+        - 24944 # فِي - in;by
+        - 708 # بِ - in;temporal or apatial "in"
+        - 35352 # وَرَا - behind
+        - 35353 # وَرَا - behind
+        - 35357 # وَرَا - behind
+        - 4950 # جُوَّا - in
+        - 4951 # جُوَّاة - in
+        - 24943 # فِيه - there is(expletive)
+        - 24945 # فِش - there is no;nothing
+        - 28666 # بَلَاش - no need!;no!
+        - 28665 # لَا - no;not
+        - 30117 # مَا - did not/would not
+        - 30759 # مِش - not
+        - 30760 # مُش - not
+        - 34912 # وَيَّا - with
+        - 30887 # مَع - with;sb has/owns
+        - 10597 # بِدُون - without
+        - 30118 # مَا - who;that (relative)
+        - 470 # اللِّي - who;that
+        - 30120 # مَا - how;what
+        - 21868 # عَن - on;about
+        - 29886 # لَوْ - if (conditional)
+        - 1440 # بَسّ - only
+        - 19896 # عَ - on
+        - 24923 # فَوق - above;up
+        - 24924 # فَوق - above;up
+        - 21670 # عَلَى - on
+        - 1786 # بَعِد - still;after
+        - 28650 # لِ - to;for
+        - 28652 # لَ - to;for
+        - 25098 # قَبِل - before
+        - 25099 # قَبِل - before
+        - 4568 # جَنْب - next to
+        - 4575 # جَنَب - next to
+        - 28651 # إِلَى - to
+        - 18141 # صَوب - towards
+        - 23117 # فَ - then;and then;so
+        - 2798 # بَين - between
+        - 21887 # عِنْد - at
+        - 2876 # تَحِت - under
+        - 8636 # خِلَال - through
+        - 21308 # عُقُب - after
+        - 1156 # بَرَّا - outside
+        - 1155 # بَرَّاة - outside
+    - title: "Pronouns"
+      icon: "User"
+      wordIds:
+        - 568 # أَنَا - I;me
+        - 569 # آنِي - I;me
+        - 82 # إِحْنَا - we;us
+        - 31908 # نِحْنَا - we;us
+        - 575 # أَنْتَ - you
+        - 576 # إِنْتَ - you
+        - 577 # أَنْتِ - you
+        - 578 # إِنْتِ - you
+        - 579 # إِنْتُو - you
+        - 580 # إِنْتِن - you
+        - 34727 # هُو - he
+        - 34728 # هُوَّا - he
+        - 34729 # هُوَّي - he
+        - 34853 # هِي - she
+        - 34854 # هِيَّ - she
+        - 34676 # هُمِّي - they
+        - 34722 # هِنِّي - they
+        - 33884 # هَاذ - this
+        - 33885 # هٰذَا - this
+        - 10686 # ذَاه - this
+        - 33887 # هَاي - this
+        - 33886 # هَاذِي - this
+        - 34248 # هَذَاك - that
+        - 34249 # هَذِيك - that
+        - 34252 # هَذَول - these
+        - 34253 # هَذَولَاك - those
+        - 34781 # هَون - here
+        - 34782 # هَان - here
+        - 23075 # غَاد - there
+        - 34717 # هْنَاك - there
+        - 34718 # هِنَاك - there
+        - 34719 # هْنِيك - there
+        - 34720 # هُنِيك - there
+        - 625 # أَنُو - which;who
+        - 704 # أَيّ - any
+        - 705 # أَيّ - which;what
+        - 28275 # كُلّ - the whole thing/every
+        - 17250 # إِشِي - thing
+        - 35111 # حَدَا - someone;somebody
+    - title: "Question Words"
+      icon: "HelpCircle"
+      wordIds:
+        - 17122 # شُو - what
+        - 17123 # شُو - what
+        - 692 # أَيش - what
+        - 30116 # مَا - what
+        - 699 # وَين - where
+        - 700 # وَين - where
+        - 36158 # وَين - where
+        - 30170 # مَتَى - when
+        - 30171 # أَيمْتَا - when
+        - 30172 # أَيمَت - when
+        - 1438 # بَسّ - when
+        - 29722 # لَمَّا - when
+        - 7463 # حِين - when
+        - 7429 # حَيش - when
+        - 7430 # حَيشْمَا - when
+        - 31535 # مِين - who
+        - 30066 # لَيش - why
+        - 30062 # لَوَيش - why
+        - 30067 # لَوَيش - why
+        - 694 # إِيش مَعْنَى - why
+        - 28619 # كَيف - how
+        - 28620 # كَيف - how
+        - 28621 # كِيف - how
+        - 28622 # كِيف - how
+        - 16880 # شْلَون - how
+        - 16881 # شْلَون - how
+        - 25318 # قَدَّيش - how much
+        - 25319 # قَدَّيش - how much?
+        - 28309 # كَم - how much;how many
+        - 28313 # كَم - how much;how many 
+        - 28387 # كَم - how many;how much (Interrogative)
+        - 625 # أَنُو - which;who
+        - 704 # أَيّ - any
+        - 705 # أَيّ - which;what
+    - title: "Conjunctions"
+      icon: "Link"
+      wordIds:
+        - 34911 # و - and
+        - 647 # أَوْ - Or;if not;unless;except if;except when
+        - 28669 # لَا - or;otherwise;in a tag question
+        - 556 # إِمَّا - either
+        - 1439 # بَسّ - but
+        - 29719 # لٰكِن - but
+        - 553 # أَمَّا - As to;as for;as far as he (she;it;..etc) is concerned;but;however;yet
+        - 15447 # عَشَان - for;for the sake;because of
+        - 15448 # مِشَان - for;for the sake;because of
+        - 15450 # عَلَشَان - for;for the sake;because of
+        - 15446 # عَشِنُّه - because
+        - 620 # لِأَن - because
+        - 202 # إِذَا - if (conditional)
+        - 616 # إِنّ - if
+        - 204 # إِذاً - so
+        - 3416 # ثُمّ - then
+        - 1801 # بَعْدَين - then
+        - 15251 # سَاعِيتهَا - then
+        - 1785 # بَعْده - still
+        - 28316 # كَمَا - still
+        - 29119 # لِسَّه - still
+        - 13333 # زَاد - also
+        - 5244 # حَتَّى - even
+        - 468 # إِلَّا - except for;with the exception of
+    - title: "Numbers"
+      icon: "Hash"
+      wordIds:
+        # Core Digits (0-10)
+        - 17851 # صِفِر - zero
+        - 35105 # وَاحَد - one;1
+        - 3470 # اِثْنَين - two;2
+        - 3404 # ثَلَاث - three;3
+        - 3403 # ثَلَاثِة - three;3
+        - 11074 # أَرْبَع - four
+        - 11094 # أَرْبَعَة - 4
+        - 8709 # خَمَس - five;5
+        - 8708 # خَمْسِة - five;5
+        - 13641 # سِتِّة - 6;six
+        - 13572 # سَبْعَة - seven
+        - 3447 # ثَمَان - eight;9
+        - 3446 # ثَمَانْيِة - eight;8
+        - 3001 # تِسْع - nine
+        - 2998 # تِسْعَة - 9
+        - 20828 # عَشَرَة - ten;10
+        
+        # Tens & Large Numbers
+        - 20829 # عِشْرِين - twenty;20
+        - 11075 # أَرْبَعِين - 40;forty
+        - 8710 # خَمْسِين - fifty;50
+        - 13647 # سِتِّين - sixties;sixty
+        - 13588 # سَبْعِين - seventies
+        - 2999 # تِسْعِين - 90;nineteen
+        - 31536 # مِيِّة - 100;one hundred
+        - 450 # أَلِف - 1000
+        - 453 # أَلْف - 1000
+        - 31208 # مَلْيَون - million;1000,000
+
+        # Fractions & Multipliers
+        - 32500 # نِصِف - half
+        - 32494 # نُصّ - half
+        - 11076 # رُبُع - one fourth;quarter
+        - 3448 # ثُمُن - one eighth
+        - 20832 # عُشُر - one tenth
+        - 18493 # ضِعْف - double
+        - 9198 # دَبَل - double
+        - 18492 # مُضَاعَف - double
+        - 4867 # مِجْوِز - double
+        - 9576 # دَسْتِة - dozen
+        - 9572 # دَزِّينِة - dozen
+
+        # Ordinals
+        - 663 # أَوَّل - first;early
+        - 661 # أَوَّلَانِي - first;early
+        - 3454 # ثَانِي - second
+        - 3468 # ثَانِي - second
+        - 11069 # رَابِع - fourth
+        - 8705 # خَامِس - fifth
+        - 13977 # سَادِس - sixth
+        - 13569 # سَابِع - 7th
+        - 3444 # ثَامِن - 8th
+        - 2997 # تَاسِع - 9th
+        - 20825 # عَاشِر - 10th
+
+        # Quantifiers
+        - 11987 # رَقَم - number
+        - 4495 # مَجْمُوع - total
+        - 1842 # بَعْض - some
+        - 28312 # كَم - some
+    - title: "Greetings & Common Phrases"
+      icon: "Handshake"
+      wordIds:
+        # Hello / Welcome
+        - 11291 # مَرْحَبَا - Hello!;Hi!
+        - 14770 # سَلَام - Salam!;Hi!;Hello!
+        - 21283 # عوَافي - Hello
+        - 21290 # عَالعَافْيِة - Hello
+        - 639 # أَهْلاً - welcome!
+        - 641 # هَلَا - welcome!
+        - 11295 # يَا مَرْحَبَا بك - Most welcome!
+
+        # Morning / Evening
+        - 17384 # صَبَاح الخير - Good morning!
+        - 30750 # مَسَا الخير - good evening!
+
+        # Yes / No / OK
+        - 32764 # نَعَم - yes!
+        - 701 # أَيْوَا - Yes!
+        - 665 # آَه - yes
+        - 492 # إِمْبَلَا - yes
+        - 28664 # لَا - No!
+        - 28665 # لَا - no;not
+        - 659 # أَوكَي - OK!
+        - 19754 # طَيِّب - OK!
+        - 30787 # مَاشِي - OK!
+        - 24815 # مَفْهُوم - Understood!
+        - 396 # أَكِيد - Sure!
+
+        # Thanks / Apologies / Please
+        - 16682 # شُكْرَا - Thank you!
+        - 21288 # العَفو - excuse me!;you're welcome!
+        - 21282 # عَفْواً - excuse me!;pardon!
+        - 330 # آسِف - sorry
+        - 500 # مَا عَلَيك أَمِر - please;if you do not mind
+
+        # Exclamations & Reactions
+        - 36173 # يَا - Oh!
+        - 14788 # يَا سَلَام - Wow!
+        - 6852 # يَا حَلَاوَة - Wow!
+        - 6846 # حِلُو - Nice!
+        - 26995 # قول وغير - Unbelievable!
+        - 29272 # يَا لَطِيف - Oh my God!
+        - 6891 # بْيِسْتَاهَل الحَمْد - Thank God!
+        - 5972 # يَا حَسِرْتي - Alas!
+        - 15306 # مبروك على سِوَاك - Congratulations!
+        - 32462 # يُنْصُر دينك - well-done!
+        - 10630 # دير بَالك - Watch out!
+        - 5720 # حَرَام - Poor X!
+        - 8312 # خْطَيّ - Poor X!
+
+        # Goodbyes / Riddance
+        - 8369 # بْخَاطْرَك - Goodbye!
+        - 26516 # اِقْلِب وِجْهَك - Good riddance!
+        - 11197 # رَوحة بلَا رَجْعَة - Good riddance!
+        - 26295 # قَطِيعَة - Good riddance!
+        - 6786 # حِلّ عَن رَاسِي - Get lost!
+
+        # Question / Filler Phrases
+        - 30119 # مَالُه - Why?
+        - 30064 # عَلَيش - Why?
+        - 8994 # خَير - What!
+        - 725 # بَالك - Do you think?
+        - 16197 # بِالمْشَرْمَحي - In a nutshell
+        - 14157 # نُقْطَة عَالسَّطِر - That's all
+    - title: "Common Verbs"
+      icon: "Zap"
+      wordIds:
+        # Action & Motion
+        - 12390 # يرُوح - go
+        - 4966 # يِجِي - come
+        - 3047 # تَعَال - come
+        - 4967 # إِجَى - come
+        - 30794 # يِمْشِي - walk
+        - 12081 # يِرْكُض - run
+        - 35926 # يُوقَف - stand
+        - 4342 # يِجْلِس - sit
+        - 26440 # يُقْعُد - sit down
+        - 4165 # يجَعْمِز - sit (colloquial)
+        - 33812 # ينَام - sleep
+        - 29335 # يِلْعَب - play
+        # Consumption
+        - 434 # يَوكِل - eat
+        - 15934 # يِشْرَب - drink
+        # Doing & Exchanging
+        - 21805 # يِعْمَل - make;do
+        - 16467 # يِشْتِغِل - work
+        - 97 # يَوخِذ - take
+        - 32612 # يِنْطِي - give
+        - 21141 # يَعْطِي - give
+        - 4988 # يجِيب - bring
+        - 6329 # يحُطّ - put
+        - 16227 # يِشْتِرِي - buy
+        - 2788 # يبِيع - sell
+        - 23197 # يِفْتَح - open
+        - 14511 # يسَكِّر - close
+        # Communication
+        - 27008 # يقُول - say
+        - 27011 # قَال - say
+        - 6626 # يِحْكِي - talk
+        - 7576 # يخَبِّر - tell
+        - 13501 # يِسْأَل - ask
+        - 13505 # سَأَل - ask
+        - 4787 # يجَاوِب - answer
+        - 1750 # بَعَث - send
+        # Cognition & Senses
+        - 17206 # يشُوف - see
+        - 17208 # شَاف - see;look
+        - 23488 # يِتْفَرَّج - see/watch
+        - 19375 # يِتْطَلَّع - look
+        - 14953 # يِسْمَع - listen;hear
+        - 14955 # سِمِع - listen;hear
+        - 24529 # يفَكِّر - think
+        - 24531 # فَكَّر - think
+        - 19872 # يظُنّ - think
+        - 19873 # ظَنّ - think
+        - 20545 # يِعْرَف - know
+        - 20551 # عِرِف - know
+        - 24830 # يِفْهَم - understand
+        - 24839 # فِهِم - understand
+        - 21630 # يِتْعَلَّم - learn
+        - 21633 # تْعَلَّم - learn
+        # Feelings & Needs
+        - 964 # بِدّ - want
+        - 12420 # يرِيد - want
+        - 12426 # رَاد - want
+        - 7216 # يِحْتَاج - need
+        - 5076 # يحِبّ - love
+        - 27800 # يِكْرَه - hate
+        - 27803 # كِرِه - hate
+        - 20131 # يِعْجِب - like
+        - 20139 # عَجَب - like
+    - title: "Time"
+      icon: "Clock"
+      wordIds:
+        # Scale of Time (Short to Long)
+        - 3108 # تَكِّة - second;minute
+        - 3454 # ثَانِي - second
+        - 9931 # دَقِيقَة - minute
+        - 15247 # سَاعَة - hour;watch
+        - 15248 # سِاعَة - hour;watch
+        - 36281 # يَوم - day
+        - 13575 # أُسْبُوع - week
+        - 13577 # أَسَابِيع - week
+        - 17082 # شَهَر - month
+        - 15107 # سَنِة - year
+        - 21328 # عَقِد - decade
+        - 25819 # قَرِن - century
+        - 25820 # قْرُون - century
+        - 6479 # حِقْبِة - era        
+        # Parts of the Day (Chronological)
+        - 16138 # شُرُوق - sunrise
+        - 17381 # صَبَاح - morning
+        - 17379 # صُبِح - morning
+        - 33602 # نْهَار - morning
+        - 19880 # ظُهُر - noon
+        - 30747 # مَسَا - evening
+        - 30088 # لَيلِة - night        
+        # General Time Periods
+        - 21715 # عُمُر - age
+        - 21718 # أَعْمَار - age
+        - 10355 # دَهِر - age
+        - 20908 # عَصِر - age
+        - 20912 # عُصُور - age
+        - 35500 # مَوْسِم - season
+        - 35502 # مَوَاِسِم - season
+        - 23235 # فَتْرَة - period
+        - 30315 # مُدِّة - period
+        # Past / Present / Future
+        - 1110 # اِمْبَارِح - yesterday
+        - 36285 # اليَوم - today
+        - 36282 # أَيَّام - day
+        - 2016 # بُكْرَة - tomorrow
+        - 30849 # مَاضِي - past
+        - 6253 # حَاضِر - present        
+        # Now
+        - 34562 # هَلَّا - now
+        - 34542 # هَلَّق - now
+        - 34388 # هَسَّا - now
+        - 7471 # الحِين - now        
+        # Chronology (Before / After / Sequence)
+        - 2012 # بَكِّير - early
+        - 978 # بَدْرِي - early
+        - 134 # مِتْأَخِّر - late
+        - 35174 # وَخْرِي - late
+        - 25098 # قَبِل - before
+        - 21308 # عُقُب - after
+        - 1784 # بعدهَا - afterwards
+        - 1801 # بَعْدَين - then/later
+        - 3416 # ثُمّ - then
+        - 15251 # سَاعِيتهَا - then (at that time)
+        - 1211 # بَرْضُه - then/also
+        - 25437 # قَرِيباً - soon
+        # Frequency & Duration
+        - 19712 # على طُول - always
+        - 33604 # لَيل نْهَار - always (night and day)
+        - 22027 # بَالعَادِة - usually
+        - 22016 # عَادَةً - usually
+        - 35861 # أَوقَات - sometimes 
+        - 30424 # إِمْرَار - sometimes
+        - 34874 # هَيك وهَيك - sometimes 
+        - 1785 # بَعْده - still
+        - 28316 # كَمَا - still
+        - 29119 # لِسَّه - still
+        - 5425 # لَحَدّ - until
+        - 5245 # حَتَّى - until
+        - 36279 # يَومِي - daily
+        - 17077 # شَهْرِي - monthly
+        # Days of the Week
+        - 3469 # اِثْنَين - Monday 
+        - 3406 # ثُلَاثَاء - Tuesday
+        - 11097 # أَرْبِعَاء - Wednesday
+        - 8711 # خَمِيس - Thursday
+        - 4481 # جُمْعَة - Friday
+        - 13534 # سَبْت - Saturday
+        - 35127 # أَحَد - Sunday
+        - 21100 # عُطْلِة - holiday/weekend  
+        # Seasons of the Year
+        - 11098 # رَبِيع - Spring
+        - 18288 # صَيف - Summer
+        - 7959 # خَرِيف - Autumn
+        - 15638 # شِتَا - Winter
+    - title: "Directions & Orientation"
+      icon: "Compass"
+      wordIds:
+        # Movement & Cardinal Directions
+        - 36263 # يَمِين - right
+        - 36239 # يَسَار - left
+        - 15377 # سِيدَا - straight
+        - 21455 # عَكْس - opposite
+        - 16949 # شَمَال - north
+        - 4580 # جَنُوب - south
+        - 16140 # شَرْق - east
+        - 22414 # غَرْب - west
+        # Relative Positions
+        - 24923 # فَوق - above;up
+        - 2876 # تَحِت - under;down
+        - 25356 # قُدَّام - in front of
+        - 35352 # وَرَا - behind
+        - 4568 # جَنْب - next to
+        - 4950 # جُوَّا - inside;in
+        - 1156 # بَرَّا - outside       
+        # Structural Locations
+        - 26767 # قِمِّة - top
+        - 26768 # قِمَم - top
+        - 26967 # قَاع - bottom
+        - 14921 # مَسْمَط - middle
+        - 12064 # مَرْكَز - center
+        - 12065 # مَرَاكِز - center
+        - 6436 # حِفِّة - edge
+        - 25816 # قُرْنِيِّة - corner
+        - 33676 # نِهَايِة - end
+        - 3167 # تَالِي - end/following
+    - title: "Colors"
+      icon: "Palette"
+      wordIds:
+        # Primary
+        - 6896 # أَحْمَر - red
+        - 12760 # أَزْرَق - blue
+        - 17847 # أَصْفَر - yellow
+        # Secondary
+        - 8279 # أَخْضَر - green
+        - 1084 # بُرْتُقَالِي - orange (color)
+        - 30100 # لَيلَكِي - purple       
+        # Neutral & Earth
+        - 15202 # أَسْوَد - black
+        - 2743 # أَبْيَض - white
+        - 12145 # رَمَادِي - grey/gray
+        - 2422 # بُنِّي - brown
+        # Modifiers
+        - 23199 # فَاتِح - light (color)
+        - 22904 # غَامِق - dark (color)
+        - 16133 # مُشْرِق - bright
+        - 16521 # شَفَّاف - transparent
+    - title: "Size & Dimensions"
+      icon: "Maximize"
+      wordIds:
+        # General Size
+        - 27220 # كْبِير - big
+        - 18407 # ضَخِم - huge/large
+        - 17806 # صْغِير - small
+        - 35467 # وَاسِع - wide/spacious
+        - 11842 # رْفِيع - narrow
+        # Length & Height
+        - 19704 # طَوِيل - long/tall
+        - 26093 # قَصِير - short
+        - 21647 # عَالِي - high/tall
+        - 21761 # عَمِيق - deep
+        # Thickness & Weight
+        - 3384 # ثْقِيل - heavy
+        - 8433 # خَفِيف - light
+        - 8742 # خْمِيل - thick
+        - 14971 # سْمِيك - thick
+        - 11963 # رْقِيق - thin (objects)
+        - 32431 # نَاصِح - fat (people)
+        - 18491 # ضْعِيف - thin (people)
+        - 31883 # نْحِيف - thin (people)
+        - 15063 # سْنِيف - thin/skinny (people)        
+        # Nouns (Dimensions)
+        - 27084 # مَقَاس - size (clothing/shoes)
+        - 5349 # حَجِم - volume/size (general)
+        - 19710 # طُول - length
+        - 19711 # أَطْوَال - length
+        - 20478 # عَرْض - width
+        - 21762 # عُمُق - depth
+        - 35396 # وَزِن - weight
+    - title: "Communication Verbs"
+      icon: "MessageCircle"
+      wordIds:
+        # Talking & Stating
+        - 27008 # يقُول - say
+        - 27011 # قَال - say
+        - 7576 # يخَبِّر - tell
+        - 10774 # يِذْكُر - mention
+        - 10781 # ذَكَر - mention
+        - 21979 # يِعْنِي - mean
+        - 21980 # عَنَى - mean
+        - 32699 # يِنْعَت - describe
+        - 32700 # نَعَت - describe
+        - 15974 # يِشَرَح - explain
+        - 15976 # شَرَح - explain
+        - 23956 # يفَسِّر - interpret/explain
+        - 23960 # فَسَّر - interpret;explain
+        - 2935 # يتَرْجِم - translate
+        - 2936 # تَرْجَم - translate
+        # Asking & Answering
+        - 13501 # يِسْأَل - ask
+        - 13505 # سَأَل - ask
+        - 4787 # يجَاوِب - answer
+        - 11418 # يرُدّ - respond/reply
+        - 11426 # رَدّ - answer/respond
+        - 33237 # ينَاقِش - discuss
+        - 33239 # نَاقَش - discuss
+        - 32643 # ينَاظِر - debate
+        - 32649 # نَاظَر - debate
+        # Volume & Tone
+        - 34610 # يِهْمِس - whisper
+        - 34612 # هَمَس - whisper
+        - 18231 # يصَيِّح - yell/shout
+        - 18233 # صَيَّح - yell
+        - 17684 # يصَرِّخ - scream/yell
+        - 17685 # صَرَّخ - scream
+        - 22984 # يغَنِّي - sing
+        - 22989 # غَنَّى - sing
+        - 16755 # يِشْكِي - complain
+        - 16759 # شَكَى - complain
+        # Interactions & Intentions
+        - 35590 # يِتِّصِل - call
+        - 35596 # اِتَّصَل - call
+        - 12276 # يرِنّ - ring/call
+        - 12277 # رَنّ - ring
+        - 32052 # نَادَى - call out
+        - 32049 # ينَادِي - call
+        - 7527 # يحيّ - greet
+        - 20372 # يِعْتِذِر - apologize
+        - 20375 # اِعْتَذَر - apologize
+        - 328 # يِتْأَسَّف - apologize/say sorry
+        - 329 # تْأَسَّف - apologize
+        - 5467 # يحَذِّر - warn
+        - 32445 # يِنْصَح - advise
+        - 32450 # نَصَح - advise
+        - 35729 # يُوعِد - promise
+        - 35734 # وَعَد - promise
+        - 27551 # يِكْذِب - lie
+        - 27550 # اِكْذِب - lie
+    - title: "Mental Verbs"
+      icon: "Brain"
+      wordIds:
+        # Knowledge & Learning
+        - 20545 # يِعْرَف - know
+        - 20551 # عِرِف - know
+        - 9562 # يِدْرَى - know
+        - 24830 # يِفْهَم - understand
+        - 24839 # فِهِم - understand
+        - 21630 # يِتْعَلَّم - learn
+        - 21633 # تْعَلَّم - learn
+        - 21629 # يعَلِّم - teach
+        - 21632 # عَلَّم - teach
+        - 9483 # يدَرِّس - teach
+        # Memory & Imagination
+        - 10776 # يِتْذَكَّر - remember
+        - 10783 # تْذَكَّر - remember
+        - 32254 # يِنْسَى - forget
+        - 32260 # نِسِي - forget
+        - 9068 # يِتْخَيَّل - imagine
+        - 6822 # يِحْلَم - dream
+        # Opinion & Expectation
+        - 24529 # يفَكِّر - think 
+        - 24531 # فَكَّر - think
+        - 19872 # يظُنّ - think
+        - 19873 # ظَنّ - think
+        - 21350 # يِعْتَقِد - think
+        - 21358 # اِعْتَقَد - think
+        - 17613 # يصَدِّق - believe
+        - 17617 # صَدَّق - believe
+        - 35904 # يِتْوَقَّع - expect
+        - 35908 # تْوَقَّع - expect
+        - 9511 # يِدْرِك - realize
+        - 5812 # يِحْزَر - guess
+        - 16700 # شَكّ - doubt
+        - 13504 # يِتْسَاءَل - wonder
+        - 13506 # تْسَاءَل - wonder
+        - 25827 # يقَارِن - compare
+        - 25832 # قَارَن - compare
+        # Intention & Choice
+        - 25518 # يقَرِّر - decide
+        - 25522 # قَرَّر - decide
+        - 9019 # يِخْتَار - choose
+        - 8392 # يخَطِّط - plan
+        - 33827 # يِنْوِي - intend
+        - 33828 # نَوَى - intend
+        - 31296 # يِتْمَنَّى - wish
+        - 31298 # تْمَنَّى - wish
+    - title: "Physical Verbs"
+      icon: "Blocks"
+      wordIds:
+        # Posture & Slow Motion
+        - 35925 # يوَقِّف - stand
+        - 35926 # يُوقَف - stand
+        - 26440 # يُقْعُد - sit down
+        - 30794 # يِمْشِي - walk
+        - 30336 # يِتْمَدَّد - lie down / stretch out
+        - 13938 # يِنْسِدِح - lie down
+        # Fast & Heavy Motion
+        - 12081 # يِرْكُض - run
+        - 32571 # ينُطّ - jump
+        - 18815 # يُطْبُل - fall / drop
+        # Forces (Push, Pull, Hold, Throw)
+        - 13039 # يزُقّ - push
+        - 13760 # يِسْحَب - pull
+        - 30729 # يِمْسِك - catch / hold / grab
+        - 29601 # يُلْقُط - catch / pick up
+        - 12228 # يِرْمِي - throw
+        # Altering Objects (Build, Break, Fix, Cut)
+        - 2455 # يِبْنِي - build
+        - 21735 # يعَمِّر - build
+        - 34188 # يِهْدِم - demolish / destroy
+        - 17952 # يصَلِّح - fix / mend
+        - 27910 # يِكْسِر - break
+        - 18437 # يِضْرُب - hit / beat
+        - 29509 # يِلْفَع - hit / beat
+        - 26131 # يقُصّ - cut
+        - 11054 # يِرْبُط - tie
+
+- section: "Personal Life • الحياة الشخصية"
+  topics:
+    - title: "Family"
+      icon: "Baby"
+      wordIds:
+        # Core Relatives
+        - 22251 # عَيلِة - family
+        - 22255 # عِيَل - family
+        - 11 # أَب - father
+        - 14 # أَبَّهَات - father
+        - 528 # أُمّ - mother
+        - 526 # أُمَّهَات - mother
+        - 9087 # خَيّ - brother (colloquial)
+        - 162 # أَخ - brother (standard)
+        - 151 # أُخُت - sister
+        - 150 # إِخْوَات - sister
+        - 164 # إِخْوِة - siblings
+        - 3242 # تَوم - twins
+        # Offspring
+        - 2425 # اِبِن - son
+        - 2426 # أَبْنَاء - son
+        - 2341 # بِنِت - daughter/girl
+        - 2339 # بَنَات - daughter/girl
+        # Extended Family
+        - 15372 # سِيد - grandfather
+        - 15373 # سْيَاد - grandfather
+        - 3280 # تِيتَة - grandmother
+        - 21827 # عَمّ - paternal uncle
+        - 21828 # عْمَام - paternal uncle
+        - 21825 # عَمِّة - paternal aunt
+        - 8939 # خَال - maternal uncle
+        - 8941 # خْوَال - maternal uncle
+        - 25439 # قَرِيب - relative
+        - 25443 # أَقَارِب - relative
+        # In-Laws & Marriage
+        - 4877 # جَوز - husband
+        - 4879 # جِيزَان - husband
+        - 30368 # مَرَة - wife/woman
+        - 32240 # نِسْوَان - wife/woman
+        - 7074 # حَمَا - father-in-law
+        - 7071 # حَمَايِة - mother-in-law
+        - 18102 # صِهِر - brother-in-law
+        - 32152 # نْسِيب - in-law
+        - 32154 # نَسَايِب - in-law
+        - 2586 # بُوبُّو - baby boy
+        - 3241 # تَوْأَم - twins
+        - 13856 # مَسْخُوط - child
+        - 25602 # قَارُوط - child
+        - 25597 # قَارُوط - orphan
+        - 25598 # قَوَاريط - orphan
+        - 12187 # أَرْمَل - widow
+        - 13857 # سَخْطَة - child
+    - title: "Body Parts"
+      icon: "BicepsFlexed"
+      wordIds:
+        # The Core Body
+        - 4056 # جِسِم - body
+        - 10265 # دَمّ - blood
+        - 28921 # لَحِم - flesh/meat
+        - 21157 # عَظْمِة - bone
+        - 21016 # عَضَلِة - muscle
+        - 20891 # عَصَب - nerve
+        - 20561 # عِرْق - vein
+        - 20563 # عْرُوق - vein (plural)
+        # Torso & Organs
+        - 11894 # رَقَبِة - neck
+        - 11903 # رْقَاب - neck (plural)
+        - 6739 # حَلْق - throat
+        - 17557 # صَدِر - chest
+        - 19876 # ظَهِر - back
+        - 24394 # فَقَار - spine
+        - 1683 # بَطِن - belly
+        - 1686 # بْطُون - belly (plural)
+        - 8201 # خَصِر - waist
+        - 26506 # قَلْب - heart
+        - 27211 # كِبِد - liver
+        - 28306 # كِلْيِة - kidney
+        - 30888 # مِعْدِة - stomach
+        - 18529 # ضِلِع - rib
+        - 18531 # ضْلُوع - rib (plural)
+        # Arms & Hands
+        - 27358 # كِتِف - shoulder
+        - 18530 # ضِلِع - arm
+        - 18534 # ضُلْعَان - arm (plural)
+        - 28531 # كُوع - elbow
+        - 11527 # رُسُغ - wrist
+        - 36210 # إِيد - hand
+        - 36211 # أَيَادي - hand (plural)
+        - 17430 # إِصْبَع - finger
+        - 19835 # ظِفِر - nail
+        # Legs & Feet
+        - 23424 # فَخِذ - thigh
+        - 23423 # فْخَاذ - thigh (plural)
+        - 12017 # رُكْبِة - knee
+        - 20189 # عِجِل - calf
+        - 11244 # رِجِل - leg
+        - 11245 # رِجْلَين - leg (plural)
+        - 28028 # كَعِب - ankle/heel
+        - 28030 # كْعُوب - ankle/heel (plural)
+        - 11236 # اِجِر - foot
+        - 11246 # اِجْرَين - foot (plural)
+    - title: "Face & Head"
+      icon: "Smile"
+      wordIds:
+        # The Head & Core
+        - 10896 # رَاس - head
+        - 10899 # رُوس - head (plural)
+        - 30271 # مُخّ - brain
+        - 10240 # دْمَاغ - brain
+        - 30272 # مْخَاخ - brain (plural)
+        - 4443 # جُمْجُمِة - skull
+        - 16356 # شَعَر - hair
+        - 35043 # وِجِه - face
+        - 35045 # وْجُوه - face (plural)
+        # Eyes & Ears
+        - 22266 # عَين - eye
+        - 22269 # عْيُون - eye (plural)
+        - 5263 # حَاجِب - eyebrow
+        - 4227 # جِفِن - eyelid
+        - 205 # ذَان - ear
+        - 211 # ذِنَين - ear (plural)
+        # Nose & Cheeks
+        - 8186 # خَشِم - nose
+        - 31944 # مِنْخَار - nose
+        - 7706 # خَدّ - cheek
+        # Mouth & Jaw
+        - 3433 # ثِمّ - mouth
+        - 2617 # بُوز - mouth
+        - 13042 # زُقُم - mouth
+        - 33847 # نِيع - mouth
+        - 3436 # ثْمَام - mouth (plural)
+        - 16522 # شِفِّة - lip
+        - 16523 # شَفَايِف - lip (plural)
+        - 15087 # سِنّ - tooth
+        - 15091 # سْنَان - tooth (plural)
+        - 29144 # لْسَان - tongue
+        - 29145 # أَلْسِنِة - tongue (plural)
+        - 24538 # فَكّ - jaw
+        - 24539 # فْكُوك - jaw (plural)
+        # Chin & Beard
+        - 10750 # ذِقِن - chin/beard
+        - 10752 # ذْقُون - chin/beard (plural)
+        - 28951 # لِحْيِة - beard
+        - 28952 # لُحَى - beard (plural)
+    - title: "Senses"
+      icon: "Activity"
+      wordIds:
+        # General Senses
+        - 5990 # حَاسِّة - sense
+        - 16381 # شَعَر - feel
+        - 16375 # يُشْعُر - feel (imperf)
+        - 6004 # حَسّ - feel
+        - 6001 # يْحِسّ - feel (imperf)
+        # Sight
+        - 32619 # نَظَر - sight
+        - 10956 # رُؤيَة - vision
+        - 21846 # أَعْمَى - blind
+        - 17208 # شَاف - see
+        - 17206 # يشُوف - see (imperf)
+        - 19381 # تْطَلَّع - look
+        - 19375 # يِتْطَلَّع - look (imperf)
+        - 23493 # تْفَرَّج - watch/see
+        - 23488 # يِتْفَرَّج - watch/see (imperf)
+        # Hearing
+        - 14942 # سَمَع - hearing
+        - 18973 # أَطْرَش - deaf
+        - 18024 # أَصَمّ - deaf (msa)
+        - 14955 # سِمِع - hear
+        - 14953 # يِسْمَع - hear (imperf)
+        # Smell
+        - 12517 # رِيحَة - smell (noun)
+        - 16965 # شَمّ - smell
+        - 16963 # يشِمّ - smell (imperf)
+        # Taste
+        - 10857 # ذَوق - taste (noun)
+        - 10858 # أَذْوَاق - taste (plural noun)
+        - 19159 # طَعِم - flavor
+        - 10874 # ذَاق - taste
+        - 10873 # يذُوق - taste (imperf)
+        # Touch & Tactile
+        - 29746 # مَلْمَس - touch/texture
+        - 35024 # وَجَع - pain
+        - 473 # أَلَم - pain
+        - 7710 # مْخَدَّر - numb
+        - 7718 # يِخْدَر - numb (imperf)
+        - 29751 # اِلْمَس - touch
+        - 29757 # يِلْمِس - touch (imperf)
+    - title: "Emotions & Feelings"
+      icon: "Heart"
+      wordIds:
+        # Happiness & Love
+        - 14200 # سَعَادِة - happiness
+        - 14198 # سَعِيد - happy
+        - 23501 # فَرَح - happiness
+        - 23496 # فَرْحَان - happy
+        - 23505 # يِفْرَح - be happy (imperf)
+        - 14023 # سُرُور - pleasure
+        - 1452 # مَبْسُوط - happy
+        - 1474 # مِنْبِسِط - happy
+        - 23707 # مْفَرْفِش - happy
+        - 1469 # اِنْبَسَط - enjoy/be happy
+        - 1471 # يِنْبَسِط - enjoy/be happy (imperf)
+        - 5045 # حُبّ - love (noun)
+        - 5042 # مَحَبِّة - affection
+        - 5077 # حَبّ - love
+        - 5076 # يحِبّ - love (imperf)
+        # Sadness & Hate
+        - 5888 # حُزُن - sadness
+        - 5886 # حَزِين - sad
+        - 12901 # زَعَل - sadness/upset
+        - 12899 # زَعْلَان - sad/upset
+        - 27793 # كُرُه - hate (noun)
+        - 27796 # كِرِه - hate
+        - 27800 # يِكْرَه - hate (imperf)
+        # Anger & Frustration
+        - 22630 # غَضَب - anger
+        - 22628 # غَضْبَان - angry
+        - 5540 # حَرَد - anger
+        - 5539 # حَرْدَان - angry
+        - 20887 # مْعَصِّب - angry/nervous
+        - 20896 # عَصَّب - get angry
+        - 20899 # يعَصِّب - get angry (imperf)
+        - 23097 # غَيظ - annoyance
+        - 23102 # غَاظ - annoy
+        - 23100 # يغِيظ - annoy (imperf)
+        # Fear & Surprise
+        - 8931 # خَوف - fear (noun)
+        - 8929 # خَايِف - afraid
+        - 8940 # خَاف - fear
+        - 8937 # يْخَاف - fear (imperf)
+        - 7939 # خَرْعَة - fear/fright
+        - 11749 # رَعَب - frighten
+        - 11747 # يِرْعِب - frighten (imperf)
+        - 23300 # مُفَاجَأَة - surprise
+        - 8298 # مَخْضُوض - shocked/surprised
+        # Disgust & Jealousy
+        - 25668 # قَرَف - disgust
+        - 25675 # قَرْفَان - disgusted
+        - 23080 # غِيرِة - jealousy
+        - 23077 # غَيْرَان - jealous
+        # Tiredness & Boredom
+        - 3008 # تَعَب - tiredness
+        - 3007 # تَعْبَان - tired
+        - 12308 # إِرْهَاق - exhaustion
+        - 13296 # زَهَق - boredom
+        - 13295 # زَهْقَان - bored
+        - 31179 # مَلَل - boredom
+        - 31173 # مَلَّان - bored
+        - 19230 # طَفْشَان - bored
+        # Worry & Confusion
+        - 34670 # هَمّ - worry (noun)
+        - 34663 # مَهْمُوم - worried
+        - 26621 # قَلَقَان - worry (noun)
+        - 26617 # قَلْقَان - worried
+        - 26619 # قَلِق - worried
+        - 26625 # قِلِق - worry
+        - 26623 # يِقْلَق - worry (imperf)
+        - 34943 # مِتْوَتِّر - nervous/stressed
+        - 7415 # حِيرِة - confusion
+        - 7413 # حَيْرَان - confused
+        - 11104 # اِرْتِبَاك - confusion
+        - 11101 # مِرْتِبِك - confused
+        - 11109 # رَبَك - confuse
+        - 11107 # يِرْبِك - confuse (imperf)
+        # Physical States & Traits
+        - 4912 # جُوع - hunger
+        - 4909 # جُوْعَان - hungry
+        - 4910 # جَعَان - hungry
+        - 21064 # عَطَش - thirst
+        - 21062 # عَطْشَان - thirsty
+        - 30490 # مَرِيض - sick
+        - 22307 # عَيَّان - sick
+        - 17496 # صِحِّي - healthy
+        - 35832 # وَافِي - healthy
+        - 7696 # خَجَل - shyness
+        - 7491 # مِسْتِحِي - shy
+        - 7692 # خَجُول - shy
+        - 23432 # فَخِر - pride
+        - 23427 # فَخُور - proud
+        - 34207 # هَادِي - calm
+        - 4656 # مَجْنُون - crazy
+        - 33954 # أَهْبَل - idiot/crazy
+    - title: "Qualities"
+      icon: "Sparkles"
+      wordIds:
+        # Good & Bad
+        - 4992 # جَيِّد - good
+        - 31068 # مْلِيح - good
+        - 449 # أَلِف - good
+        - 15186 # سَيِّئ - bad
+        - 21098 # عَاطِل - bad
+        - 11455 # رَدِي - bad
+        # Beautiful & Ugly
+        - 4532 # جَمِيل - beautiful
+        - 16763 # شَلَبِي - beautiful
+        - 6845 # حْلَيوَة - handsome
+        - 35496 # وَسِيم - handsome
+        - 25018 # قَبِيح - ugly
+        - 1518 # بِشِع - ugly
+        - 17346 # شَين - ugly
+        # Smart & Stupid
+        - 10784 # ذَكِي - smart/clever
+        - 16278 # شُطَّار - smart
+        - 31642 # نَبِيه - clever
+        - 2125 # عقله بْيُوزِن بَلَد - clever
+        - 22353 # غَبِي - stupid
+        - 33954 # أَهْبَل - idiot/crazy
+        - 18169 # أَصْوَج - idiot
+        # Kind, Polite & Mean, Rude
+        - 29268 # لَطِيف - kind
+        - 192 # آدَمِي - polite/decent
+        - 28653 # لَئِيم - mean
+        - 14346 # سَافِل - mean/bastard
+        - 35684 # وَاطِي - base/mean
+        - 31785 # نِجِس - mean/base
+        - 35870 # وَقِح - rude
+        - 747 # بِجِح - rude
+        - 22291 # عَينُه بَارْحَة - rude
+        # Generous & Stingy
+        - 27739 # كَرِيم - generous
+        - 925 # بَخِيل - stingy
+        - 27431 # كُحْتِة - stingy
+        - 4310 # جِلْدِة - stingy
+        - 36216 # إِيده مَاسكة - stingy
+        # Honest & Liar
+        - 17599 # صَادَق - honest
+        - 17657 # صَرِيح - frank/honest
+        - 354 # أَصِيل - authentic/grateful
+        - 359 # اِبِن أُصُول - authentic/grateful
+        - 27537 # كَذَّاب - liar
+        - 7911 # خَرِّيط - liar
+        - 2033 # بَكَّاش - liar
+        # Brave & Cowardly
+        - 15656 # شُجَاع - brave
+        - 7938 # خُرِّيعَة - coward
+        - 29216 # مَلْطَشِة - coward
+        # Hardworking & Lazy
+        - 27934 # كَسُول - lazy
+        - 3202 # تَنْبَل - lazy
+        - 3201 # مْتَنْبِل - lazy
+        - 34650 # مُهْمِل - careless
+        # Humble & Arrogant
+        - 35634 # مُتَوَاضِع - humble/down to earth
+        - 27221 # مُتَكَبِّر - arrogant
+        - 21646 # مُتَعَالِي - arrogant
+        - 20151 # مُتَعَجْرِف - arrogant
+        - 2429 # اِبِن بيرو - arrogant
+        # Funny & Serious
+        - 10266 # خَفِيف دَمّ - funny
+        - 32831 # نِغِش - funny
+        - 19824 # ظَرِيف - nice/funny
+        - 23705 # فَرْفُوش - funny
+        # Strong, Weak & Stubborn
+        - 27050 # قَوِي - strong
+        - 15869 # شَدِيد - strong/vigorous
+        - 30051 # لَادّ - strong
+        - 3090 # تِقِع - strong
+        - 18490 # ضَعِيف - weak
+        - 19533 # طَنْط - weak
+        - 34476 # هَفْتَان - weak
+        - 11380 # رَخَوِي - weak
+        - 7839 # خُرْخُشِّة - weak
+        - 21886 # عَنِيد - stubborn
+        - 10929 # رَاسُه يَابس - stubborn
+        # Other Traits
+        - 566 # أَنَانِي - selfish
+        - 35834 # وَفِي - loyal
+        - 6814 # حَلِيم - patient
+        - 20176 # مَعْجُوق - busy
+    - title: "Life Events"
+      icon: "PartyPopper"
+      wordIds:
+        # Birth & Early Life
+        - 35999 # مِيلَاد - birth/birthday
+        - 36024 # وِلِد - be born
+        - 36021 # يُولَد - be born (imperf)
+        - 36007 # وِلَادِة - giving birth
+        - 33567 # يِنْمو - grow
+        # Education & Career
+        - 7824 # يِتْخَرَّج - graduate
+        - 7807 # خِرِّيج - graduate
+        - 26442 # يِتْقَاعَد - retire (verb)
+        - 26425 # تَقَاعُد - retirement
+        # Relationships & Marriage
+        - 8335 # خُطُوبِة - engagement
+        - 31154 # مِلْكِة - engagement/marriage contract
+        - 4871 # جْوَازِة - marriage
+        - 4870 # جِيزِة - marriage
+        - 13317 # زَوَاج - marriage
+        - 15559 # شَبْكِة - engagement gift
+        - 9319 # دُخْلِة - wedding night
+        - 9199 # دِبْلِة - wedding ring
+        - 20807 # شهر عَسَل - honeymoon
+        - 6457 # حَفْلِة - party/celebration
+        - 6462 # اِحْتَفَل - celebrate
+        - 6463 # يِحْتَفِل - celebrate (imperf)
+        # Separation
+        - 19397 # طَلَاق - divorce
+        - 12221 # رَمى عليهَا اليمين - divorce (idiom)
+        # Life, Aging & Health
+        - 22239 # يعِيش - live
+        - 22227 # عَايِش - alive
+        - 21715 # عُمُر - age
+        - 7690 # خَتْيَر - get old
+        - 7685 # خِتْيَار - old man
+        - 20156 # عَجُوز - old person
+        # End of Life
+        - 31365 # مَات - die
+        - 31361 # يمُوت - die (imperf)
+        - 31347 # مَوت - death
+        - 35837 # وَفَاة - death (formal)
+        - 35842 # اِتْوَفَّى - pass away
+        - 35846 # يِتْوَفَّى - pass away (imperf)
+        - 31342 # مَيِّت - dead
+        - 9866 # دَفِن - burial
+        - 19443 # يُطْمُر - bury
+        - 4612 # جْنَازِة - funeral
+        - 2698 # بَيت أَجِر - funeral home
+    - title: "Relationships"
+      icon: "Users"
+      wordIds:
+        # Friends, Partners & Companions
+        - 17602 # صَدِيق - friend
+        - 17472 # صَاحِب - friend/companion
+        - 11872 # رِفْقَة - friendship/companions
+        - 16861 # شِلِّة - group of friends
+        - 16167 # شَرِيك - partner
+        - 6707 # حَلِيف - ally
+        - 17491 # يصَاحِب - befriend / have a relationship with
+        - 11876 # يرَافِق - accompany
+        - 22149 # يِتْعَاوَن - cooperate
+        - 15047 # يِسْنِد - support
+        # Enemies & Rivals
+        - 20318 # عَدُو - enemy
+        - 20320 # عَدَا - enemy
+        - 22509 # غَرِيم - enemy
+        - 8243 # خَصِم - rival/competitor
+        - 9651 # دُشْمَان - rival/competitor
+        - 32009 # نِدّ - peer/rival opponent
+        - 13595 # مُتَسَابِق - competitor
+        - 33013 # ينَافِس - compete
+        - 20504 # يعَارِض - oppose
+        - 18440 # يضَارِب - conflict/fight
+        # Professional & Authority (Work)
+        - 10944 # رَيِّس - boss
+        - 10476 # مُدِير - manager/director
+        - 26932 # قَائِد - leader
+        - 12918 # زَعِيم - leader
+        - 2834 # مُتَابِع - follower
+        - 35704 # مُوَظَّف - employee
+        - 13162 # زَمِيل - colleague
+        - 16451 # شَغَّال - worker/servant
+        - 7739 # خَدَّام - servant
+        - 36060 # مَوْلَى - master/lord
+        - 10509 # يدِير - manage
+        - 26940 # يقُود - lead
+        - 2838 # يِتْبَع - follow
+        - 35712 # يوَظِّف - employ
+        # Educational (School)
+        - 302 # أُسْتَاذ - teacher (male)
+        - 303 # أَسَاتْذِة - teachers
+        - 21616 # مْعَلِّم - teacher
+        - 9462 # مُدَرِّس - teacher
+        - 19335 # طَالِب - student
+        - 3161 # تِلْمِيذ - student
+        - 21629 # يعَلِّم - teach
+        - 21630 # يِتْعَلَّم - learn
+        # Social & Hospitality
+        - 18624 # مُضِيف - host (noun)
+        - 18613 # ضَيف - guest
+        - 20735 # مَعْزُوم - guest (invited)
+        - 22407 # غُرَبَاء - strangers
+        - 1154 # بَرَّاني - foreigner/stranger
+        - 13362 # يزُور - visit
+        - 19422 # يطُلّ - visit/show up
+        - 20743 # يِعْزِم - invite
+        - 18627 # يِسْتَضِيف - host (verb)
+
+- section: "Home • البيت"
+  topics:
+    - title: "Daily Actions"
+      icon: "BrushCleaning"
+      wordIds:
+        # Waking & Sleeping
+        - 17535 # يِصْحَى - wake up
+        - 24995 # يفِيق - wake up
+        - 23874 # يفِزّ - get up
+        - 33812 # ينَام - sleep
+        - 33790 # نَوم - sleep
+        - 2712 # يْبِيت - sleep
+        - 33788 # نَومِة - sleep
+        # Start, Stop, Try & Wait
+        - 948 # يِبْدَا - start
+        - 951 # يِبْدَأ - start
+        - 2147 # يبَلِّش - start
+        - 28152 # يكُفّ - stop
+        - 7366 # يحَاوِل - try
+        - 7343 # مُحَاوَلِة - try
+        - 32644 # يِنْتِظِر - wait
+        - 32554 # يُنْطُر - wait
+        - 12461 # يرَيِّض - wait
+        - 15118 # اِسْتَنَّى - wait
+        # Eating & Drinking
+        - 15934 # يِشْرَب - drink
+        - 15915 # مَشْرُوب - drink (noun)
+        - 29407 # يلُغّ - eat/devour
+        - 14527 # يسُكّ - eat
+        - 18700 # يُطْبُخ - cook
+        # Movement (Go, Come, Return)
+        - 12390 # يرُوح - go
+        - 11202 # يِرْجَع - return
+        - 32130 # يِنْزِل - go down/go somewhere
+        - 10633 # يدُور - go around/walk
+        - 2020 # يبَكِّر - come early
+        # Commerce & Acquiring
+        - 16227 # يِشْتِرِي - buy
+        - 2788 # يبِيع - sell
+        - 2871 # يْتَاجِر - trade
+        - 29681 # يِلْقَى - find
+        - 29664 # لَاقِي - find
+        - 29690 # يِلْقَى - find
+        - 20304 # يِعْدَم - lose
+        - 8102 # يِخْسَر - lose
+        - 97 # يَوخِذ - take
+        # Work & Help
+        - 16467 # يِشْتِغِل - work
+        - 16449 # شُغُل - work (noun)
+        - 10582 # يدَاوِم - go to work/school
+        - 14213 # يسَاعِد - help
+        - 22145 # يعَاوِن - help
+        - 7747 # يِسْتَخْدِم - use
+        - 21777 # اِسْتِعْمَال - use
+        - 21807 # يِسْتَعْمِل - use
+        # Housekeeping (Clean, Wash, Open, Close)
+        - 23204 # مَفْتُوح - open (adj)
+        - 16850 # مَشْلُوق - open (adj)
+        - 23201 # يفَتِّح - open (verb)
+        - 14511 # يسَكِّر - close/shut (verb)
+        - 32652 # نْظِيف - clean (adj)
+        - 16309 # يُشْطُف - clean floor
+        - 28423 # يكَنِّس - sweep
+        - 22573 # يِغْسِل - wash
+        - 22574 # يغَسِّل - wash
+        - 28822 # يلِحّ - wash utensils
+        - 32683 # ينَظِّم - organize
+        - 3098 # يْتَكْتِك - arrange
+        - 31249 # مَنْدِيل مُعَطَّر - wipe
+        - 28588 # يِكْوِي - iron
+        - 28579 # مِكْوَايِة - iron
+        - 19748 # يِطْوِي - fold
+        - 9458 # يِدْرُز - sew
+        - 21542 # مْعَلَّق - hang
+        - 17031 # يِشْنُق - hang
+    - title: "House Structure"
+      icon: "Home"
+      wordIds:
+        # Property & Home
+        - 2684 # بَيت - house
+        - 10478 # دَار - house (dar)
+        - 2439 # بِنَايِة - building
+        - 21711 # عَمَارَة - building
+        - 16617 # شَقَّة - apartment
+        - 5451 # حَدِيقَة - garden
+        - 4658 # جْنَينِة - garden
+        - 27603 # كَرَاج - garage
+        # Rooms
+        - 22482 # غُرْفِة - room
+        - 30114 # لِيوَان - living room
+        - 18698 # مَطْبَخ - kitchen
+        - 2704 # بَيت المَي - bathroom
+        - 21648 # عِلِّيِّة - attic
+        - 15304 # تَسْوِيِة - basement
+        # Structural Parts
+        - 2553 # بَاب - door
+        - 15561 # شُبَّاك - window
+        - 19680 # طَاقَة - small window
+        - 7301 # حَيط - wall
+        - 15056 # سِنِسْلِة - stacked rock wall
+        - 14416 # سَقِف - interior roof / ceiling
+        - 14127 # سَطِح - exterior roof
+        - 17770 # مُصْطَبِة - floor
+        - 2162 # بَلَاطَة - floor tile
+        - 9390 # دَرَج - stairs
+        - 2271 # بَلْكَونِة - balcony
+        - 7804 # مَخْرَج - exit
+        # Utilities & Infrastructure
+        - 28484 # كَهْرَبَاء - electricity
+        - 31436 # مَيّ - water
+        - 18592 # ضَوّ - light
+        - 33732 # نُور - light / illumination
+        - 29724 # لَمْبَة - lamp
+        - 18146 # صَوبَّة - heater
+        - 9881 # دَفَّايِة - heater
+        - 30123 # مَاسُورَة - pipe
+        - 8078 # خَزَّان - water tank
+    - title: "Furniture"
+      icon: "Armchair"
+      wordIds:
+        # Sitting & Sleeping
+        - 28403 # كَنَبَايِة - couch
+        - 30318 # مَدّ - sofa (floor seating)
+        - 27658 # كُرْسِي - chair
+        - 2898 # تَخِت - bed
+        - 14025 # سْرِير - bed
+        # Tables & Storage
+        - 19708 # طَاوْلِة - table
+        - 2918 # تَرَابَيزَة - table
+        - 33541 # نَمْلِيّة - kitchen cupboard
+        - 16939 # شَمَّاعَة - wardrobe / closet
+        - 3872 # جَرَّار - drawer
+        - 9391 # دُرُج - drawer
+        - 9852 # دَفِّة - shelf
+        # Bedding & Decor
+        - 23576 # فَرْشِة - mattress
+        - 5729 # حْرَام - blanket
+        - 28867 # لْحَاف - blanket / quilt
+        - 7705 # مَخَدِّة - pillow
+        - 1122 # بُرْدَايِة - curtain (common)
+        - 13658 # سْتَارَة - curtain
+        - 10962 # مْرَايِة - mirror
+        - 6174 # حَصِيرِة - floor mat / carpet
+        - 4090 # جَاعِد - sheep skin rug
+    - title: "Household Tools"
+      icon: "Hammer"
+      wordIds:
+        # Tools & Hardware
+        - 25361 # قَدُّوم - small hammer / axe
+        - 24537 # مَفَكّ - screwdriver
+        - 12712 # زَرَّادِيِّة - pliers
+        - 32294 # مِنْشَار - saw
+        - 14879 # مِسْمَار - nail
+        - 26480 # قَفِل - lock
+        - 23180 # مِفْتَاح - key
+        - 14780 # سُلَّم - ladder
+        - 15323 # سِيبِة - ladder
+        - 5169 # حَبِل - rope
+        - 14734 # سِلِك - wire
+        - 29071 # لُزَّيق - tape
+        - 18013 # صَمِغ - glue
+        # Cleaning & Utility
+        - 25985 # مَقَشِّة - straw broom
+        - 17930 # مُصْلَحَة - broom
+        - 23575 # فُرْشَايِة - brush
+        - 340 # إِسْفَنْج - sponge
+        - 17450 # صَابُون - soap
+        - 14172 # سَطِل - bucket
+        - 10180 # دَلُو - bucket
+        - 8754 # خَمِّة - trash
+        - 33119 # نُفَايَات - trash
+        - 7388 # حَاوْيِة - trash can
+        # Miscellaneous Tools
+        - 26125 # مَقَصّ - scissors
+        - 9042 # خَيط - thread
+        - 9138 # دَبُّوس - pin
+        - 30764 # مِشْط - comb
+        - 28579 # مِكْوَايِة - iron
+        - 34824 # هَوَّايِة - fan
+        - 12356 # مَرْوَحَة - fan
+        - 25285 # قَدَّاحَة - lighter
+        - 36028 # وَلَّاعَة - lighter
+        - 1635 # بَطَّارِيِّة - battery
+        - 1071 # بَرْبِيش - hose
+    - title: "Kitchen Items"
+      icon: "Utensils"
+      wordIds:
+        # Dishware & Flatware
+        - 17524 # صَحِن - plate
+        - 14652 # سُلْطَانيِّة - bowl
+        - 27159 # كَاس - cup
+        - 24732 # فِنْجَان - cup
+        - 27160 # كَاسِة - glass
+        - 21547 # مَعْلَقَة - spoon
+        - 29364 # مِلْعَقَة مشَلَّحَة - fork
+        - 14547 # سِكِّين - knife
+        - 8924 # خُوصَة - knife
+        # Cooking & Serving
+        - 19509 # طَنْجَرَة - cooking pot
+        - 26673 # قَلَّايِة - frying pan
+        - 18097 # صِينِيِّة - tray
+        - 15452 # شَاف - jug
+        - 26871 # قَنِّينِة - bottle
+        - 11139 # مَرْتَبَان - glass jar
+        - 2023 # بَكْرَج - teapot
+        - 1125 # بَرَّاد - teapot
+        - 2001 # بَاكَيت - can / packet
+        # Appliances & Fixtures
+        - 3407 # ثَلَّاجِة - fridge
+        - 23823 # فُرُن - oven
+        - 35876 # مُوقَد - stove
+        - 8528 # خَلَّاط - blender
+        - 4423 # مَجْلَى - kitchen sink
+    - title: "Garments"
+      icon: "Shirt"
+      wordIds:
+        # Tops & Outerwear
+        - 15479 # شُبَّاح - undershirt
+        - 24774 # فَانِيلَّا - undershirt
+        - 26713 # قَمِيص - shirt
+        - 2311 # بْلُوزِة - blouse
+        - 3884 # جِرْزَايِة - sweater
+        - 4258 # جَاكَيت - jacket
+        - 13659 # سُتْرَة - jacket
+        - 27200 # كَبُّوت - coat
+        - 19319 # طَقِم - suit
+        - 1003 # بَدْلِة - suit
+        # Bottoms
+        - 2410 # بَنْطَلَون - trousers
+        - 17161 # شُورْت - shorts
+        - 27166 # كَابَوي - jeans
+        - 3217 # تَنُّورَة - skirt
+        # Dresses & Traditional
+        - 23909 # فُسْتَان - dress
+        - 20028 # عَبَايِة - Abaya
+        - 3475 # ثَوب - traditional dress/gown
+        - 4263 # جِلْبَاب - robe
+        - 12556 # مَرْيُول - uniform
+        # Underwear & Sleepwear
+        - 28703 # لْبَاس - underwear
+        - 28240 # كَلْسَون - underwear
+        - 2878 # لِبِس تَحْتَانِي - underwear
+        # Footwear
+        - 3770 # جْرَاب - socks
+        - 28239 # كَلْسَات - socks
+        - 13566 # سُبََّاط - shoe
+        - 17760 # صُرْمَايِة - shoe
+        - 26785 # قُنْدَرَة - shoe
+        - 4014 # جَزْمِة - boot
+        - 1476 # بُسْطَار - boot
+        - 18047 # صَنْدَل - sandal
+        - 15523 # شِبْشِب - slippers
+        - 15712 # شَحَّاطَة - slippers
+        - 13190 # زَنُّوبِة - slippers
+        - 726 # بَابُوج - slippers
+        # Headgear & Neckwear
+        - 19681 # طَاقِيِّة - hat
+        - 5264 # حْجَاب - hijab
+        - 29482 # لَفْحَة - winter scarf
+        - 15453 # شَالِة - scarf
+        - 17431 # مُصْبَعَانِيَّات - gloves
+        - 3913 # جْرَافِة - tie
+        - 21942 # رَبْطِة عُنُق - tie
+        - 5863 # حْزَام - belt
+        - 25996 # قْشَاط - belt
+        - 13221 # زُنَّار - belt
+        # Accessories & Jewelry
+        - 15248 # سَاعَة - watch
+        - 17007 # شَنْطَة - bag
+        - 9570 # دُزْدَان - wallet
+        - 32615 # نَظَّارَة - glasses
+        - 17200 # شَوَّافِة - glasses
+        - 15057 # سِنْسَال - necklace
+        - 23003 # غْوَيشِة - bracelet
+        - 9199 # دِبْلِة - wedding ring
+        - 7652 # خَاتِم - ring
+        - 6740 # حَلَق - earring
+        # The Tailor & Actions
+        - 9041 # خَيَّاط - tailor
+        - 9040 # خْيَاطَة - sewing
+        - 24109 # تَفْصِيل - tailoring
+        - 18967 # تَطْرِيز - embroidery
+        - 9046 # يخَيِّط - sew
+        - 26131 # يقُصّ - cut
+        - 18969 # يطَرِّز - embroider
+        - 19748 # يِطْوِي - fold
+        - 28588 # يِكْوِي - iron
+        # Tools & Fasteners
+        - 2 # إِبْرِة - needle
+        - 9042 # خَيط - thread
+        - 26125 # مَقَصّ - scissors
+        - 30132 # مِتِر - tape measure
+        - 18676 # طُبِّة - thread spool
+        - 12716 # زِرّ - button
+        - 13750 # سَحَّاب - zipper
+        - 9138 # دَبُّوس - pin
+        - 11947 # رُقْعَة - patch
+        - 22460 # غُرْزِة - stitch
+        # Materials & Fabrics
+        - 26710 # قْمَاش - fabric
+        - 26404 # قُطُن - cotton
+        - 18189 # صُوف - wool
+        - 5572 # حَرِير - silk
+        - 4317 # جِلْد - leather
+        # Style & Fashion
+        - 31403 # مَوضَة - fashion
+        - 13640 # سْتَايْل - style
+        - 18966 # طَرْز - pattern/model
+        - 32205 # نَسَق - pattern
+        - 32163 # نَسِج - weave
+        - 17443 # يُصْبُغ - dye
+        - 17438 # صَبْغَة - dye
+        
+- section: "Food • الطعام"
+  topics:
+    - title: "Pantry Staples"
+      icon: "Wheat"
+      wordIds:
+        # Oils & Liquids
+        - 13424 # زَيت - oil
+        - 13432 # زِيت - oil
+        - 8631 # خَلّ - vinegar
+        - 20805 # عَسَل - honey
+        - 20209 # مَعْجُون - paste (tomato paste)
+        - 30527 # مَرَقَة - broth
+        # Baking & Powders
+        - 14501 # سُكَّر - sugar
+        - 14503 # سِكَّر - sugar
+        - 31079 # مِلِح - salt
+        - 31080 # مُلُح - salt
+        - 18863 # طْحِين - flour
+        - 8698 # خَمِيِرِة - yeast
+        - 8697 # خَمِير - yeast
+        - 20210 # عَجِين - dough
+        - 20221 # عَجِينِة - dough
+        - 7588 # خَبِز - baking
+        - 7592 # خُبِز - bread
+        - 7594 # خُبُز - bread
+        # Grains & Legumes
+        - 11472 # رُزّ - rice
+        - 26693 # قَمْح - wheat
+        - 16387 # شْعِير - barley
+        - 1248 # بُرْغُل - bulgur
+        - 20255 # عَدَس - lentil
+        - 24940 # فُول - beans
+        - 6963 # حُمُّص - chickpeas
+        # Herbs & Spices
+        - 2849 # يتَبِّل - spice
+        - 2500 # بْهَارَات - spices
+        - 24659 # فِلْفِل أسود - pepper
+        - 28394 # كَمُّون - cumin
+        - 25665 # قِرْفِة - cinnamon
+        - 34879 # هِيل - cardamom
+        - 12844 # زعتر نَاس - thyme
+        - 15460 # شَاي - tea
+        - 26910 # قَهْوِة - coffee
+    - title: "Vegetables"
+      icon: "Carrot"
+      wordIds:
+        # Fruiting Vegetables
+        - 2364 # بَنَدُورَة - tomato
+        - 9003 # خْيَار - cucumber
+        - 1043 # بَاذِنْجَان - eggplants
+        - 28521 # كُوسَايِة - zucchini
+        # Root & Tuber Vegetables
+        - 1605 # بَطَاطَا - potatoes
+        - 3991 # جَزَرَة - carrot
+        - 2361 # بَنْجَر - beet
+        - 29468 # لِفِت - turnip
+        # Leafy Greens & Cruciferous
+        - 8111 # خَسّ - lettuce
+        - 29521 # مَلْفُوف - cabbage
+        - 25835 # قَرْنَبِيط - cauliflower
+        # Fresh Herbs & Others
+        - 32807 # نَعْنَع - mint
+        - 1917 # بَقْدُونِس - Parsley
+        - 5145 # حَبَق - basil
+        - 10733 # ذُرَة - maize/corn
+    - title: "Fruits"
+      icon: "Apple"
+      wordIds:
+        # The Fruit Class
+        - 24555 # فوَاكِه - fruit
+        # Citrus & Core Fruits
+        - 3058 # تُفَّاح - apples
+        - 31391 # مَوز - bananas
+        - 1086 # بُرْتُقَال - orange
+        - 30103 # لَيْمُون - lemon
+        - 6974 # حَامِض - lemon
+        # Summer & Melon Fruits
+        - 1634 # بَطِّيخ - watermelon
+        - 16958 # شِمَّام - melon
+        - 21875 # عِنَب - grapes
+        - 8905 # خَوخ - peach
+        - 1280 # بَرْقُوق - plum
+        - 30784 # مِشْمِش - apricots
+        # Berries, Cherries & Dates
+        - 23832 # فَرَاوْلِة - strawberry
+        - 27639 # كَرَزِة - cherry
+        - 3252 # تُوت - berries
+        - 3308 # تِين - figs
+        - 3175 # تَمِر - dates
+    - title: "Nuts & Seeds"
+      icon: "Bean"
+      wordIds:
+        # The Class & Snacks
+        - 27891 # مْكَسَّرَات - nuts
+        - 14828 # تَسَالِي - nuts/snacks
+        # Nuts
+        - 4876 # جَوز - walnut
+        - 29931 # لَوز - almond
+        - 2372 # بُنْدُق - hazelnut
+        - 23904 # فُسْتُق - pistachio/peanut
+        - 27863 # كَسْتَنَا - chestnut
+        - 18096 # صْنَوبَر - pine nuts
+        # Seeds
+        - 1037 # بُذُور - seeds
+        - 1378 # بِزِر - roasted seeds
+        - 14915 # سِمْسِم - sesame
+    - title: "Meat & Proteins"
+      icon: "Beef"
+      wordIds:
+        # The Basics & Poultry
+        - 28921 # لَحِم - meat
+        - 3502 # جَاج - chicken
+        - 2747 # بَيض - eggs
+        # Livestock & Seafood
+        - 22952 # غَنَم - sheep
+        - 20189 # عِجِل - calf/beef
+        - 14967 # سَمَك - fish
+        # Organ Meats & Prepared
+        - 27211 # كِبِد - liver
+        - 28306 # كِلْيِة - kidney
+        - 33349 # نَقَانِق - sausage
+        - 28111 # كَفْتَة - kofta
+        - 23800 # مَفْرُوم - ground/minced
+    - title: "Dairy Products"
+      icon: "Milk"
+      wordIds:
+        # Milks & Liquids
+        - 6641 # حَلِيب - milk
+        # Yogurts & Cultured
+        - 28749 # لَبَن - yogurt (leben)
+        - 12573 # زَبَادِي - yogurt (zabadi)
+        - 28747 # لَبَنِه - labaneh
+        # Creams & Fats
+        - 25995 # قِشْطَة - clotted cream
+        - 14996 # سَمْنِة - fat/ghee
+    - title: "Sweets & Desserts"
+      icon: "CakeSlice"
+      wordIds:
+        # The Basics & Sugars
+        - 6842 # حِلو - sweet
+        - 6849 # حِلُو - dessert
+        - 14501 # سُكَّر - sugar
+        - 20805 # عَسَل - honey
+        - 27780 # كَرَامَيل - caramel
+        # Candies & Spreads
+        - 16743 # شُكَلَاتَة - chocolate
+        - 31911 # نَحَانِيح - candy
+        - 11116 # مْرَبَّى - jam (murabba)
+        - 19426 # تَطْلِي - jam (tatli)
+        - 2657 # بُوظَة - ice cream
+        # Traditional & Baked
+        - 28635 # كَيك - cake
+        - 1968 # بَقْلَاوَة - baklava
+        - 28449 # كْنَافِة - knafeh
+        - 26356 # قَطَايِف - qatayef
+        - 22138 # عَوَّامِة - awameh
+    - title: "Drinks"
+      icon: "Coffee"
+      wordIds:
+        # Basics & Vessels
+        - 31436 # مَيّ - water
+        - 27159 # كَاس - cup/glass
+        - 24732 # فِنْجَان - coffee cup
+        # Hot Drinks
+        - 26910 # قَهْوِة - coffee
+        - 15460 # شَاي - tea
+        # Cold Drinks
+        - 20909 # عَصِير - juice
+        - 6641 # حَلِيب - milk
+        # Alcohols
+        - 15915 # مَشْرُوب - drink/alcohol
+        - 8691 # خَمْرَة - wine
+    - title: "Meals & Dishes"
+      icon: "Soup"
+      wordIds:
+        # The Meals
+        - 34979 # وَجْبِة - meal
+        - 24201 # فْطُور - breakfast
+        - 12478 # تَرْوِيقَة - breakfast
+        - 22391 # غَدَا - lunch
+        - 20874 # عَشَا - dinner
+        # Dishes & Portions
+        - 14446 # سَكْبِة - dish
+        - 17524 # صَحِن - plate/dish
+        # Food Types
+        - 29519 # لَفِّة - sandwich roll
+        - 20449 # عَرُوسِة - sandwich
+        - 15921 # شَورَبِة - soup
+        - 30527 # مَرَقَة - broth/stock
+        - 14642 # سَلَطَة - salad
+        # Snacks
+        - 17403 # تَصْبِيرِة - snack
+        - 33206 # نَقْرَشِة - snack
+    - title: "Flavors & Tastes"
+      icon: "IceCreamBowl"
+      wordIds:
+        # Taste & Flavor Concepts
+        - 19159 # طَعِم - taste
+        - 33499 # نَكْهَة - flavor
+        # Core Profiles
+        - 6842 # حِلو - sweet
+        - 6971 # حَامِض - sour
+        - 31070 # مَالِح - salty
+        - 30421 # مُرّ - bitter
+        - 5565 # حَار - hot/spicy
+        - 5667 # حَرَّاق - spicy
+        # Quality & State
+        - 13057 # زَاكِي - delicious
+        - 19753 # طَيِّب - tasty/nice
+        - 10074 # دِلِع - bland/unsalted
+        - 19080 # طَازَا - fresh
+        - 18691 # مَطْبُوخ - cooked
+        - 25733 # مْقَرْقِش - crunchy
+        # Spoilage
+        - 21269 # مْعَفِّن - rotten/moldy
+        - 6972 # مْحَمِّض - rotten/spoiled
+
+- section: "Nature • الطبيعة"
+  topics:
+    - title: "Activity Verbs"
+      icon: "Footprints"
+      wordIds:
+        # Directional Movement
+        - 12390 # رَاح - go
+        - 4966 # إِجَى - come
+        - 11202 # رِجِع - return
+        - 9336 # دَخَل - enter
+        - 19368 # طِلِع - exit/go out
+        # Body Positioning
+        - 35926 # وِقِف - stand
+        - 26436 # قَعَد - sit down
+        # Physical Action
+        - 30802 # مَشَى - walk
+        - 12081 # رَكَض - run
+        - 32571 # نَطّ - jump
+        - 13553 # سِبِح - swim
+        - 35898 # وِقِع - fall
+        - 14303 # سَافَر - travel
+    - title: "Physical States"
+      icon: "SunSnow"
+      wordIds:
+        # Energy & Sleep
+        - 3007 # تَعْبَان - tired
+        - 32710 # نَعْسَان - sleepy
+        - 17526 # صَاحِي - awake
+        - 33786 # نَايِم - sleeping
+        # Satiety
+        - 4909 # جُوْعَان - hungry
+        - 21062 # عَطْشَان - thirsty
+        - 15546 # شَبْعَان - full
+        # Health & Temperature
+        - 30490 # مَرِيض - ill/sick
+        - 1118 # بَرْدَان - feeling cold
+        - 17125 # مْشَوِّب - feeling hot
+        # Baseline Moods
+        - 1452 # مَبْسُوط - happy
+        - 12899 # زَعْلَان - angry/sad
+    - title: "Weather"
+      icon: "Cloud"
+      wordIds:
+        # The Sky & Conditions
+        - 19267 # طَقِس - weather
+        - 4952 # جَوّ - weather/atmosphere
+        - 15012 # سَمَا - sky
+        - 16904 # شَمِس - sun
+        - 26698 # قَمَر - moon
+        - 34829 # هَوَا - air
+        - 23105 # غَيمِة - cloud
+        - 13744 # سَحَابِة - cloud
+        # Precipitation
+        - 30854 # مَطَرَة - rain
+        - 3409 # ثَلِج - snow
+        # Storms & Events
+        - 12519 # رِيح - wind
+        - 32223 # نَسْمِة هوَا - breeze
+        - 20939 # عَاصِفِة - storm
+        - 1251 # بَرِق - lightning
+        - 11751 # رَعِد - thunder
+        - 15425 # سَيل - flood
+        - 24974 # فَيَضَان - flood
+        - 4208 # جَفَاف - drought
+        - 19808 # طِين - mud
+        - 22324 # غَبْرَة - dust
+        - 18298 # ضَبَاب - fog
+        - 11702 # رْطُوبِة - humidity
+    - title: "Natural Elements"
+      icon: "Mountain"
+      wordIds:
+        # Land & Geography
+        - 255 # أَرْض - land/earth
+        - 12192 # رَمِل - sand
+        - 2916 # تْرَاب - dirt/sand
+        - 19808 # طِين - mud
+        - 35224 # وَادِي - valley
+        - 19603 # طُور - cave
+        - 22992 # مَغَارَة - cave
+        - 3149 # تَلِّة - hill
+        - 3989 # جَزِيرَة - island
+        # Flora & Nature
+        - 15643 # شَجَرَة - tree
+        - 35269 # وَرْدِة - rose/flower
+        - 20817 # عِشِب - grass
+        - 6538 # حَقِل - field
+        - 12738 # مَزْرَعَة - farm
+        # Materials & Elements
+        - 5310 # حَجَر - stone
+        - 17541 # صَخْرَة - rock
+        - 8135 # خَشَب - wood
+        - 6305 # حَطَب - firewood
+        - 33728 # نَار - fire
+        - 9347 # دُخَّان - smoke
+        - 9346 # دَخَنِة - smoke
+        - 24947 # فَيّ - shadow
+        - 19843 # ظِلّ - shadow
+        # Water Bodies
+        - 31435 # مَيِّة - water
+        - 812 # بَحَر - sea
+        - 13817 # سَاحِل - coast
+        - 16294 # شَطّ - beach
+        - 33601 # نَهِر - river
+        - 31614 # نَبْعَة - spring
+        - 710 # بِير - well
+    - title: "Plants"
+      icon: "Leaf"
+      wordIds:
+        # The Flora
+        - 31558 # نَبَات - plant
+        - 31556 # نَبْتِة - plant
+        - 5604 # حَرْش - bush
+        - 26693 # قَمْح - wheat
+        # Plant Anatomy
+        - 35316 # وَرَقَة - leaf
+        - 23651 # فَرِع - branch
+        - 9088 # دَبِّة - trunk
+        - 16017 # شِرِش - root
+        - 1036 # بَذْرَة - seed
+        - 5044 # حَبِّة - seed/grain
+        - 5058 # حْبُوب اللُّقَاح - pollen
+        # Farming & Agriculture
+        - 12741 # زَرِع - planting
+        - 6162 # حَصَاد - harvest
+    - title: "Domestic Animals"
+      icon: "Cat"
+      wordIds:
+        # Pets & General
+        - 7483 # حَيَوَان - animal
+        - 1442 # بِسّ - cat
+        - 26280 # قُطّ - cat
+        - 28212 # كَلِب - dog
+        - 12240 # أَرْنَب - rabbit
+        # Farm & Livestock
+        - 1921 # بَقَرَة - cow
+        - 7960 # خَارُوف - sheep
+        - 22952 # غَنَم - sheep
+        - 21898 # عَنْزِة - goat
+        - 6229 # حْصَان - horse
+        - 9056 # خَيل - horse
+        - 6905 # حْمَار - donkey
+        - 4539 # جَمَل - camel
+        # Poultry & Birds
+        - 3501 # جَاجِة - hen
+        - 10636 # دِيك - rooster
+        - 7044 # حَمَامِة - pigeon
+        - 20941 # عَصْفُور - bird
+        - 19781 # طَير - bird
+    - title: "Wild Animals"
+      icon: "Panda"
+      wordIds:
+        # Predators & Big Game
+        - 304 # أَسَد - lion
+        - 33514 # نِمِر - tiger
+        - 10678 # ذِيب - wolf
+        - 3364 # ثَعْلَب - fox
+        - 18341 # ضَبِع - hyena
+        - 9091 # دُبّ - bear
+        - 25489 # قِرْد - monkey
+        - 25004 # فِيل - elephant
+        - 35139 # حِمَار وَحْشي - zebra
+        - 8792 # خَنْزِير - pig
+        - 22539 # غَزَالِة - deer
+        # Reptiles
+        - 3179 # تِمْسَاح - crocodile
+        - 7497 # حَيِّة - snake
+        - 3361 # ثُعْبَان - snake
+        - 13815 # سِحْلِيِّة - lizard
+        - 874 # أَبُو البْخُوت - lizard
+        # Wild Birds
+        - 32188 # نِسِر - eagle
+        - 2660 # بُومِة - owl
+        - 22412 # غُرَاب - crow
+    - title: "Insects & Small Creatures"
+      icon: "Bug"
+      wordIds:
+        # General & Flying Insects
+        - 6064 # حَشَرَة - insect
+        - 23582 # فَرَاشِة - butterfly
+        - 31896 # نَحْلِة - bee
+        - 9123 # دَبُّور - wasp/hornet
+        - 9126 # دَبَابِير - wasps/hornets
+        # Crawling Insects
+        - 33542 # نَمْلِة - ant
+        - 17703 # صَرْصُور - cockroach
+        - 17704 # صَرَاصِير - cockroaches
+        - 8836 # خُنْفَسَاء - beetle
+        - 8837 # خَنَافِس - beetles
+        # Biting & Bloodsucking
+        - 1843 # بَاعُوضَة - mosquito
+        - 1844 # بَاعُوض - mosquitos
+        - 34395 # هِسْهِسِة - mosquito
+        - 26761 # قَمْلِة - louse
+        # Spiders & Scorpions
+        - 16390 # شَعْشَبَون - spider
+        - 16389 # شَعْشَبَونِة - spider
+        - 21368 # عَقْرَب - scorpion
+        - 21369 # عَقَارِب - scorpions
+        # Worms, Snails & Rodents
+        - 10456 # دُودِة - worm
+        - 10457 # دُود - worms
+        - 1401 # بُزَّيق - snail
+        - 23121 # فَار - mouse
+        - 23122 # فِيرَان - mice
+
+- section: "Society • المجتمع"
+  topics:
+    - title: "Social Verbs"
+      icon: "HandHeart"
+      wordIds:
+        # Communication & Meetings
+        - 6626 # حَكَى - talk/tell
+        - 14813 # سَلَّم - greet
+        - 11297 # رَحَّب - welcome
+        - 4517 # اِجْتَمَع - meet (group)
+        - 29682 # اِلْتَقَى - meet (someone)
+        - 17211 # تْشَاوَف - meet/see each other
+        - 13362 # زَار - visit
+        - 13350 # زِيَارَة - visit (noun)
+        - 20743 # عَزَم - invite
+        # Interpersonal Actions
+        - 14213 # سَاعَد - help
+        - 16688 # شَكَر - thank
+        - 16689 # تْشَكَّر - thank profusely
+        - 20372 # اِعْتَذَر - apologize
+        - 15047 # سَنَد - support
+        - 15662 # شَجَّع - encourage
+        - 22149 # تْعَاوَن - cooperate
+        - 35518 # وَاسَى - console
+        - 19664 # تْطَوَّع - volunteer
+        # Affection & Feelings
+        - 1484 # اِبْتِسَامِة - smile
+        - 18381 # ضِحِك - laugh
+        - 2065 # بَكَى - cry
+        - 2628 # بُوسِة - kiss
+        - 6302 # حَضَن - hug
+        - 19993 # تَعْبِيط - hug (noun)
+        - 8302 # خَضّ - shake
+        - 31370 # مَوجِة - wave
+        # Activities
+        - 29335 # لِعِب - play
+        - 6462 # اِحْتَفَل - celebrate
+        - 11936 # رَقَص - dance
+        - 22984 # غَنَّى - sing
+    - title: "States & Conditions"
+      icon: "Sliders"
+      wordIds:
+        # Quality & Value
+        - 31227 # مْنِيح - very well/good
+        - 15186 # سَيِّئ - bad
+        - 21098 # عَاطِل - bad
+        - 6846 # حِلُو - nice/beautiful
+        - 1518 # بِشِع - ugly
+        - 6505 # حَقِيقِي - real
+        - 8321 # خَاطِئ - wrong
+        - 6511 # حَقّ - right (correct)
+        - 8562 # مْخْتَلِف - different
+        # Size & Age
+        - 27220 # كْبِير - big
+        - 27226 # كْبَار - big (plural)
+        - 20069 # عَتِيق - old
+        - 25353 # قَدِيم - old
+        - 20156 # عَجُوز - old (person)
+        - 7685 # خِتْيَار - old (person)
+        # Cost & Wealth
+        - 22799 # غَالِي - expensive
+        - 11355 # رْخِيص - cheap
+        - 24388 # فَقِير - poor
+        - 14537 # مِسْكِين - poor/miserable
+        - 13202 # زَنْجِيل - rich
+        # Availability & Condition
+        - 4727 # جَاهِز - ready
+        - 3281 # مُتَاح - available
+        - 24185 # فَاضِي - free/empty
+        - 20176 # مَعْجُوق - busy
+        - 15134 # سَهِل - easy
+        - 17778 # صَعِب - difficult
+        - 29087 # لَازِم - necessary
+        - 7338 # مُسْتَحِيل - impossible
+        - 14024 # سِرّ - secret
+        - 6769 # مُحْتَلّ - occupied
+    - title: "Countries & Regions"
+      icon: "Globe"
+      wordIds:
+        # Geographic Terms
+        - 2118 # بْلَاد - country
+        - 532 # أُمِّة - nation
+        - 5823 # حِزّ - border
+        - 20378 # عَرَبِي - Arab
+        # Palestine & Cities
+        - 24620 # فَلَسْطِين - Palestine
+        - 25345 # قُدْس - Jerusalem
+        - 8664 # خَلِيل - Hebron
+        - 22524 # غَزِّة - Gaza
+        - 32458 # نَاصْرَة - Nazareth
+        - 33130 # نَقَب - Negev
+        # Neighbors & Global
+        - 249 # أُرْدُن - Jordan
+        - 30807 # مَصِر - Egypt
+        - 31012 # مَكِّة - Mecca
+    - title: "City Places"
+      icon: "Building2"
+      wordIds:
+        # General Geography & Infrastructure
+        - 30351 # مَدِينِة - city
+        - 25838 # قَرْيِة - village
+        - 32589 # مَنْطِقَة - area
+        - 16093 # شَارِع - street
+        - 11079 # مُرَبَّع - square
+        - 13032 # زُقَّة - alley
+        - 4038 # جِسِر - bridge
+        - 33087 # نَفَق - tunnel
+        - 32140 # مُتَنَزَّه - park
+        # Facilities & Services
+        - 9461 # مَدْرَسِة - school
+        - 4484 # جَامْعَة - university
+        - 27319 # مَكْتَبِة - library
+        - 16539 # مُسْتَشْفَى - hospital
+        - 22185 # عِيَادِة - clinic
+        - 18249 # صَيْدَلِيِّة - pharmacy
+        - 2417 # بَنْك - bank
+        - 5114 # حَبِس - jail
+        - 9076 # مُخَيَّم - camp
+        # Religion & Culture
+        - 4490 # جَامِع - mosque
+        - 28434 # كَنِيسِة - church
+        - 2891 # مَتْحَف - museum
+        - 15081 # سِينِمَا - cinema
+        - 26590 # قَلْعَة - castle
+        - 19160 # مَطْعَم - restaurant
+        - 23118 # فُنْدُق - hotel
+        - 19780 # مَطَار - airport
+        # Commercial & Industrial
+        - 15270 # سُوق - shop/market
+        - 31408 # مَول - mall
+        - 10008 # دُكَّانِة - supermarket
+        - 1964 # بَقَّالِة - supermarket
+        - 7591 # مَخْبَز - bakery
+        - 3992 # جَزَّار - butcher
+        - 18061 # مَصْنَع - factory
+        - 35294 # وَرْشِة - workshop
+        - 6210 # حَاصِل - warehouse
+        # Buildings & Structures
+        - 21711 # عَمَارَة - building
+        - 2439 # بِنَايِة - building
+        - 1091 # بُرْج - tower
+        - 2706 # بَيت - house/prison
+        - 7301 # حَيط - wall
+        - 2551 # بَوَّابِة - gate
+        - 32944 # نَافُورَة - fountain
+    - title: "Transportation"
+      icon: "Truck"
+      wordIds:
+        - 35920 # مَوْقِف - situation;parking
+        - 9370 # يدَرِّب - train
+        - 9369 # يِتْدَرَّب - train
+        - 19780 # مَطَار - airport
+        - 5382 # حَادِث - accident
+        - 15386 # سَير - traffic;walk
+        - 15385 # مَسَار - lane
+        - 26430 # مَقَاعِد - seat;place [auto]
+        - 26424 # مَقْعَد - seat;place
+        - 719 # بَاص - bus
+        - 12020 # مَرْكِب - boat
+        - 25441 # قَارِب - boat
+        - 12019 # رَاكِب - passenger
+        - 3105 # تَاكْسِي - taxi
+        - 12310 # يِرْهِق - tire;exhaust
+        - 12309 # اِرْهِق - tire;exhaust [auto]
+        - 12311 # أَرْهَق - tire;exhaust [auto]
+        - 15273 # سَوَّاق - driver
+        - 15381 # سَيَّارَة - car
+        - 15382 # سِيَّارَة - car
+        - 6319 # مَحَطَّة - station
+        - 14072 # سُرْعَة - speed;quickness
+        - 14370 # سَفِينِة - ship
+        - 26426 # قَعْدِة - sitting place;seat
+        - 11360 # رُخْصَة - license
+        - 20194 # عَجَلِة - hurry;haste;wheel;tire;wheels;tires
+        - 23822 # فْرَين - brake
+        - 5705 # مِحْرَاك - engine
+        - 18575 # ضَمَانِة - guarantee;security;insurance
+    - title: "Technology"
+      icon: "Smartphone"
+      wordIds:
+        # Devices & Hardware
+        - 4933 # جَوَّال - mobile phone
+        - 28323 # كَمْبِيُوتِر - computer
+        - 3139 # تِلِفِيزْيَون - television
+        - 10981 # رَادْيو - radio
+        - 28331 # كَامِيرَا - camera
+        - 17162 # شَاشِة - screen
+        - 18761 # مَطْبَعَة - printer
+        - 1635 # بَطَّارِيِّة - battery
+        - 15745 # شَاحِن - charger
+        # Digital & Software
+        - 18785 # تَطْبِيق - application
+        - 28484 # كَهْرَبَا - electricity
+        - 24964 # فِيدْيَو - video
+        - 18173 # صُورَة - picture/photo
+        - 23121 # فَار - mouse
+    - title: "Communication Media"
+      icon: "Mail"
+      wordIds:
+        # Connection & Conversation
+        - 35590 # يِتِّصِل - call
+        - 11418 # يرُدّ - answer/reply
+        # Mail & Post
+        - 11531 # رِسَالِة - message/letter
+        - 27324 # مَكْتُوب - letter
+        - 19820 # ظَرِف - envelope
+        - 18766 # طَابِع - stamp
+        - 7653 # خَتِم - stamp
+        - 21965 # عِنْوَان - address
+        # Messages
+        - 30668 # مَسِج - message
+        # Broadcasting & Press
+        - 7566 # خَبَر - news
+        - 10876 # إِذَاعَة - broadcast
+        - 10879 # يذِيع - broadcast (verb)
+        - 26881 # قَنَاة - channel
+        - 1325 # بَرْنَامَج - program
+        - 17518 # صَحَافِة - journalism
+        - 17522 # صَحَفِي - journalist
+        - 3837 # جَرِيدِة - newspaper
+        - 4403 # مَجَلِّة - magazine
+        - 25102 # مُقَابَلِة - interview
+        - 21638 # إِعْلَان - advertisement
+    - title: "Work & Employment"
+      icon: "Briefcase"
+      wordIds:
+        # Career & Profession
+        - 16449 # شُغُل - work
+        - 16467 # يِشْتِغِل - work (verb)
+        - 35707 # وَظِيفِة - job
+        - 31333 # مِهْنِة - job/profession
+        - 1420 # بِزْنِس - business
+        - 16162 # شِرْكِة - company
+        - 27325 # مَكْتَب - office
+        - 35294 # وَرْشِة - workshop
+        - 4492 # اِجْتَمَاع - meeting
+        # People
+        - 10476 # مُدِير - manager
+        - 35704 # مُوَظَّف - employee
+        - 21780 # عَامِل - worker/labourer
+        - 16445 # شَغِّيل - hard working/labourer
+        - 13162 # زَمِيل - colleague
+        # Stages & Pay
+        - 15380 # سِيرِة - biography/resume
+        - 7565 # خِبْرَة - experience
+        - 16468 # يشَغِّل - hire
+        - 11137 # رَاتِب - salary
+        - 22231 # مَعَاش - salary
+        - 11998 # تَرْقِيِة - promotion
+        - 26442 # يِتْقَاعَد - retire
+    - title: "Commerce & Money"
+      icon: "CircleDollarSign"
+      wordIds:
+        # Money & Wealth
+        - 24615 # فْلُوس - money
+        - 30808 # مَصَارِي - money
+        - 30806 # مِصْرِيَّات - money
+        - 28609 # كَاش - cash
+        - 24536 # فَكِّة - change (money)
+        - 23621 # فْرَاطَة - change (money)
+        - 17732 # مَصْرُوف - pocket money/expense
+        - 17738 # مَصَارِيف - pocket money/expenses
+        # Trade & Valuation
+        - 14234 # سِعِر - price
+        - 14235 # أَسْعَار - prices
+        - 3449 # ثَمَن - value/price
+        - 22799 # غَالِي - expensive
+        - 11355 # رْخِيص - cheap
+        - 8240 # خَصِم - discount
+        - 8426 # تَخْفِيض - discount
+        - 18422 # ضَرِيبِة - tax
+        - 18424 # ضَرَايِب - taxes
+        # Buying & Selling
+        - 2861 # تَاجِر - merchant
+        - 2863 # تُجَّار - merchants
+        - 12618 # زْبُون - customer
+        - 12619 # زَبَايِن - customers
+        - 16237 # يِشْتِرِي - buy
+        - 16240 # اِشْتَرَى - buy
+        - 2788 # يبِيع - sell
+        - 2790 # بَاع - sell
+        - 9844 # يِدْفَع - pay
+        - 9848 # دَفَع - pay
+        - 9925 # يدَاقِش - exchange
+        - 9926 # دَاقَش - exchange
+        - 9919 # مْدَاقَشِة - exchange (noun)
+        # Banking & Accounts
+        - 17734 # مَصْرِف - bank
+        - 17739 # مَصَارِف - banks
+        - 17737 # صَرَّاف - ATM machine
+        - 11635 # رَصِيد - balance
+        - 11636 # أَرْصِدِة - balances
+        - 35219 # يُودِع - deposit (verb)
+        - 35222 # أَوْدَع - deposit (verb)
+        - 35203 # وَدِيعَة - deposit
+        - 35218 # وَدَاعَة - deposit
+        - 3429 # يِسْتَثْمِر - invest
+        - 3432 # اِسْتَثْمَر - invest
+        - 35802 # يوَفَّر - save
+        - 35801 # وَفَّر - save
+        - 9313 # يِدِّخِر - save
+        - 9314 # اِدَّخَر - save
+        - 10996 # رِبِح - profit
+        - 10994 # مَرْبَح - profit
+        - 8097 # خَسَارَة - loss
+        - 8098 # مَخْسَر - loss
+        - 14778 # اِسْتِلَام - receipt
+        - 25062 # قَبْضَة - receipt
+        # Lending & Borrowing
+        - 10652 # دَين - debt
+        - 10653 # دْيُون - debts
+        - 25580 # قَرْض - loan
+        - 25583 # قُرُوض - loans
+        - 14700 # يِتْسَلَّف - borrow
+        - 14703 # تْسَلَّف - borrow
+        - 25588 # يِقْتِرِض - borrow
+        - 25592 # اِقْتَرَض - borrow
+        - 22219 # يِسْتَعِير - borrow
+        - 22223 # اِسْتَعَار - borrow
+        - 10663 # يدَيِّن - lend
+        - 10668 # دَيَّن - lend
+        - 10664 # يْدَايِن - lend
+        - 10669 # دَايَن - lend
+        - 25595 # يِقْرِض - lend
+        - 25596 # أَقْرَض - lend (verb)
+        - 25594 # اِقْرِض - lend (noun)
+        - 22221 # يعِير - lend
+        - 22222 # عَار - lend
+        # Renting & Letting
+        - 65 # تَأْجِير - rent (noun)
+        - 63 # إِيجَار - rent (noun)
+        - 64 # أَجَار - rent (noun)
+        - 71 # يؤجِّر - rent (verb)
+        - 73 # أَجَّر - rent (verb)
+        - 72 # يِسْتَأْجِر - rent (verb)
+        - 74 # اِسْتَأْجَر - rent (verb)
+        - 27823 # يِكْرِي - rent (verb)
+        - 27824 # كَرَى - rent (verb)
+    - title: "Education"
+      icon: "GraduationCap"
+      wordIds:
+        # Institutions
+        - 9461 # مَدْرَسِة - school
+        - 9470 # مَدَارِس - schools
+        - 4484 # جَامْعَة - university
+        # People
+        - 9462 # مُدَرِّس - teacher
+        - 302 # أُسْتَاذ - teacher
+        - 303 # أَسَاتْذِة - teachers
+        - 21616 # مْعَلِّم - teacher
+        - 605 # آنِسَة - miss/female teacher
+        - 606 # آنْسِة - miss/female teacher
+        - 19335 # طَالِب - student
+        - 19336 # طُلَّاب - students
+        - 3161 # تِلْمِيذ - student
+        - 3162 # تَلَامِيذ - students
+        - 7807 # خِرِّيج - graduate (noun)
+        # Learning & Teaching (Verbs)
+        - 21630 # يِتْعَلَّم - learn
+        - 21627 # اِتْعَلَّم - learn
+        - 21633 # تْعَلَّم - learn
+        - 21629 # يعَلِّم - teach
+        - 21632 # عَلَّم - teach
+        - 21626 # عَلِّم - teach
+        - 9483 # يدَرِّس - teach
+        - 9485 # دَرَّس - teach
+        - 9481 # دَرِّس - teach
+        - 25427 # يِقْرَا - read
+        - 25425 # اِقْرَا - read
+        - 25431 # قَرَا - read
+        - 25428 # يقَرِّي - make sb read/teach
+        - 25432 # قَرَّا - make sb read/teach
+        - 25426 # قَرِّي - make sb read/teach
+        - 27344 # يكَتِّب - make sb write (causative)
+        - 27350 # كَتَّب - make sb write (causative)
+        - 27339 # كَتِّب - make sb write (causative)
+        # Classroom & Supplies
+        - 17875 # صَفّ - class
+        - 17876 # صْفُوف - classes
+        - 29901 # لَوح - board
+        - 29902 # أَلْوَاح - boards
+        - 17007 # شَنْطَة - bag
+        - 17008 # شَنَاطِي - bags
+        - 27323 # كْتَاب - book
+        - 27328 # كُتُب - books
+        - 9783 # دَفْتَر - notebook
+        - 9784 # دَفَاتِر - notebooks
+        - 27649 # كَرَّاسِة - notebook
+        - 35316 # وَرَقَة - paper
+        - 35317 # وَرَق - paper
+        - 35318 # أَوْرَاق - papers
+        - 26660 # قَلَم - pen/pencil
+        - 26661 # قَلَم - pen/pencil
+        - 26662 # أَقْلَام - pens/pencils
+        # Lessons & Exams
+        - 9465 # دَرْس - lesson
+        - 9469 # دْرُوس - lessons
+        - 9464 # دَرِس - lesson
+        - 6259 # مُحَاضَرَة - lecture
+        - 21607 # عِلِم - knowledge/science
+        - 21618 # عُلُوم - knowledge/sciences
+        - 30236 # اِمْتِحَان - test/exam
+        - 13494 # سُؤَال - question
+        - 13496 # أَسْئِلَة - questions
+        - 4780 # جَوَاب - answer
+        - 4783 # أَجْوِبِة - answers
+        - 34980 # وَاجِب - homework
+        - 21605 # عَلَامِة - grade
+        # Academic Progress
+        - 7824 # يِتْخَرَّج - graduate (verb)
+        - 7818 # اِتْخَرَّج - graduate (verb)
+        - 7830 # تْخَرَّج - graduate (verb)
+        - 11512 # يِرْسُب - fail
+        - 11510 # اِرْسُب - fail
+        - 11514 # رَسَب - fail
+        - 30244 # يِمْتَحِن - take the test/test sb
+        - 30248 # اِمْتَحَن - take the test/test sb
+        - 30239 # اِمْتَحِن - take the test/test sb
+        - 9216 # دِبْلُوم - diploma
+        - 9217 # دِبْلَوم - diploma
+    - title: "Health & Medicine"
+      icon: "Activity"
+      wordIds:
+        # Places & People
+        - 16539 # مُسْتَشْفَى - hospital
+        - 16540 # مَشْفَى - hospital
+        - 13637 # سْبِيطَار - hospital
+        - 16542 # مَشَافِي - hospitals
+        - 22185 # عِيَادِة - clinic
+        - 18249 # صَيْدَلِيِّة - pharmacy
+        - 18677 # طَبِيب - doctor
+        - 18678 # أَطِبَّاء - doctors
+        - 9988 # دَكْتُور - doctor
+        - 9989 # دَكَاتْرَة - doctors
+        - 30494 # مُمَرِّض - nurse
+        - 3176 # تَمَرْجِي - nurse
+        - 3177 # تَمَرْجِيِّة - nurse f
+        - 30490 # مَرِيض - ill/sick/patient
+        - 30492 # مَرْضَى - patients/sick
+        - 30491 # مْرَاض - patients/sick
+        # Sickness & Symptoms
+        - 17497 # صِحَّة - health
+        - 30493 # مَرَض - illness
+        - 30496 # أَمْرَاض - illnesses
+        - 35024 # وَجَع - pain
+        - 35025 # أَوْجَاع - pains
+        - 473 # أَلَم - pain
+        - 474 # آلَام - pains
+        - 17581 # صُدَاع - headache
+        - 5570 # حَرَارَة - heat/temprature
+        - 27445 # كَحِّة - cough
+        - 14253 # سَعْلِة - cough
+        - 21051 # عَطْسِة - sneeze
+        - 3812 # جُرُح - wound
+        - 3814 # جْرُوح - wounds
+        - 10265 # دَمّ - blood
+        - 5988 # حَسَاسِيِّة - allergy
+        # Medicine & Tools
+        - 10619 # دَوَا - remedy/medication
+        - 10618 # أَدْوِيِة - medications
+        - 5057 # حَبِّة دَوَا - pill
+        - 5048 # حُبُوب - pills
+        - 2 # إِبْرِة - needle/injection
+        - 3 # إِبَر - needles/injections
+        - 6541 # حُقْنِة - injection
+        - 6544 # حُقَن - injections
+        - 29570 # لُقَاح - vaccine
+        - 30827 # مَصِل - vaccine
+        - 15451 # شَاش - bandage
+        - 35552 # وَصْفِة طبِّية - prescription
+        # Treatment & Actions
+        - 21518 # عِلَاج - treatment
+        - 21773 # عَمَليِّة - operation/surgery
+        - 30504 # يِمْرَض - get sick
+        - 30509 # مِرِض - get sick
+        - 3013 # يِتْعَب - be tired/get sick
+        - 3015 # تِعِب - be tired/get sick
+        - 18687 # يطَبِّب - treat sb
+        - 18689 # طَبَّب - treat sb
+        - 16550 # يِشْفِي - heal
+        - 16555 # شَفَى - heal
+        - 17508 # يصِحّ - recover
+        - 17511 # صَحّ - recover
+        - 19760 # يطِيب - recover
+        - 19764 # طَاب - recover
+        - 27448 # يكُحّ - cough
+        - 27449 # كَحّ - cough
+        - 14255 # يِسْعَل - cough
+        - 14256 # سَعَل - cough
+        - 21056 # يُعْطُس - sneeze
+        - 21059 # عَطَس - sneeze
+    - title: "Sports & Games"
+      icon: "Trophy"
+      wordIds:
+        # General & Types of Sports
+        - 12452 # رِيَاضَة - sports
+        - 29313 # لِعْبِة - game/toy
+        - 29314 # لُعْبِة - game/toy
+        - 1361 # مُبَارَاة - match
+        - 13593 # مُسَابَقَة - competition
+        - 32972 # مُنَافَسِة - competition
+        - 9359 # تَدْرِيب - training
+        - 30587 # تَمْرِين - exercise
+        - 30588 # تَمَارِين - exercises
+        - 12076 # رَكِض - running
+        - 17710 # مُصَارَعَة - wrestling
+        - 1616 # مْبَاطَحَة - wrestling
+        - 29711 # مُلَاكَمِة - kickboxing/boxing
+        - 25367 # كُرة قَدَم - football
+        - 14756 # كُرَة سَلِّة - basketball
+        # Places, Equipment & Rewards
+        - 29325 # مَلْعَب - stadium/field
+        - 29324 # مَلَاعِب - stadiums/fields
+        - 6538 # حَقِل - field
+        - 32044 # نَادِي - club
+        - 32046 # أَنْدِيِة - clubs
+        - 18662 # طَابِة - ball casual
+        - 27816 # كُرَة - ball generic
+        - 27815 # كَورَة - football / ball
+        - 27159 # كَاس - cup
+        - 35499 # وِسَام - medal
+        - 30347 # مِيدَالِيِّة - medal
+        - 9388 # دَرَجِة - grade/score
+        - 34166 # هَدَف - goal/aim
+        - 12215 # مَرْمَى - goal post/purpose
+        # People
+        - 29342 # لَاعِب - player/athlete
+        - 29341 # لَعِّيبِة - player
+        - 23729 # فَرِيق - team
+        - 23732 # فِرَق - teams
+        - 23733 # أَفْرِقَة - teams
+        - 9360 # مُدَرِّب - trainer/coach
+        - 6607 # حَكَم - judge/referee
+        - 1674 # بَطَل - champion/hero
+        - 1675 # أَبْطَال - champions
+        # Sports Actions (Verbs)
+        - 29335 # يِلْعَب - play
+        - 29339 # لِعِب - play
+        - 24893 # يفُوز - win
+        - 24894 # فَاز - win
+        - 22958 # يِغْنَم - win
+        - 8102 # يِخْسَر - lose
+        - 8106 # خِسِر - lose
+        - 4988 # يجِيب - score/bring
+        - 4989 # جَاب - score/bring
+        - 4987 # جِيب - score/bring
+        - 30591 # يِتْمَرَّن - exercise
+        - 30593 # تْمَرَّن - exercise
+        - 12081 # يِرْكُض - run
+        - 12083 # رَكَض - run
+        - 32571 # ينُطّ - jump
+        - 32573 # نَطّ - jump
+        - 13553 # يِسْبَح - swim
+        - 13556 # سِبِح - swim
+    - title: "Religion & Spirituality"
+      icon: "Moon"
+      wordIds:
+        # Divine, Holy & Supernatural
+        - 481 # الله - God
+        - 10985 # رَبّ - God/Lord
+        - 2134 # اِبْلِيس - devil
+        - 2135 # أَبَالْسِة - devils
+        - 16320 # شِيطَان - devil
+        - 16321 # شَيَاطِين - devils
+        - 4662 # جِنّ - Jinn
+        - 25340 # مُقَدَّس - sacred/divine
+        - 25416 # قُرْآن - Qura'an
+        - 32973 # نَفْس - soul
+        - 12352 # رَوح - soul
+        # Religions & People
+        - 10650 # دِين - religion
+        - 10651 # أَدْيَان - religions
+        - 14775 # إِسْلَام - Islam
+        - 14767 # مُسْلِم - Muslim
+        - 30669 # مَسِيحِي - Christian
+        - 32456 # نَصْرَانِي - Christian
+        - 34735 # يَهُودِي - Jewish
+        - 34736 # يَهُود - Jewish people
+        - 31541 # نَبِي - prophet
+        - 31542 # أَنْبِيَاء - prophets
+        - 31549 # أَنْبَيَاء - prophets
+        - 11530 # رَسُول - messenger/apostle
+        - 11529 # رُسُل - messengers/apostles
+        # Places of Worship
+        - 13699 # مَسْجِد - mosque
+        - 13702 # مَسَاجِد - mosques
+        - 4490 # جَامِع - mosque
+        - 4498 # جَوَامِع - mosques
+        - 28434 # كَنِيسِة - church
+        - 28435 # كَنَائِس - churches
+        - 28436 # كَنَايِس - churches
+        - 19924 # مَعْبَد - temple
+        - 25027 # قَبِر - tomb
+        # Rituals, Concepts & Actions (Verbs/Nouns)
+        - 19940 # يِعْبُد - worship
+        - 19941 # يُعْبُد - worship
+        - 17983 # صَلَاة - prayer
+        - 17990 # صَلَّى - pray
+        - 17989 # يصَلِّى - pray
+        - 9743 # دُعَاء - Duaa/supplication
+        - 9754 # دَعَا - supplicate
+        - 9753 # يِدْعِي - supplicate
+        - 18195 # صْيَام - fasting
+        - 18194 # صَايِم - fasting person
+        - 18200 # صَام - fast
+        - 18196 # صُوم - fast
+        - 18198 # يصُوم - fast
+        - 5286 # حَجّ - pilgrimage/Hajj
+        - 6763 # حَلَال - allowed/permissible
+        - 5718 # حَرَام - forbidden
+        - 5728 # حَرَام - forbidden action
+        - 32767 # نِعْمِة - blessing
+        - 32769 # أَنْعُم - blessings
+        - 32770 # نِعَم - blessings
+        - 1286 # بَرَكِة - blessing/good
+        - 1307 # بَارَك - bless
+        - 1303 # بَارِك - bless
+        - 1305 # يبَارِك - bless
+        - 14860 # سَامَح - forgive
+        - 14852 # سَامِح - forgive
+        - 14856 # يسَامِح - forgive
+        - 22691 # غَفَر - forgive
+        - 22685 # اِغْفِر - forgive
+        - 22688 # يِغْفِر - forgive
+        - 20175 # مُعْجِزِة - miracle
+        - 35741 # مَوْعِظَة - sermon
+        # Sin & Punishment
+        - 10820 # ذَنْب - sin
+        - 10822 # ذْنُوب - sins
+        - 20982 # مَعْصِيِة - sin
+        - 20985 # مَعَاصِي - sins
+        - 10830 # أَذْنَب - sin
+        - 10826 # اِذْنِب - sin
+        - 10828 # يِذْنِب - sin
+        - 20999 # عَصى - disobey/commit a sin
+        - 20993 # اِعْصِي - disobey/commit a sin
+        - 20996 # يِعْصِي - disobey/commit a sin
+        - 4772 # جْهَنَّم - hell
+    - title: "Government & Law"
+      icon: "Scale"
+      wordIds:
+        # Nation & Country
+        - 2118 # بْلَاد - country
+        - 10563 # دَولِة - country/nation
+        - 35666 # وَطَن - nation
+        - 532 # أُمِّة - nation
+        - 537 # أُمَم - nations
+        - 16335 # شَعِب - people
+        # Government & Politics
+        - 6584 # حُكُومِة - government
+        - 1309 # بَرْلَمَان - parliament
+        - 9578 # دَسْتوُر - constitution
+        - 16089 # تَشْرِيع - legislation
+        - 31929 # اِنْتِخَاب - election
+        - 18162 # صَوت - vote
+        - 31936 # اِنْتَخَب - elect
+        - 18422 # ضَرِيبِة - tax
+        - 18424 # ضَرَايِب - taxes
+        # Leadership & Roles
+        - 10895 # رَئِيس - president
+        - 10898 # رُؤَسَاء - presidents
+        - 31157 # مَلِك - king
+        - 31160 # مُلُوك - kings
+        - 496 # أَمِير - prince
+        - 499 # أُمَرَا - princes
+        - 35366 # وَزِير - minister
+        - 35367 # وُزَرَاء - ministers
+        - 12918 # زَعِيم - leader
+        - 12919 # زُعَمَاء - leaders
+        - 6414 # مُحَافِظ - governor
+        - 21677 # عُمْدِة - mayor
+        - 30263 # مُخْتَار - chieftain/head of village
+        - 30264 # مَخَاتِير - chieftains
+        # Law & Justice
+        - 26868 # قَانُون - law
+        - 26867 # قَوَانِين - laws
+        - 6511 # حَقّ - right
+        - 6517 # حُقُوق - rights
+        - 20266 # عَدِل - justice/fairness
+        - 21869 # عَنَان - freedom
+        - 6583 # مَحْكَمِة - court
+        - 6591 # مَحَاكِم - courts
+        - 26206 # قَضِيِّة - lawsuit
+        - 26210 # قَضَايَا - lawsuits
+        - 3768 # تَجْرِيب - trial
+        - 26222 # قَاضِي - judge
+        - 26221 # قُضَاة - judges
+        - 7073 # مُحَامِي - lawyer
+        - 17047 # شَاهِد - witness
+        - 17051 # شُهُود - witnesses
+        - 6607 # حَكَم - pass a judgment
+        - 6600 # يِحْكُم - pass a judgment
+        # Crime & Punishment
+        - 3926 # جَرِيمِة - crime
+        - 3928 # جَرَائِم - crimes
+        - 3939 # أَجْرَم - commit a crime
+        - 3936 # يِجْرِم - commit a crime
+        - 3925 # مُجْرِم - criminal
+        - 18390 # ضَحِيِّة - victim
+        - 19861 # مَظْلُوم - victim of injustice
+        - 19853 # ظَالِم - unjust
+        - 21311 # عِقَاب - punishment
+        - 21318 # عَاقَب - punish
+        - 21316 # يعَاقِب - punish
+        - 13731 # سِجِن - prison/jail
+        - 13734 # سْجُون - prisons/jails
+        - 5114 # حَبِس - jail
+        - 5117 # حْبُوس - jails
+        - 10674 # دِيِّة - blood compensation
+        # Police & Military
+        - 558 # أَمْن - safety/security
+        - 16053 # شُرْطَة - police
+        - 16054 # شُرْطِي - policeman
+        - 18325 # ضَابِط - officer
+        - 18326 # ضُبَّاط - officers
+        - 20790 # عَسْكَرِي - military
+        - 5014 # جَيش - army
+        - 5016 # جْيُوش - armies
+        - 4604 # جُنْدِي - soldier
+        - 4605 # جُنُود - soldiers
+        - 20793 # عَسَاكِر - soldiers
+        - 5485 # حَرِب - war
+        - 5491 # حْرُوب - wars
+        - 14776 # سَلَام - peace
+    - title: "Music & Arts"
+      icon: "Music"
+      wordIds:
+        # General Arts & Venues
+        - 24778 # فَنّ - art
+        - 182 # آدَاب - arts
+        - 20492 # مَعْرَض - exhibition/gallery
+        - 20491 # مَعَارِض - exhibitions
+        - 2891 # مَتْحَف - museum
+        - 2892 # مَتَاحِف - museums
+        - 4563 # جُمْهُور - audience/public
+        # Visual Arts
+        - 11544 # رَسْمِة - painting
+        - 4046 # مُجَسَّم - sculpture
+        - 28331 # كَامِيرَا - camera
+        - 18173 # صُورَة - picture/photo
+        - 18175 # صُوَر - pictures/photos
+        - 11547 # رَسَّام - painter
+        - 24777 # فَنَّان - artist
+        - 18171 # مُصَوِّر - photographer
+        - 11557 # رَسَم - draw
+        - 11555 # اِرْسُم - draw
+        - 11556 # يِرْسُم - draw
+        - 18180 # صَوَّر - take a picture
+        - 18176 # صَوِّر - take a picture
+        - 18178 # يصَوِّر - take a picture
+        # Music & Singing
+        - 31401 # مُوسِيقَى - music
+        - 22964 # أُغْنِيِّة - song
+        - 22971 # أَغَانِي - songs
+        - 23723 # فِرْقَة - band
+        - 23734 # فِرَق - bands
+        - 18896 # مُطْرِب - singer
+        - 22969 # مُغَنِّي - singer
+        - 13141 # زُمَّار - pipe/flute
+        - 18806 # طَبْلِة - drum
+        - 18807 # طْبُول - drums
+        - 22989 # غَنَّى - sing
+        - 22979 # غَنِّي - sing
+        - 22984 # يغَنِّي - sing
+        - 20704 # عَزَف - play (a musical instrument)
+        - 20702 # اِعْزِف - play (a musical instrument)
+        - 20703 # يِعْزِف - play (a musical instrument)
+        # Dance
+        - 11928 # رَقَّاص - dancer
+        - 11940 # رَقَص - dance
+        - 11933 # اُرْقُص - dance
+        - 11936 # يِرْقُص - dance
+        # Acting & Cinema
+        - 13999 # مَسْرَح - theater/stage
+        - 14000 # مَسَارِح - theaters/stages
+        - 14001 # مَسْرَحِيِّة - play
+        - 24698 # فِلِم - film/movie
+        - 24699 # أَفْلَام - films/movies
+        - 15081 # سِينِمَا - cinema
+        - 30184 # مُمَثِّل - actor
+        - 7809 # مُخْرِج - director
+        - 31221 # مُونْتَاج - montage
+        - 30192 # مَثَّل - act
+        - 30190 # مَثِّل - act
+        - 30191 # يمَثِّل - act
+        # Literature & Poetry
+        - 26124 # قِصَّة - story
+        - 26126 # قِصَص - stories
+        - 12495 # رِوَايِة - novel/narration
+        - 6614 # حْكَايِة - story
+        - 16355 # شِعِر - poem/poetry
+        - 16358 # أَشْعَار - poems
+        - 26079 # قَصِيدِة - poem
+        - 26080 # قَصَايِد - poems
+        - 27322 # كَاتِب - writer
+        - 27326 # كُتَّاب - writers
+        - 455 # مُؤلِّف - author
+        - 16352 # شَاعِر - poet
+        - 467 # أَلَّف - compose/author
+        - 460 # أَلِّف - compose/author
+        - 464 # يؤلِّف - compose/author
+
+- section: "Idiomatic Expressions • الأمثال الشعبية"
+  topics:
+    - title: "Social & Relational Idioms"
+      icon: "MessagesSquare"
+      wordIds:
+        - 2427 # اِبِن عِز - it is an idiomatic expression that means that sb i
+        - 16 # مِش مَعْرُوف قَرْعِة أَبُوهَا مِن وين - It is an idiomatic expression that means that sb's
+        - 157 # مَا أظْرَط مِن الخَال اِلَّا إِبن أُخْتُه - it is an idiomatic expression that means"when a wo
+        - 15011 # الله واِسِم الله - It is an idiomatic expression that means "as you l
+        - 18485 # مَا أَضْرَط من الخَال الَا إِبن أخته - it is an idiomatic expression that means"when a wo
+        - 10533 # الجنة بدون نَاس مَابتِنْدَاس - It is an idiomatic expression that means that the 
+        - 26322 # اِنْقَطَع الخَيط - it is an idiomatic expression that means that the 
+        - 1693 # اِبن بَطْنِي بيعرف لرطْني - It is an idiomatic expression that means that nobo
+        - 2123 # مفتح ببْلَاَد عميَان - It is an idiomatic expression that means that a wi
+        - 2917 # ترَابَاته أخذوه - It is an idiomatic expression that means that sb h
+        - 26515 # بيتقلَّب بقبره - It is an idiomatic expression that means that sb i
+        - 14551 # تِتْمَسْكَن تَتِمَكَّن - It is an idiomatic expression that means that sb p
+        - 3480 # زَلَمِة مَلَاة ثْيَابُه - it is an idiomatic expression that means that sb i
+        - 3490 # دَقُّوَا بِبَعَض الثِّيرَان - It is an idiomatic expression that means that peop
+        - 5066 # حَمَاتِك بِتْحِبَّك - It is an idiomatic expression that is used to invi
+        - 5923 # تْرَابُه حْسَابُه - It is an idiomatic expression that means that sb h
+        - 5961 # بيحسِدُوَا الوَاحد عهمُّه - It is an idiomatic expression that means that peop
+        - 6324 # حَطّ حْطَاط - It is an idiomatic expression that means that sb h
+        - 6784 # اِبِن الحَلَال عِند ذِكْرُه بِيبَان - It is an idiomatic expression that is used when tw
+        - 6672 # يحَلْحَل وِسِطْهُم - It is an idiomatic expression that means that the 
+        - 7310 # الحَيط عَالحَيط - it is an idiomatic expression that means that the 
+        - 7571 # إِجَاهُم خَبَرُه - It is an idiomatic expression that means that peop
+        - 8036 # مَضَافِة خْرَيوِش - It is an idiomatic expression that means that the 
+        - 169 # الحَيِّة مَابِتْصِير خَيِّة - It is an idiomatic expression that means that bad 
+        - 9946 # إِجَت الدَّقَّة بْرَاسُه - it is an idiomatic expression that means that an i
+        - 10300 # المَنِيِّة ولَا الدَّنِيِّة - It is an idiomatic expression which means that it 
+        - 10542 # العيَار اللي مَابصيبك بدوشك - It is an idiomatic expression that means that thos
+        - 216 # ذَانُه بِتْصُنّ - It is an idiomatic expression that means that peop
+        - 10812 # أَحط بذمتي - It is an idiomatic expression that means to expect
+        - 10811 # مَا أوسع ذمتك - It is an idiomatic expression that describes sb wh
+        - 10927 # فوق رُوسْهم - It is an idiomatic expression that means that sb b
+        - 10993 # عَدُو جِدَّك مَابِيحِبَّك حَتَّى لَو عَبَدْتُه مِثِل رَبَّك - It is an idiomatic expression that means that bad 
+        - 11335 # الجوز في البيت رحمة حتى لو كَان فحمة - It is an idiomatic expression that means that the 
+        - 11334 # طلبت روحه الرحمة - It is an idiomatic expression that means that sb m
+        - 12744 # يِقْطَع زَرِّيعَة أهْلَك - It is an idiomatic expression that means "May your
+        - 13146 # إِبِن الطَبَّال زَمَّار - an idiomatic expression that means " when the caus
+        - 15253 # اِبن سَاعْتُه - it is an idiomatic expression that means that sth 
+        - 15328 # المَال السَّايِب بعلِّم السِّرْقَة - It is an idiomatic expression that means that if a
+        - 13667 # اُسْتُر عولَايَانَا - This idiomatic expression is used when a bad story
+        - 14209 # سعيد النصبة - It is an idiomatic expression that means "husband/
+        - 14658 # سُلْطَان زَمَانُه - It is an idiomatic expression that means that sb i
+        - 17259 # بعد مَا شَاب ودوه الكتَّاب - It is an idiomatic expression that means that old 
+        - 15467 # يجدِّد شَبَابُه - usually as a second wife
+        - 16883 # شَلَا بَلَا - It is an idiomatic expression that means that peop
+        - 17454 # العَتَب صَابُون القَلْب - it is an idiomatic expression that means friendly 
+        - 17484 # اِحذر عدوك مرة، وصَاحْبَك مية مرة - an idiomatic expression that means" to always be c
+        - 17899 # صَافي يَا لبن - It is an idiomatic expression that means that two 
+        - 17832 # صَفْحَة وَانطوت - It is an idiomatic expression that means that sth 
+        - 17834 # صَفْحَتك بيضَا - It is an idiomatic expression that means that sb h
+        - 17833 # صَفْحَتك سودَا - It is an idiomatic expression that means that sb h
+        - 18190 # صوفْتُه حمرَا - It is an idiomatic expression that means that sb h
+        - 18810 # إِبِن طَبَّال زَمَّار - an idiomatic expression that means " when the caus
+        - 19362 # يطلع عقبري - It is an idiomatic expression that means that sb l
+        - 19722 # الطويلة طَالت التينة وَالقصيرة ضلت حزينة - It is an idiomatic expression that means that it i
+        - 20216 # خَابزُه وعَاجْنُه - It is an idiomatic expression that means tha sb kn
+        - 21625 # اِبن عَالَم ونَاس - it is an idiomatic expression that means that sb i
+        - 20196 # مَا بحرث الأرض إِلَا عجولهَا - It is an idiomatic expression that means that brav
+        - 20257 # اللي بيدري بيدري وَاللي مَابيدري بيقول كَف عَدَس - it is an idiomatic expression that means that the 
+        - 20538 # إِجَاك مين يعرفك يَا بلُّوط - it is an idiomatic expression that means that the 
+        - 20684 # نفسه عزيزة - It is an idiomatic expression that means that sb h
+        - 20738 # يَا جَاي بلَا عزيمة يَا قليل القيمة - It is an idiomatic expression that means that it i
+        - 20809 # إِذَا حبيبك عسل تلحسوش كله - It is an idiomatic expression that's used "to stop
+        - 21370 # الأقَارب عقَارب - It is an idiomatic expression that means thatthe p
+        - 21397 # العَقِل زينِة - It is an idiomatic expression that means that mean
+        - 21445 # إِبن العَازِة عُكَّازِة - an idiomatic expression that means" to never under
+        - 23042 # اِتعبي يَا خَايبة للغَايْبِة - It is an idiomatic expression that means that sb m
+        - 22670 # سِتر وغَطَا - It is an idiomatic expression that means the husba
+        - 23404 # الجوز بَالبيت رحمة حتى لو كَان فَحْمِة - It is an idiomatic expression that means that the 
+        - 23623 # فرطت المسبحة - It is an idiomatic expression that means that a yo
+        - 25032 # بتقلب بقبره - It is an idiomatic expression that means that sb i
+        - 25424 # قروَا ولَاد يعبد ولَا يجعلهم مَا قروَا - It is an idiomatic expression that means that the 
+        - 26148 # يقصف عمر - It is an idiomatic expression that means tha sb is
+        - 26283 # القُطّ مَابِيحِبّ اِلَّا خُنَّاقُه - it is an idiomatic expression that means that the 
+        - 28526 # ذمته كَوْشُوك - It is an idiomatic expression that describes sb wh
+        - 28607 # كِيسْنَا وكِيسْكُم وَاحِد - It is an idiomatic expression that means that the 
+        - 29326 # لِعب بذيله - it is an idiomatic expression that means that sb i
+        - 29636 # مش متهني بلقمته - It is an idiomatic expression that means that sb i
+        - 34688 # مش مِتْهَنِّى بلقمته - It is an idiomatic expression that means that sb i
+        - 3972 # مَجَارِي وفَتَحَت - an idiomatic expression that means "a person that 
+        - 6325 # حَطّ مَحَطَّة - It is an idiomatic expression that means that sb h
+        - 14850 # الِمْسَامِح كَريم - It is an idiomatic expression that means that the 
+        - 13547 # اِنقطع الخيط وفرطت المسبحة - It is an idiomatic expression that means that the 
+        - 30907 # مَا ضل بَالخم إِلَا مَمْعُوط الذنب - It is an idiomatic expression that means that the 
+        - 32985 # أَكلته منفوسة - It is an idiomatic expression that means that sb i
+        - 31444 # ميَّاته خلصوَا - It is an idiomatic expression that means that sb i
+        - 32996 # نفسه خَضْرَا - It is an idiomatic expression that means that sb w
+        - 32995 # نفسه طرية - It is an idiomatic expression that means that sb w
+        - 34788 # هين قرشك ولَا تهين نفسك - It is an idiomatic expression that means that it i
+        - 35474 # ذمته وَاسعة - It is an idiomatic expression that describes sb wh
+    - title: "Emotions & States"
+      icon: "MessageCircleWarning"
+      wordIds:
+        - 11230 # قَطَع إِجْرُه - it is an idiomatic expression that means that sb p
+        - 11229 # كَسَر إِجْرُه - it is an idiomatic expression that means that sb p
+        - 7513 # الِّلي بْيِسْتِحِي بِتْرُوح عَلَيه - It is an idiomatic expression that means that shyn
+        - 21135 # فَرْحِتِي مَا بَعْطِيهَا لَحَدَا - It is an idiomatic expression that means that sb i
+        - 425 # أَكَل بْحَالُه - it is an idiomatic expression that means that sb i
+        - 418 # أَكَل روح الخل - it is an idiomatic expression that means that sb i
+        - 423 # أَكَل هَم - it is an idiomatic expression that means that sb i
+        - 16624 # اِنْشَقَّت الأَرْض وبَلْعَتُه - It is an idiomatic expression that means that the 
+        - 1446 # البِسِّة بتَوكِل عَشَاه - it is an idiomatic expression that means that sb i
+        - 3489 # مِثِل الثُّور الهَايِج - It is an idiomatic expression that means that sb i
+        - 8437 # يَا بَخْت مِين زَار وخَفَّف - It is an idiomatic expression that means that the 
+        - 10847 # ذبت بأوَاعيي - It is an idiomatic expression that means that sb w
+        - 11681 # اللي بزعل لحَاله بيرضَى لحَاله - It is an idiomatic expression that means that if s
+        - 12374 # الله يْجِيبِك يَا طُولِة الرَّوح - It is an idiomatic expression that means that sb s
+        - 12375 # رّوحُه بْرَاس مَنَاخِيرُه - It is an idiomatic expression that means that sb i
+        - 12373 # روحُه طويلة - It is an idiomatic expression that means that s is
+        - 12362 # طِلْعَت رَوحِي - It is an idiomatic expression that means that sb i
+        - 15249 # سَاعَة شيطَان - It is an idiomatic expression that means that sb w
+        - 14174 # وقع سطل بطنه - It is an idiomatic expression that means that sb w
+        - 17798 # نِزِل عَلَيه الخَبَر مِثْل الصَّاعِقَة - it is an idiomatic expression that means that sb w
+        - 19721 # حبَاله طويلة - It is an idiomatic expression that means that sb i
+        - 21551 # عَشَان الوَرْد يِنْسَقَى العُلَّيق - It is an idiomatic expression that means that sb s
+        - 22282 # اِلُه عَينَين بْرَاس - It is an idiomatic expression that means that sb w
+        - 31804 # نِجْمُه غَاطِس - It is an idiomatic expression that means that sb i
+        - 34398 # صِرِت مِثِل الهِسْهِسِة - It is an idiomatic expression that means that sb w
+        - 35054 # اِفْرِد وِجْهَك - It is an idiomatic expression that the speaker say
+        - 35688 # بيوطَّي الرَاس - It is an idiomatic expression that means that sth 
+    - title: "Body Parts Idioms"
+      icon: "PersonStanding"
+      wordIds:
+        - 24 # أَبُو رَاس - it is an idiomatic expression that is used to desc
+        - 25 # أَبُو نُص لْسَان - it is an idiomatic expression that means that a ch
+        - 2756 # عَينُه بَيضَا - It is an idiomatic expression that means that sb i
+        - 261 # عضِّة الأَرْض - It is an idiomatic expression that means the absce
+        - 12765 # عينيه زُرُق وَاسنَانُه فُرُق - It is an idiomatic expression that means that sb w
+        - 17860 # ضِحْكِة صَفْرَا - It is an idiomatic expression that means that has 
+        - 633 # حمَّل أهلي جميلة - It is an idiomatic expression that means to hold s
+        - 1392 # زَيّ لَوح القَزَاز لَا طِيز ولَا بْزَاز - It is an idiomatic expression that means that a la
+        - 1822 # أَبْعَز لُه عَينَيه - It is an idiomatic expression that means "to beat 
+        - 2754 # بِيبَيِّض الوِجِه - It is an idiomatic expression that means that sth 
+        - 10343 # رِجِل بَالدُّنْيَا ورِجِل بَالآخْرِة - It is an idiomatic expression that means that sb i
+        - 10656 # حَمَّل دِينِي جْمِيلِة - It is an idiomatic expression that means to hold s
+        - 10795 # ذل أهلي - It is an idiomatic expression that means to hold s
+        - 10924 # بيوكلوَا رَاس الحية - It is an idiomatic expression that means that sb i
+        - 10990 # حمَّل رَبِّي جْمِيلِة - It is an idiomatic expression that means to hold s
+        - 11260 # أَقطع رجل - It is an idiomatic expression that means that sb w
+        - 11365 # لحم رْخِيص - It is an idiomatic expression that means that a la
+        - 11651 # رَصَاصِة بنُص صَبَاحُه - It is an idiomatic expression that means that sb h
+        - 11804 # وجههَا مَا بضحك للرغيف السخن - It is an idiomatic expression that means that sb h
+        - 13199 # اللِّي بْيِفْتَح زَنْبِيلُه كُلّ النَّاس بِتْعَبِّي عَلَيه - It is an idiomatic expression that means the perso
+        - 13581 # عقدهَا سبعة - It is an idiomatic expression that means that "sb 
+        - 14917 # صَار وجهي مثل حبة السمسم - It is an idiomatic expression that means that sb w
+        - 15208 # بيسَوِّد الوِجِه - It is an idiomatic expression that means that sth 
+        - 17258 # شَاب شعر رَاسي - It is an idiomatic expression that means that sb i
+        - 16011 # اِكْسِر الشَّرّ - It is an idiomatic expression that means "zip it s
+        - 16365 # طِلِع شَعَر عَلْسَانِي - It is an idiomatic expression that means that I am
+        - 16907 # مثل عين الشَّمِس - It is an idiomatic expression that means that sth 
+        - 17260 # بيشيِّب شعر الرَاس - It is an idiomatic expression that means that sth 
+        - 17543 # حَفَر بَالصَّخِر - It is an idiomatic expression that means that sb w
+        - 17705 # حَوَاجْبُه مِثِل الصَّرْصُور - It is an idiomatic expression that means that sb's
+        - 18372 # وجههَا مَا بيضحك للرغيف السخن - It is an idiomatic expression that means that sb h
+        - 19811 # ذَان من طين وذَان من عجين - It is an idiomatic expression that means tha sb is
+        - 19858 # عَامود الظلَام - It is an idiomatic expression that means that sb i
+        - 21372 # قد طيز العقربَا - It is an idiomatic expression that means that sth 
+        - 21833 # اِبْن العَمّ هُو اللِّي بينَزِّل عَن ظَهْر الفَرَس - it is an idiomatic expression that means that sb s
+        - 22270 # مِشْ مَحْلُوب بْعَينُه - It is an idiomatic expression that means that a ch
+        - 23315 # من طيز الفجر - It is an idiomatic expression that means "very ear
+        - 29148 # يِقُصّ لْسَان العَالَم - It is an idiomatic expression that means that sb t
+        - 21132 # مَعْطِي عين - it is an idiomatic expression that means that sb a
+        - 21131 # مَعْطِي وجه - it is an idiomatic expression that means that sb a
+        - 31538 # حَمَّل أَهْلِي مِية جْمِيلِة - It is an idiomatic expression that means to hold s
+        - 31842 # نَحَت بَالصَّخِر - It is an idiomatic expression that means that sb w
+        - 35049 # ببيض الوِجِه - It is an idiomatic expression that means that sth 
+        - 35050 # وِجْهَك مثل مدفَاش الخرَا - it is a idiomatic expression that means "ugly"
+    - title: "Animals & Nature Idioms"
+      icon: "Bird"
+      wordIds:
+        - 419 # أَكَل هَوَا - it is an idiomatic expression that means that sb i
+        - 14922 # اِنْسَمَط من البرد - It is an idiomatic expression that means that the 
+        - 3000 # أَولَاد تِسْعَة - It is an idiomatic expression that means that peop
+        - 5050 # حَبَّتَك حيِّة - It is a sarcastic idiomatic expression that is use
+        - 6914 # أَبْصَر حْمَار مِين ميِّت - it is an idiomatic expression that means that sb h
+        - 10493 # ويَا دَار مَا دخلك شر - It is an idiomatic expression that means "let slee
+        - 10282 # الدَّمّ عُمْرُه مَا بِيصِير مَي - It is an idiomatic expression that means that any 
+        - 11909 # قرد يمزع رقبتك - It is an idiomatic expression that means "Damn, it
+        - 12534 # أَخف من ريشتين على جمل - an idiomatic expression that means" to make things
+        - 13894 # من طين بلَادك سخم عخدَادك - It is an idiomatic expression that means  that sb 
+        - 14757 # هجين وَاقع بسلة تين - It is an idiomatic expression that means "nouveau 
+        - 19812 # من طين بلَادك لط عخدَادك - It is an idiomatic expression that means  that sb 
+        - 22494 # بْيِغْرَق بِشُرْبِة مَيّ - It is an idiomatic expression that means that sb i
+        - 23580 # فَرَشِلْهَا الأَرْض وَرد - It is an idiomatic expression that means that sb m
+        - 25422 # الخَاري وَالقَاري وَاحد - It is an idiomatic expression that means that an e
+        - 25491 # قِرْد يِرْكَبَك - It is an idiomatic expression that means "Damn, it
+        - 27981 # بِيكِش ذُبَّان - it is an idiomatic expression that means that sb i
+        - 31805 # على نِجْمُه غيم - It is an idiomatic expression that means that sb i
+    - title: "Death & Passing"
+      icon: "HeartCrack"
+      wordIds:
+        - 21134 # أَعْطَاكُم عُمْرُه - It is an idiomatic expression that means that sb p
+        - 424 # أَكَل الكْتَاب - it is an idiomatic expression that means that sb r
+        - 562 # الله أخذ أمَانته - It is an idiomatic expression that means that sb p
+        - 2171 # لِبِس البَلَاطَة - It is an idiomatic expression that means that sb d
+        - 34689 # يَوم تْهَنَّى - It is an idiomatic expression that means that sb p
+        - 7657 # مِثِل الخَاتِم بإِصْبَعْهَا - It is an idiomatic expression that means that sb c
+        - 10908 # وِقِع الفَاس بِالرَّاس - It is an idiomatic expression that means that the 
+        - 15252 # إِجت سَاعته - It is an idiomatic expression that means that sb p
+        - 14394 # سقطت ورقته - It is an idiomatic expression tha means tha "sb's 
+        - 15549 # شبع موت - It is an idiomatic expression that means sb has be
+        - 22812 # غليت ميَاته - It is an idiomatic expression that means that sb p
+        - 29637 # اِنقطعت لقمته - It is an idiomatic expression that means that sb p
+        - 31446 # ميَّاته عَالنَار - It is an idiomatic expression that means that sb i
+        - 31445 # ميَّاته معَاليَات - It is an idiomatic expression that means that sb i
+        - 35207 # الله أخذ ودَاعته - It is an idiomatic expression that means that sb p
+    - title: "Insults, Curses & Sarcasm"
+      icon: "Angry"
+      wordIds:
+        - 416 # أَكَل زفت - it is an idiomatic expression that means that sb i
+        - 417 # أَكَل قُندَرَة - it is an idiomatic expression that means that sb i
+        - 1695 # نَعَامِة تدَعِّس بِبَطْنَك - It is an idiomatic expression that means "Damn, it
+        - 5868 # اِتْحَزَّم وَارقُص - It is an idiomatic expression that is sarcasticall
+        - 4135 # يِجْعَلك - an idiomatic expression that means "Good riddance!
+        - 5049 # حَبّك برص - It is a sarcastic idiomatic expression that is use
+        - 5051 # حَبَّك برميل - It is a sarcastic idiomatic expression that is use
+        - 5052 # حَبَّك حُب وغَضَب الرَّب - It is a sarcastic idiomatic expression that is use
+        - 10570 # الله مع دَوَالِيبَك - It is an idiomatic expression that means "good rid
+        - 12379 # رُوح مُوت - It is an idiomatic expression that means "get lost
+        - 11196 # انشَالله مَا بترجع إِلَا عخشبة - It is an idiomatic expression that means "May God 
+        - 11405 # دَرْب يسِدّ مَا يرِدّ - It is an idiomatic expression that means "good rid
+        - 11816 # نعَامة ترفسك - It is an idiomatic expression that means "Damn, it
+        - 11951 # عزَا يرقعك - It is an idiomatic expression that means that sb w
+        - 13536 # دخل السَّبت بطيز اليهود - It is an idiomatic expression that means that sb h
+        - 13644 # سِتّ راسَك - it is an idiomatic expression that is used in inte
+        - 15013 # حِلّ عَن سَمَاي - It is an idiomatic expression that means "get lost
+        - 16019 # بحش عَالشروش - It is an idiomatic expression that means that sb c
+        - 17439 # جيزِة تصبغك - It is an idiomatic expression that is sarcasticall
+        - 22277 # أَشِيل لُه بِزْرِة عَينِيه - It is an idiomatic expression that means "to beat 
+        - 24205 # الخمير وَالفطير - It is an idiomatic expression that is sarcasticall
+        - 29167 # لْسَانُه زِفِر - It is an idiomatic expression that means that sb i
+        - 29934 # الوَضِع لَوز - It is an idiomatic expression that the situation i
+        - 30478 # مية مرشحة - It is an idiomatic expression that means that sb i
+        - 32772 # نَعَامِة تخبط ببطنك - It is an idiomatic expression that means "May an o
+        - 35082 # البنَات بسبع وجوه - it is an idiomatic expression that means that the 
+    - title: "General Idioms & Proverbs"
+      icon: "Quote"
+      wordIds:
+        - 6 # الإِبْرِة غلبت الحَايِك - it is an idiomatic expression that means that the 
+        - 2136 # اِبْلِيس بيِتْعلَّم مِنُّه - It is an idiomatic expression that means that sb i
+        - 19 # أَبُو العُرِّيف - it is an idiomatic expression that means "the one 
+        - 20 # أَبُو العَكَّات - it is an idiomatic expression that means "the one 
+        - 11225 # بَاس إِجْرِي - It is an idiomatic expression that means to beg sb
+        - 8293 # إِجِرْهَا خَضْرَا - an idiomatic expression that's said when "the brid
+        - 8292 # اِيدُه خَضْرَا - It is an idiomatic expression that means that sb w
+        - 166 # أَخُو الميت - an idiomatic expression that means "someone who go
+        - 11086 # أَرْبَعْتَك تعطيك - an idiomatic expression that means " to be self-ma
+        - 272 # بيوكل طوب الأَرْض - It is an idiomatic expression that means that sb i
+        - 27261 # اِسْتَكْبِرْهَا ولَو عَجَرَة - an idiomatic expression that means sb is greedy
+        - 14408 # مَا أَسْقَع وجهه - It is an idiomatic expression that means that sb i
+        - 15210 # غدة سودَا - It is an idiomatic expression that means that sb i
+        - 17432 # شَعَّل أَصَابْعُه العَشْرَة - It is an idiomatic expression tha means that sb is
+        - 17433 # اِِرْبُط إِصْبَعَك مْلِيح، لَا بْيِدْمِي ولَا بِيقِيح - an idiomatic expression that means" to be firm and
+        - 422 # أَكَل حَقُّه - it is an idiomatic expression that means that sb d
+        - 421 # أَكَل رَاسي - it is an idiomatic expression that means that sb i
+        - 427 # أَكَل مَقْلَب - it is an idiomatic expression that means that sb w
+        - 428 # أَكَلهَا عليه - it is an idiomatic expression that means that sb d
+        - 426 # أَكَلوَا وِجْهُه - it is an idiomatic expression that means that sb f
+        - 1362 # اِنْبَرَى لْسَانِي - It is an idiomatic expression that means that is s
+        - 21849 # اِنعمى على قلبي - It is an idiomatic expression that means that sb s
+        - 27996 # اِنْكَشَف حَسَبْهَا - it is an idiomatic expression that means that sb w
+        - 36225 # اللي من إِيدُه الله يزيده - It is an idiomatic expression that means that sb m
+        - 2565 # عبَاب الله - poor
+        - 1133 # عَالبَارِد المِسْتِرِيح - It is an idiomatic expression that means that sb g
+        - 820 # بتَاخْذَك عَالبَحَر وبِتْرَجْعَك عَطْشَان - It is an idiomatic expression that means that sb i
+        - 879 # شَلّ بَخْتُه - It is an idiomatic expression that means to speak 
+        - 1577 # بَصَلْتَك مَحْرُوقَة - It is an idiomatic expression that means that sb i
+        - 1700 # بَطْنُه كْبِير - it is an idiomatic expression that means that sb i
+        - 1701 # بَطِنْهَا بِشَحْوِطْهَا - It is an idiomatic expression that means that sb i
+        - 1689 # بَطِنْهَا فَاقِس - the pregnancy bump is narrow and pointed
+        - 1702 # حَامِل بَطْنُه عَظَهْرُه - It is an idiomatic expression that means that sb i
+        - 1811 # مثل بَعِر الجمَال - It is an idiomatic expression that means that sb's
+        - 1897 # زي البَفْتِة - It is an idiomatic expression that means that a la
+        - 2120 # بْلَاَد الله الوَاسْعَة - It is an idiomatic expression that means that sb d
+        - 2624 # حطني ببوز المدفع - It is an idiomatic expression that means to "have 
+        - 2623 # لَاوي بوزه - an idiomatic expression that means "upset"
+        - 716 # سِرَّك بِبِير - It is an idiomatic expression that means that sth 
+        - 2759 # عبَيض - It is an idiomatic expression that means that sb i
+        - 2758 # مَاشِي عبَيض - It is an idiomatic expression that means that sb i
+        - 2808 # مَا بَين البَين وَالنَّيَا - an idiomatic expression that means "a long distanc
+        - 8486 # تِتْخَلْخَل عْظَامَك - It is an idiomatic expression that means that the 
+        - 10424 # تدهول على عينه - It is an idiomatic expression that means that sb s
+        - 11328 # تعيش وتِتْرَحَّم - It is an idiomatic expression that means that the 
+        - 20682 # طلبوهَا تْعَزَّزت تركوهَا تندَّمت - job offer, marriage proposal, etc.
+        - 26563 # تْقَلَّد خطيتهَا - It is an idiomatic expression that means that sb i
+        - 3300 # تَيس مْعَمْعَم - It is an idiomatic expression that means that sb i
+        - 3421 # ثَمَرَة زَوَاج - It is an idiomatic expression that means child or 
+        - 3420 # ولَا عُمرُه بيعَمِّر ولَا بيثَمِّر - It is an idiomatic expression that means that sb i
+        - 3503 # حُنِّيرَك وَالجَاجِة تنقُر عينك - It is an idiomatic expression that is used by chil
+        - 4136 # إِجعلوهَا بعودة - an idiomatic expression that means "visit us again
+        - 4615 # اِمْشِي بِجْنَازِة وتِمْشِيش بِجْوَازِة - It is an idiomatic expression that means that sb i
+        - 4669 # جِنّ اللي يِرْكَبَك - It is an idiomatic expression that means that you 
+        - 4914 # الجُوع كَافِر - It is an idiomatic expression that means that hung
+        - 7043 # حَاَمْلِه مِن عَينْهَا - it is an idiomatic expression that means "the tree
+        - 5321 # مَضْرُوب بْحَجَركْبِير - It is an idiomatic expression that means that some
+        - 5344 # أَول الرُّقيص حَجَلَان - It is an idiomatic expression that means that it i
+        - 5674 # حَرِيقَة تِحْرِقْهُم - It is an idiomatic expression that means that the 
+        - 6709 # النَاس بتِحْلِف بحيَاتُه - It is an idiomatic expression that means that sb i
+        - 6746 # عِلْكِة بحَلْق العَالم - It is an idiomatic expression that means that sth 
+        - 6915 # أَتْعَس مِن حَمِير النَّوَر - it is an idiomatic expression that means that sb i
+        - 6911 # العَدُو مَابِيصِير حَبِيب وِالحْمَار مَابِيصِير طَبِيب - It is an idiomatic expression that means that sb o
+        - 7048 # زَيّ زَغْلُول الحَمَام - it is an idiomatic expression that means that a gi
+        - 7312 # فَوَّتْنِي بَالحَيط - It is an idiomatic expression that means that sb m
+        - 8374 # الوَلَد العَاطِل بْيِكْسِر الخَاطِر - It is an idiomatic expression that means that erra
+        - 7815 # شُرَّابُه خُرُج - it is an idiomatic expression that means that sb i
+        - 7941 # زَيّ الخَرْوَع - it is an idiomatic expression that means that sth 
+        - 8308 # خَطِيتي بْرَقِبْتَك - It is an idiomatic expression that is used to mean
+        - 9189 # دَبَّك بِبَطْنُه - It is an idiomatic expression that means that sb h
+        - 9188 # دَبَّك عَوِجْهُه - It is an idiomatic expression that means that sb h
+        - 9190 # أَعْطَاه الدُّبَّيك - It is an idiomatic expression that means that sb h
+        - 9575 # طَبْعُه مِثِل الدِّسْت الفَايِر - it is an idiomatic expression that means that sb g
+        - 10280 # مَصَّت دَمُّه - It is an idiomatic expression that means that sb e
+        - 10465 # الدود طَالع من تحتهَا - It is an idiomatic expression that means sb is ver
+        - 215 # نَام عَذَانُه - It is an idiomatic expression that means that sb i
+        - 10737 # بيختِرِع الذَرِّة - It is an idiomatic expression that is used whe sb 
+        - 10754 # اِزرعهَا بذِقْنني - It is an idiomatic expression that is used to mean
+        - 10810 # عَامل السبعة وذمتهَا - It is an idiomatic expression that describes sb wh
+        - 10885 # أَيْلُول ذَيلُه مَبْلُول - It is an idiomatic expression that means  that the
+        - 12367 # الصَّرَاحة رَاحَة - it is an idiomatic expression that means that it i
+        - 10907 # بْيِرْفَع الرَّاس - It is an idiomatic expression that means that sth 
+        - 10925 # قَمَاقِير رَاسِي - It is an idiomatic expression that means to shout 
+        - 10920 # يوقع عَرَاسُه غز - It is an idiomatic expression that means that sb w
+        - 10967 # يَامَن دَرَى وعَينِي تَرَى - It is an idiomatic expression that means "hopefull
+        - 12377 # يَا رَايح كثر ملَايح - It is an idiomatic expression that means "you have
+        - 10998 # الحَيَاة رِبِح وِخْسَارَة - It is an idiomatic expression that means that ther
+        - 10991 # صَبَحِيِّة رَبْنَا - It is an idiomatic expression that means "very ear
+        - 11047 # إِربط الحمَار مطرح مَا بقلك صَاحبه - an idiomatic expression that means" non of your bu
+        - 11930 # أَول الرَّقِص حَنْجَلَة - It is an idiomatic expression that means that sth 
+        - 12077 # مَالك بتركض وبَايدك مرس، قَال نسيب نسيبنَا شَاريله فرس - It is an idiomatic expression that means that sb i
+        - 12378 # مَاكِل رَوح الخَلّ - It is an idiomatic expression that means that sb s
+        - 12559 # رْيَالته شَاطِّة - It is an idiomatic expression that means that sb i
+        - 12568 # ضَرْب الحَبِيب مِثِل أَكِل الزْبِيب - It is an idiomatic expression that means that sb w
+        - 12714 # يحلْحِل زَرَدهم - It is an idiomatic expression that means that sb w
+        - 12766 # عرقه بزرق زرق - It is an idiomatic expression that means that sb s
+        - 12903 # يِزْعَل ويطُق رَاسه بَالحيط - It is an idiomatic expression that means that sb d
+        - 12902 # يِزْعَل وينفِلِق - It is an idiomatic expression that means that sb d
+        - 12994 # البنت بتحلم بَالزَّفِّة وهي بَالَّلفِّة - It is an idiomatic expression that means that the 
+        - 13078 # بيوكل الزّلط - It is an idiomatic expression that means that sb i
+        - 13425 # مَا حدَا بقول عن زِيتُه عكر - It is an idiomatic expression that means that nobo
+        - 13579 # رَاضِع حَلِيب سْبَاع - it is an idiomatic expression that means that sb i
+        - 13598 # إِجَى تَيِلْحَقْهُم سَبَقْهُم - it is an idiomatic expression that means that sb i
+        - 13645 # سِتّ السِّتَّات - it is an idiomatic expression that is used to prai
+        - 13890 # الطول طول نخلة وَالعقل عقل سخلة - It is an idiomatic expression that means that sb i
+        - 13974 # قد السِّدرِة عَالهِدْرِة - it is an idiomatic expression that means that sb i
+        - 14002 # يِسْرَح فيني - It is an idiomatic expression that means that sb e
+        - 14203 # المَلَافِظ سَعَد - It is an idiomatic expression that means that sb s
+        - 14553 # سَكَاكِين بِقَلْبِي - It is an idiomatic expression that means tha what 
+        - 14552 # هَاي مِش مِسْكِينِة، هَاي سِكِّينِة - It is an idiomatic expression that means that sb i
+        - 14657 # النُّوم سُلْطَان - It is an idiomatic expression that means that slee
+        - 14656 # شيوخ السَّلَاطين - It is an idiomatic expression that means that some
+        - 14694 # الحَيَاة سَلَف ودَين - It is an idiomatic expression that is equivalent t
+        - 15014 # وَالله لَو تْشَجِّر للسّمَا - It is an idiomatic expression that means "when pig
+        - 14947 # طلَّع علي سُمْعَة - It is an idiomatic expression that means that sb r
+        - 14944 # سَمَّع علينَا الحَارة - It is an idiomatic expression that means that sb e
+        - 14946 # سَمَعُه عقَدُّه - It is an idiomatic expression that means that sb h
+        - 14969 # ذَاكِرَة سَمَكِة - It is an idiomatic expression that means that sb i
+        - 14970 # سَمَكِة ودَايخَة - It is an idiomatic expression that means that sb s
+        - 14998 # مثل السَّمْنِة عَالعسَل - It is an idiomatic expression that means that sb i
+        - 15092 # هَرِّلُّه سْنَانُه - It is an idiomatic expression that means that sb w
+        - 15297 # كلنَا بَالهوَا سوَا - It is an idiomatic expression that means that we a
+        - 15927 # شَارِب من حليب حمَارة - it is an idiomatic expression that means that sb i
+        - 15928 # شَارِب من كل نبِع - it is an idiomatic expression that means that sb i
+        - 16295 # شَاطَّة ريَالته - It is an idiomatic expression that means that a ma
+        - 15500 # بتقيس مروتهَا بَالشبر - It is an idiomatic expression that means sb is ver
+        - 15565 # شَبَك العَرَب عَرَبَين - It is an idiomatic expression that means that sb i
+        - 15716 # بطنهَا بيشحوطهَا - It is an idiomatic expression that means that sb i
+        - 15867 # بيِنْشَدّ فِيه الظَّهِر - It is an idiomatic expression that means that you 
+        - 15925 # بلهَا وإِشرب ميتهَا - and idiomatic expression that means"it has no use"
+        - 16368 # مِثِل الشَّعْرَة مِن العَجِينِة - It is an idiomatic expression that means to disent
+        - 16409 # زي الشُّعلِة - It is an idiomatic expression that means that sb i
+        - 16456 # شغلهَا مثل شغل إِمي لضرتهَا - It is an idiomatic expression that means that sb d
+        - 16623 # شَق الأرض وطلع منهَا - It is an idiomatic expression that means that a ch
+        - 16866 # شل أمله - It is an idiomatic expression that means to speak 
+        - 17025 # قَاضي الصغَار شنق حَاله - It is an idiomatic expression that means that kids
+        - 17486 # صَاحِب خُلُق - it is an idiomatic expression that means that sb i
+        - 17485 # صَاحِب دين - it is an idiomatic expression that means that sb i
+        - 17487 # صَاحِب مروِّة - it is an idiomatic expression that means that sb i
+        - 17488 # صَاحِب نَتِّة - it is an idiomatic expression that means that sb i
+        - 18185 # بِدِّي أَرُدِّله الصَّاع صَاعَين - retaliation
+        - 17898 # نيته صَافية - It is an idiomatic expression that means that sb i
+        - 17387 # صَبَاحِيِّة ربنَا - It is an idiomatic expression that means "very ear
+        - 17365 # صَبّ ثُقْلِة دَمُّه عَلَيه - It is an idiomatic expression that means that sb b
+        - 17466 # حسن صَبِي - especailly in being stubborn
+        - 17764 # زي صُرْمَايِة العيد - it is an idiomatic expression that sb is inferior 
+        - 17763 # صرتله صُرْمَايِة - it is an idiomatic expression that sb did every po
+        - 17835 # يِحرِق صْفَاح اللي خلَّفك - It is an idiomatic expression that means that the 
+        - 18050 # غَمْزَت الصَّنَارة - It is an idiomatic expression that means that a la
+        - 18595 # عَمَى ضَوُّه - It is an idiomatic expression that sb was slapped 
+        - 18870 # زي الديم عَالطَّاحُونِة - it is an idiomatic expression that means that sb i
+        - 18811 # إِجى الطَّبِل غَطَّى على النَايَات - it is an idiomatic expression that means that sb h
+        - 18682 # العدو مَابصير حبيب وَالحمَار مَابصير طبيب - It is an idiomatic expression that means that sb o
+        - 18968 # آخر طرز - it is an idiomatic expression that means "wearing 
+        - 19039 # مَرَّاق الطَّرِيق - It is an idiomatic expression that means any stran
+        - 19420 # إِجَى يطُل، أكل الكل - an idiomatic expression that means " to admire som
+        - 19439 # هون حفرنَا وهون طَمَرنَا - It is an idiomatic expression that means that sth 
+        - 19569 # بَالحبلة طهر مقيلط - when you do something at the wrong time
+        - 19587 # بَوكِل طُوب الأَرْض - It is an idiomatic expression that means that sb i
+        - 19723 # إِجى على طُولُه - it is an idiomatic expression that means that sb h
+        - 19755 # نِفْسُه طَيْبِة - It is an idiomatic expression that means that sb i
+        - 19889 # بنشد فيه الظهر - It is an idiomatic expression that means that you 
+        - 21103 # الولد العَاطل بكسر الخَاطر - It is an idiomatic expression that means that erra
+        - 21287 # أَجر وعَافْيِة - It is an idiomatic expression that is said when sb
+        - 21292 # صحة وعَافْيِة - It is an idiomatic expression that means "Bon Appé
+        - 21289 # يعطيك العَافْيِة - It is an idiomatic expression that means "May God 
+        - 21291 # يعطيك العَافية قد مَا مشت الجَاجة حَافية - It is an idiomatic expression that means "May God 
+        - 21519 # فَالِج لَا تعَالِج - it is an idiomatic expression that means that a ba
+        - 21997 # تيس عَاهْرِة - It is an idiomatic expression that means that sb i
+        - 20240 # بِيعِدّ بْغَنَمَات اِبْلِيس - It is an idiomatic expression that means that sb i
+        - 20573 # عرق جبينه - It is an idiomatic expression that means that sb i
+        - 20571 # عرقه مرقه - It is an idiomatic expression that means that sb s
+        - 20810 # عَلَى قَلْبُه أَحْلَى مِن العَسَل - It is an idiomatic expression that means that sb i
+        - 20808 # لسَانه عَسَل - It is an idiomatic expression that means that sb i
+        - 20990 # لَاحق ورَاك بعصَاية - It is an idiomatic expression that means that sb i
+        - 21066 # بتَاخدك عَالبحر وبترجعك عطشَان - It is an idiomatic expression that means that sb i
+        - 21065 # جنبه المي وعَطْشَان - It is an idiomatic expression that means that sb i
+        - 21164 # عَظْمُه إِزْرَق - it is an idiomatic expression that means that sb i
+        - 21398 # ميَّلت عْقَال أبوهَا - It is an idiomatic expression that means that perp
+        - 21404 # عَقْلَاتُه بيلُقُّوَا - it is an idiomatic expression that means that sb i
+        - 21405 # عَقْلَاتُه على بتِّة ونُص - it is an idiomatic expression that means that sb g
+        - 21406 # عَقْلُه بَالتَّرْس - it is an idiomatic expression that means that sb i
+        - 21425 # بينشرب مع المي العِكْرَة - It is an idiomatic expression that means that sb i
+        - 21573 # علكة بثم العَالم - It is an idiomatic expression that means that sth 
+        - 21850 # عمَاة القمَار - It is an idiomatic expression that means lack of c
+        - 21721 # آخر هَالعمر - It is an idiomatic expression that means that sb i
+        - 21722 # أَول عُمْرُه - It is an idiomatic expression that means that sb i
+        - 21851 # بدل مَا يكحلهَا عمَاهَا - It is an idiomatic expression that means that sb d
+        - 21940 # قَطْع الأعنَاق ولَا قَطْع الأرزَاق - it is an idiomatic expression that means that it i
+        - 22199 # اِجَعَلُوهَا عَودِة - an idiomatic expression that means "visit us again
+        - 22290 # حَامْلِة مِن عَينْهَا - It is an idiomatic expression that means "the tree
+        - 22727 # القَالب غَالب - It is an idiomatic expression that means that sb e
+        - 22417 # شو جَاب الغرَاب لَامه - It is an idiomatic expression that means that sb d
+        - 22438 # يَا مآمنة بَالرجَال يَا مآمنة بَالمي بَالغربَال - It is an idiomatic expression that means that men 
+        - 22464 # مَا بتيجي غرزة فيك - It is an idiomatic expression that means that sb p
+        - 22479 # غَرَضُه شريف - It is an idiomatic expression that means that sb w
+        - 22480 # غَرَضُه مش شريف - It is an idiomatic expression that means that sb w
+        - 22495 # غَرْقَان لشوشتُه - It is an idiomatic expression that means that sb i
+        - 22497 # الغَرِيق بْيِتْعَلَّق بِقَشِّة - It is an idiomatic expression that means that sb m
+        - 22955 # بعد بغنمَات ابليس - It is an idiomatic expression that means that sb i
+        - 23186 # فَاتِحهَا عليه - very rich
+        - 24424 # مش فَاقس من البيضة - It is an idiomatic expression that means that sb i
+        - 23759 # فُرْقُع لوز - It is an idiomatic expression that means that sb i
+        - 23906 # قد الفُسْتُقَة - It is an idiomatic expression that means "sth is v
+        - 24426 # خيَار وفقوس - It is an idiomatic expression that means "miscarri
+        - 24668 # حظُّه بيِفْلُق الصخر - it is an idiomatic expression that means that sb i
+        - 24780 # فَنِّة جديدة - It is an idiomatic expression that means that sth 
+        - 24942 # كل فولة وإِلهَا كيَالهَا - It is an idiomatic expression that means that ever
+        - 25006 # صَايرة قد الفِيل - It is an idiomatic expression that means that sb h
+        - 25035 # قَابر أهله - it is an idiomatic expression that means that sb i
+        - 26010 # دَاشع مش قَاشع - it is an idiomatic expression that means "to rush"
+        - 25014 # من قَبِّة - It is an idiomatic expression that means that sth 
+        - 25030 # عحَافة قبره - It is an idiomatic expression that means that sb i
+        - 25013 # قَبّ عوجه الدنيَا - It is an idiomatic expression that means that sb h
+        - 25510 # اِنْت مِثِل القُرّ، فِشّ شِي عَسْنَانَك مُرّ - It is an idiomatic expression that means that sb e
+        - 25493 # بْيَوكِل قَدّ قِرْدِة وَالْدِة - It is an idiomatic expression that means that sb i
+        - 26701 # اِنعمى قمَاري - It is an idiomatic expression that means that sb s
+        - 27476 # كَحَّلِت عيوني بشوفتك - It is an idiomatic expression that means that sb i
+        - 27755 # بتنقح عليهم كَرَامِتهم - It is an idiomatic expression that means that sb h
+        - 27559 # بتبن و بتكرب - an idiomatic expression used to describe woman who
+        - 28391 # لَا من ثمه ولَا من كمه - It is an idiomatic expression that means that sb i
+        - 28520 # كل مَا دق الكوز بَالجَرَّة - it is an idiomatic expression that means that sb d
+        - 28608 # اِيدُه مِثِل كِيس الرُّز - It is an idiomatic expression that means that sb's
+        - 28606 # طِلْعَت مِن كِيس - It is an idiomatic expression that means that sb w
+        - 29666 # لَاقِيهَا لقيِّة - It is an idiomatic expression that means that sb f
+        - 29669 # مش لَاقِيهَا من الشَارع - It is an idiomatic expression that means that sb p
+        - 29168 # اِرْبُط لْسَانَك مْلِيح، لَابْيِدْمِي ولَا بِيقِيح - an idiomatic expression that means " to speak well
+        - 29158 # أَقُصّ لْسَانُه - It is an idiomatic expression that means that sb w
+        - 29166 # الجوَاب عطَرَف لْسَانُه - It is an idiomatic expression that means that sb a
+        - 29159 # عَظْمِة لْسَانِي - It is an idiomatic expression that means that sb s
+        - 29154 # لْسَانُه أَطْوَل مِنُّه - It is an idiomatic expression that means that sb i
+        - 29165 # لْسَانه بسَبَع شَطَلَات - It is an idiomatic expression that means that sb i
+        - 29151 # لْسَانه بينقِّط سَمّ - It is an idiomatic expression that means that sb i
+        - 29150 # لْسَانُه بينقِّط عَسَل - It is an idiomatic expression that means that sb i
+        - 29152 # لْسَانُه حِلُو - It is an idiomatic expression that means that sb i
+        - 29160 # لْسَانُه سَبَِع شَطلَات - It is an idiomatic expression that means that sb i
+        - 29164 # لْسَانه طَوِيل - It is an idiomatic expression that means that sb i
+        - 29153 # لَْسَانُه مِتْبَرِّي مِنُّه - It is an idiomatic expression that means that sb i
+        - 29293 # يُلْطُم عخيبتُه - It is an idiomatic expression that means  that sb 
+        - 29330 # الهوَا بيلعب لِعِب - it is an idiomatic expression that means that a pl
+        - 29329 # بيِلْعَب بَالمصَاري لِعِب - it is an idiomatic expression that means that sb i
+        - 29323 # لِعِب بأعصَاب - it is an idiomatic expression that means that sb i
+        - 29321 # لِعِب برَاس - it is an idiomatic expression that means that sb i
+        - 29327 # لِعِب بعدَّاد عمره - it is an idiomatic expression that means that sb i
+        - 31352 # مَات مية موتِة - It is an idiomatic expression that means that sb s
+        - 12602 # كنز في مزبلة - It is an idiomatic expression that is equivalent t
+        - 13668 # خَلِّي الطَّابِق مَسْتُور - It is an idiomatic expression that means that the 
+        - 30683 # اِمْسَحهَا بذِقني - It is an idiomatic expression that is used to mean
+        - 13754 # مَسْحُوب من لسَانه - It is an idiomatic expression that means that sb i
+        - 15026 # مش مْسَمِّي - It is an idiomatic expression that means that sb i
+        - 30785 # بَالمِشْمِش - It is an idiomatic expression that means that sth 
+        - 17521 # مثل النُّقطة في المصحف - it is an idiomatic expression that means that sb i
+        - 17987 # مش مصلي عَالنبي - It is an idiomatic expression that means that sb i
+        - 30832 # بتحصحص وبتمصمص - It is an idiomatic expression that means "to pull 
+        - 18431 # مضروب بحجر فَاضي - It is an idiomatic expression that means that some
+        - 18432 # مضروب بحجر كبير - It is an idiomatic expression that means that some
+        - 18931 # اِرْبُط الحْمَار مَطْرَح مَا بِيقُلَّك صَاحْبُه - an idiomatic expression that means" non of your bu
+        - 18929 # مَطْرَحَك يَا بَايت - It is an idiomatic expression that means that sth 
+        - 19929 # معبديتهَا العجل - It is an idiomatic expression that means that sb i
+        - 21133 # الله مَعْطِيه - it is an idiomatic expression that means that sb i
+        - 22487 # مِثِل ذنبِة المِغْرَفِة - It is an idiomatic expression that means that sb i
+        - 23366 # مْفَحِّج عَمِية خَازُوق - It is an idiomatic expression that means that sb i
+        - 31081 # مِلْحَة تطُقُّه - It is an idiomatic expression that shows that sb i
+        - 32629 # لَا محضر ولَا منظر - It is an idiomatic expression that means that sb i
+        - 31450 # المَيِّة بتِمْشِي من تَحِت إِجْرَيه - it is an idiomatic expression that means that sb i
+        - 31447 # بيصطَاد بَالميِّة العكرة - It is an idiomatic expression that means that sb i
+        - 33030 # نَافش حَاله مثل النيص - It is an idiomatic expression that means that sb i
+        - 31807 # بِدُّه نِجْمِة من السَّمَا - it is an idiomatic expression that means that sb i
+        - 32421 # أَعطيته اللي فيه النَّصِيب - it is an idiomatic expression that means that sb m
+        - 32420 # أَكل اللي فيه النَّصِيب - it is an idiomatic expression that means that sb w
+        - 32892 # ريح يِنْفُخ بطنك - It is an idiomatic expression that means that the 
+        - 33031 # نَفَش ريشُه - It is an idiomatic expression that means that sb i
+        - 33545 # بيحلب النملة - an idiomatic expression that means "very stingy"
+        - 33825 # أَبو نِيّة سَار، و أبو نيّيتين إِحتَار - an idiomatic expression that means" when someone h
+        - 36013 # بوكل قد قردة وَالدة - It is an idiomatic expression that means that sb i
+        - 35048 # مَا أصقع وِجْهُه - It is an idiomatic expression that means that sb i
+        - 36177 # بْيَوكل الأَخْضَر وَاليَابِس - It is an idiomatic expression that means that sb i
