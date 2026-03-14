@@ -1,18 +1,35 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
-import { Word, Collection, SearchResult } from '../types';
-import { dictionaryService } from '../services/DictionaryService';
+import { Word, Collection, Topic } from '../types';
 import { databaseService } from '../services/DatabaseService';
 
 export const useDictionaryStore = defineStore('dictionary', () => {
-    const searchResults = ref<SearchResult[]>([]);
+    // State
+    const searchResults = ref<Word[]>([]);
     const savedWords = ref<Word[]>([]);
     const collections = ref<Collection[]>([]);
+    const topics = ref<Topic[]>([]);
+    const activeTopic = ref<Topic | null>(null);
+    const topicWords = ref<Word[]>([]);
+
     const isSearching = ref(false);
+    const isLoadingTopics = ref(false);
     const isInitialized = ref(false);
 
+    // Actions
+    async function initialize() {
+        await databaseService.initialize();
+        await loadSavedWords();
+        await loadCollections();
+        await loadTopics();
+        isInitialized.value = true;
+    }
+
     async function search(query: string) {
-        console.log('Store: search called with:', query);
+        // console.log('Store: search called with:', query);
+        // Clear active topic to show search results
+        activeTopic.value = null;
+
         if (!query.trim()) {
             searchResults.value = [];
             return;
@@ -20,13 +37,21 @@ export const useDictionaryStore = defineStore('dictionary', () => {
 
         isSearching.value = true;
         try {
-            searchResults.value = await dictionaryService.search(query);
-            console.log('Store: search results count:', searchResults.value.length);
+            searchResults.value = await databaseService.searchDictionary(query);
+            // console.log('Store: search results count:', searchResults.value.length);
         } catch (error) {
             console.error('Search failed:', error);
             searchResults.value = [];
         } finally {
             isSearching.value = false;
+        }
+    }
+
+    async function loadSavedWords() {
+        try {
+            savedWords.value = await databaseService.getSavedWords();
+        } catch (error) {
+            console.error('Failed to load saved words:', error);
         }
     }
 
@@ -76,11 +101,12 @@ export const useDictionaryStore = defineStore('dictionary', () => {
         }
     }
 
-    async function loadSavedWords() {
+    // Collections
+    async function loadCollections() {
         try {
-            savedWords.value = await databaseService.getSavedWords();
+            collections.value = await databaseService.getCollections();
         } catch (error) {
-            console.error('Failed to load saved words:', error);
+            console.error('Failed to load collections:', error);
         }
     }
 
@@ -115,14 +141,6 @@ export const useDictionaryStore = defineStore('dictionary', () => {
         }
     }
 
-    async function loadCollections() {
-        try {
-            collections.value = await databaseService.getCollections();
-        } catch (error) {
-            console.error('Failed to load collections:', error);
-        }
-    }
-
     async function addWordToCollection(wordId: number, collectionId: number) {
         try {
             await databaseService.addWordToCollection(wordId, collectionId);
@@ -139,14 +157,6 @@ export const useDictionaryStore = defineStore('dictionary', () => {
             console.error('Failed to remove word from collection:', error);
             throw error;
         }
-    }
-
-    function isWordSaved(wordId: number): boolean {
-        // A word is considered saved if it exists in the savedWords list.
-        // Since we enforce collection membership on save, this implies it's in a collection.
-        // However, we might want to verify it has at least one collection if we strictly enforce the rule.
-        // For now, existence in saved_words table is the source of truth.
-        return savedWords.value.some(w => w.id === wordId);
     }
 
     async function getCollectionsForWord(wordId: number): Promise<Collection[]> {
@@ -167,12 +177,46 @@ export const useDictionaryStore = defineStore('dictionary', () => {
         }
     }
 
+    // Topics Logic
+    async function loadTopics() {
+        isLoadingTopics.value = true;
+        try {
+            topics.value = await databaseService.getTopics();
+        } catch (error) {
+            console.error('Failed to load topics:', error);
+        } finally {
+            isLoadingTopics.value = false;
+        }
+    }
+
+    async function setActiveTopic(topic: Topic | null) {
+        activeTopic.value = topic;
+        if (topic) {
+            isSearching.value = true; // reusing loader state conceptually
+            try {
+                topicWords.value = await databaseService.getWordsForTopic(topic.id);
+            } catch (error) {
+                console.error('Failed to load topic words:', error);
+                topicWords.value = [];
+            } finally {
+                isSearching.value = false;
+            }
+        } else {
+            topicWords.value = [];
+        }
+    }
+
+    function isWordSaved(wordId: number): boolean {
+        return savedWords.value.some(w => w.id === wordId);
+    }
+
     async function resetDatabase() {
         try {
             await databaseService.resetDatabase();
             // Reload everything
             await loadSavedWords();
             await loadCollections();
+            await loadTopics();
             searchResults.value = [];
         } catch (error) {
             console.error('Failed to reset database:', error);
@@ -181,24 +225,37 @@ export const useDictionaryStore = defineStore('dictionary', () => {
     }
 
     return {
+        // State
         searchResults,
         savedWords,
         collections,
+        topics,
+        activeTopic,
+        topicWords,
         isSearching,
+        isLoadingTopics,
         isInitialized,
+
+        // Actions
+        initialize,
         search,
         saveWord,
         deleteWord,
         loadSavedWords,
+
+        loadCollections,
         createCollection,
         deleteCollection,
         renameCollection,
-        loadCollections,
         addWordToCollection,
         removeWordFromCollection,
-        isWordSaved,
         getCollectionsForWord,
         getWordsInCollection,
+
+        loadTopics,
+        setActiveTopic,
+
+        isWordSaved,
         resetDatabase,
     };
 });

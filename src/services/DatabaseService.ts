@@ -1,6 +1,6 @@
 
 import Database from "@tauri-apps/plugin-sql";
-import { Collection, Word } from '../types';
+import { Collection, Word, Topic } from '../types';
 import { exists, remove, stat, readFile, writeFile, mkdir, BaseDirectory } from '@tauri-apps/plugin-fs';
 import { resolveResource, appDataDir } from '@tauri-apps/api/path';
 
@@ -11,6 +11,20 @@ export class DatabaseService {
         const dbName = 'arabic-dictionary.db';
 
         try {
+            // Check for forced reset flag from previous session
+            const forceReset = localStorage.getItem('force_reset_db');
+            if (forceReset === 'true') {
+                console.log('Force reset flag detected. Attempting to remove database...');
+                try {
+                    await remove(dbName, { baseDir: BaseDirectory.AppData });
+                    console.log('Database removed via force reset.');
+                } catch (e) {
+                    console.warn('Failed to remove database during force reset:', e);
+                }
+                await this.copyDatabase(dbName);
+                localStorage.removeItem('force_reset_db');
+            }
+
             const dbExists = await exists(dbName, { baseDir: BaseDirectory.AppData });
 
             if (!dbExists) {
@@ -64,24 +78,28 @@ export class DatabaseService {
     }
 
     async resetDatabase(): Promise<void> {
-        const dbName = 'arabic-dictionary.db';
         console.log('Resetting database...');
 
-        // Close existing connection if possible (tauri-plugin-sql doesn't expose close easily, but we can try to just overwrite)
-        // If we could close it: await this.db?.close();
-        this.db = null;
-
-        try {
-            await remove(dbName, { baseDir: BaseDirectory.AppData });
-            console.log('Old database removed.');
-        } catch (e) {
-            console.warn('Failed to remove old database (might be locked or missing):', e);
+        if (!this.db) {
+            console.warn('Database not initialized, cannot reset');
+            return;
         }
 
-        await this.copyDatabase(dbName);
+        try {
+            // Drop all app-created tables
+            console.log('Dropping existing tables...');
+            await this.db.execute('DROP TABLE IF EXISTS topic_words');
+            await this.db.execute('DROP TABLE IF EXISTS topics');
+            await this.db.execute('DROP TABLE IF EXISTS word_collections');
+            await this.db.execute('DROP TABLE IF EXISTS collections');
+            await this.db.execute('DROP TABLE IF EXISTS saved_words');
+            console.log('Tables dropped successfully');
+        } catch (e) {
+            console.error('Failed to drop tables:', e);
+            throw e;
+        }
 
-        // Re-load connection
-        this.db = await Database.load(`sqlite:${dbName}`);
+        // Recreate tables and seed data
         await this.initializeTables();
         console.log('Database reset complete.');
     }
@@ -174,8 +192,169 @@ export class DatabaseService {
         PRIMARY KEY(word_id, collection_id),
         FOREIGN KEY(word_id) REFERENCES saved_words(id) ON DELETE CASCADE,
         FOREIGN KEY(collection_id) REFERENCES collections(id) ON DELETE CASCADE
+            FOREIGN KEY(collection_id) REFERENCES collections(id) ON DELETE CASCADE
     )
         `);
+
+        await this.db.execute(`
+            CREATE TABLE IF NOT EXISTS topics (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                title TEXT NOT NULL,
+                icon TEXT NOT NULL,
+                color TEXT NOT NULL,
+                level TEXT NOT NULL DEFAULT 'Essentials',
+                display_order INTEGER DEFAULT 0
+            )
+        `);
+
+        // Drop topic_words to ensure schema update (added display_order)
+        // This table is re-seeded on every sync anyway.
+        // But check if we want to preserve anything? No, it's fully derived from topic definitions.
+        await this.db.execute('DROP TABLE IF EXISTS topic_words');
+
+        await this.db.execute(`
+            CREATE TABLE IF NOT EXISTS topic_words (
+                topic_id INTEGER NOT NULL,
+                word_id INTEGER NOT NULL,
+                display_order INTEGER DEFAULT 0,
+                PRIMARY KEY(topic_id, word_id),
+                FOREIGN KEY(topic_id) REFERENCES topics(id) ON DELETE CASCADE
+            )
+        `);
+
+        // Seed/Sync topics
+        console.log('Syncing topics from JSON...');
+        await this.syncTopics();
+    }
+
+    // Comprehensive Topic Seeding & Syncing
+    private async syncTopics() {
+        if (!this.db) return;
+
+        try {
+            // Import topics from external YAML file (nested sections format)
+            const topicsData = await import('../data/topics.yaml');
+            const sections = topicsData.default as Array<{
+                section: string;
+                topics: Array<{
+                    title: string;
+                    icon: string;
+                    color?: string;
+                    wordIds: number[];
+                }>;
+            }>;
+
+            // Flatten sections into a flat list of topics with level = section name
+            const topics: Array<{
+                title: string;
+                icon: string;
+                color?: string;
+                level: string;
+                wordIds: number[];
+            }> = [];
+            for (const section of sections) {
+                for (const topic of section.topics) {
+                    topics.push({
+                        ...topic,
+                        level: section.section,
+                    });
+                }
+            }
+
+            console.log(`Syncing ${topics.length} topics across ${sections.length} sections...`);
+
+            let order = 0;
+            let successCount = 0;
+            for (const topic of topics) {
+                try {
+                    // console.log(`[${order + 1}/${topics.length}] Syncing topic: ${topic.title}`);
+
+                    // 1. Check if topic exists
+                    const existing = await this.db.select<Array<{ id: number }>>(
+                        'SELECT id FROM topics WHERE title = $1',
+                        [topic.title]
+                    );
+
+                    let topicId: number;
+
+                    if (existing.length > 0) {
+                        // Update existing topic
+                        topicId = existing[0].id;
+                        await this.db.execute(
+                            'UPDATE topics SET icon = $1, color = $2, level = $3, display_order = $4 WHERE id = $5',
+                            [topic.icon || 'HelpCircle', topic.color || '', topic.level || 'Essentials', order, topicId]
+                        );
+                        // console.log(`  -> Topic updated (ID: ${topicId})`);
+                    } else {
+                        // Create new topic
+                        const result = await this.db.execute(
+                            'INSERT INTO topics (title, icon, color, level, display_order) VALUES ($1, $2, $3, $4, $5)',
+                            [topic.title, topic.icon || 'HelpCircle', topic.color || '', topic.level || 'Essentials', order]
+                        );
+                        topicId = result.lastInsertId || 0;
+                        console.log(`  -> Topic created with ID: ${topicId}`);
+                    }
+
+                    if (!topicId) {
+                        console.error(`  -> ERROR: Invalid topicId for topic ${topic.title}. Skipping.`);
+                        order++;
+                        continue;
+                    }
+
+                    // 2. Re-seed words for this topic (Clear and Re-add)
+                    // This ensures changes to keywords in JSON are reflected
+
+                    // First, get currently associated words to see if we need to change anything?
+                    // actually, unconditional delete/insert is safer for syncing keywords, 
+                    // but might differ if we had manual associations (we don't seems like).
+                    await this.db.execute('DELETE FROM topic_words WHERE topic_id = $1', [topicId]);
+
+                    // Find words based on IDs - respecting order
+                    if (topic.wordIds && topic.wordIds.length > 0) {
+                        // Use a transaction or batch insert? For now, simple loop is fine or batch insert.
+                        let wordOrder = 0;
+                        for (const wordId of topic.wordIds) {
+                            try {
+                                await this.db.execute(
+                                    'INSERT OR IGNORE INTO topic_words (topic_id, word_id, display_order) VALUES ($1, $2, $3)',
+                                    [topicId, wordId, wordOrder]
+                                );
+                                wordOrder++;
+                            } catch (err) {
+                                console.error(`  -> Failed to insert word ${wordId}:`, err);
+                            }
+                        }
+                    }
+
+                    successCount++;
+                    order++;
+                } catch (error) {
+                    console.error(`Failed to sync topic '${topic.title}':`, error);
+                    order++;
+                }
+            }
+            console.log(`Topics sync complete. Processed ${successCount}/${topics.length} topics.`);
+
+            // Clean up topics that are no longer in the YAML file
+            const yamlTitles = topics.map(t => t.title);
+            if (yamlTitles.length > 0) {
+                const allDbTopics = await this.db!.select<Array<{ id: number; title: string }>>(
+                    'SELECT id, title FROM topics'
+                );
+                const staleTopics = allDbTopics.filter(t => !yamlTitles.includes(t.title));
+                for (const stale of staleTopics) {
+                    console.log(`Removing stale topic: "${stale.title}" (ID: ${stale.id})`);
+                    await this.db!.execute('DELETE FROM topic_words WHERE topic_id = $1', [stale.id]);
+                    await this.db!.execute('DELETE FROM topics WHERE id = $1', [stale.id]);
+                }
+                if (staleTopics.length > 0) {
+                    console.log(`Removed ${staleTopics.length} stale topic(s).`);
+                }
+            }
+
+        } catch (error) {
+            console.error('Failed to sync topics:', error);
+        }
     }
 
     async saveWord(word: Word): Promise<void> {
@@ -407,6 +586,7 @@ VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $1
             id: number;
             name: string;
             created_at: number;
+            word_count: number;
         }>>(
             `SELECT c.* FROM collections c
        INNER JOIN word_collections wc ON c.id = wc.collection_id
@@ -487,6 +667,51 @@ VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $1
 
         console.log('Search results count:', results.length);
 
+
+        return results.map(row => {
+            const r = row as any;
+            return {
+                id: parseInt(r.ID || r.id) || 0,
+                term: r.FORM || r.form,
+                definition: r.GLOSS || r.gloss,
+                transliteration: r.CAPHI__ || r.caphi__,
+                dialect: 'Palestinian',
+                exampleSentence: r.EXAMPLE_USAGE || r.example_usage,
+                exampleSentenceTranslation: '',
+                originalTerm: '',
+                root: r.ROOT || r.root,
+                rootNtws: r.ROOT_NTWS || r.root_ntws,
+                root1: r.ROOT_1 || r.root_1,
+                lemma: r.LEMMA || r.lemma,
+                lemmaSearch: r.LEMMA_SEARCH || r.lemma_search,
+                lemmaBw: r.LEMMA_BW || r.lemma_bw,
+                formBw: r.FORM_BW || r.form_bw,
+                analysis: r.ANALYSIS || r.analysis,
+                glossMsa: r.GLOSS_MSA || r.gloss_msa,
+                notes: r.NOTES || r.notes,
+                source: r.SOURCE || r.source,
+                annotator: r.ANNOTATOR || r.annotator
+            };
+        });
+    }
+
+    async getTopics(): Promise<Topic[]> {
+        if (!this.db) throw new Error('Database not initialized');
+        const results = await this.db.select<Array<{ id: number, title: string, icon: string, color: string, level: string }>>('SELECT * FROM topics ORDER BY display_order ASC');
+        return results.map(r => ({ ...r, level: r.level || 'Essentials', words: [] }));
+    }
+
+    async getWordsForTopic(topicId: number): Promise<Word[]> {
+        if (!this.db) throw new Error('Database not initialized');
+
+        // Join with the main dictionary data table
+        // Note: The main table is 'data', columns are uppercase usually like CAPHI__, GLOSS etc.
+        const results = await this.db.select<any[]>(`
+            SELECT d.* FROM data d
+            JOIN topic_words tw ON d.ID = tw.word_id
+            WHERE tw.topic_id = $1
+            ORDER BY tw.display_order ASC
+        `, [topicId]);
 
         return results.map(row => {
             const r = row as any;

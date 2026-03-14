@@ -39,3 +39,13 @@ export interface Collection {
     createdAt: number; // Timestamp
     wordCount?: number;
 }
+
+export interface Topic {
+    id: number;
+    title: string;
+    icon: string;
+    color: string;
+    level: string;
+    description?: string;
+    words?: number[]; // IDs of words in this topic
+}

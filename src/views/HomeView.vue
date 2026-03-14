@@ -9,48 +9,86 @@
       />
     </div>
 
-    <div v-if="store.isSearching" class="loading-state">
+    <!-- Loading State -->
+    <div v-if="store.isSearching && !store.activeTopic" class="loading-state">
       <div class="spinner"></div>
     </div>
 
-    <div v-else-if="store.searchResults.length > 0" class="results-container">
-      <h3 class="results-count">
-        {{ store.searchResults.length }} Results
-      </h3>
-      <ResultCard
-        v-for="result in store.searchResults"
-        :key="result.id"
-        :result="result"
-        :is-saved="store.isWordSaved(result.id)"
-      />
+    <!-- Search Results Mode -->
+    <div v-else-if="searchQuery" class="results-container">
+       <div v-if="store.searchResults.length > 0">
+          <h3 class="results-count">
+            {{ store.searchResults.length }} Results
+          </h3>
+          <ResultCard
+            v-for="result in store.searchResults"
+            :key="result.id"
+            :result="result"
+            :is-saved="store.isWordSaved(result.id)"
+          />
+       </div>
+       <div v-else-if="!store.isSearching" class="empty-state">
+          No results found
+       </div>
     </div>
 
-    <div v-else-if="searchQuery && !store.isSearching" class="empty-state">
-      No results found
+    <!-- Topic Detail Mode -->
+    <div v-else-if="store.activeTopic" class="topic-detail-container">
+       <TopicDetailView />
     </div>
 
+    <!-- Discovery Mode (Default) -->
+    <div v-else class="discovery-container">
+      <TopicsGrid />
+    </div>
 
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import { useDictionaryStore } from '../stores/dictionaryStore';
 import SearchBar from '../components/SearchBar.vue';
 import ResultCard from '../components/ResultCard.vue';
+import TopicsGrid from '../components/TopicsGrid.vue';
+import TopicDetailView from '../components/TopicDetailView.vue';
+import { debounce } from '../utils/debounce';
 
 const store = useDictionaryStore();
 const searchQuery = ref('');
 
 onMounted(async () => {
-  store.searchResults = [];
-  searchQuery.value = '';
+  // Ensure fresh state on mount logic if needed, but activeTopic persistence might be desired.
+  // If we want to reset search on mount:
+  if(store.searchResults.length > 0 && !searchQuery.value) {
+      store.searchResults = [];
+  }
+});
+
+const debouncedSearch = debounce(async (query: string) => {
+    if (!query.trim()) {
+        store.searchResults = [];
+        return;
+    }
+    await store.search(query);
+}, 300); // 300ms delay
+
+// Watch for search query changes and trigger debounced search
+watch(searchQuery, (newVal) => {
+    // Clear active topic immediately when typing starts
+    if (newVal.trim()) {
+        store.activeTopic = null;
+        debouncedSearch(newVal);
+    } else {
+        // If empty, clear results immediately (no debounce needed for clearing)
+        store.searchResults = [];
+    }
 });
 
 async function handleSearch() {
   console.log('HomeView: handleSearch triggered with query:', searchQuery.value);
+  // Immediate search on Enter key (bypasses debounce or races it safely)
   if (!searchQuery.value.trim()) {
-    console.log('HomeView: Query is empty');
     store.searchResults = [];
     return;
   }
@@ -60,9 +98,8 @@ async function handleSearch() {
 function handleClear() {
   store.searchResults = [];
   searchQuery.value = '';
+  store.activeTopic = null; // Go back to grid
 }
-
-
 
 </script>
 
@@ -116,9 +153,13 @@ function handleClear() {
   font-weight: $font-weight-normal;
 }
 
-
-
-
+.section-title {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-fg-primary;
+  margin-bottom: $spacing-md;
+  margin-left: $spacing-xs;
+}
 
 @keyframes spin {
   from {

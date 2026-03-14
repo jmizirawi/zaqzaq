@@ -118,14 +118,15 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { Bookmark, BookmarkCheck } from 'lucide-vue-next';
-import { SearchResult } from '../types';
+import { Word, SearchResult } from '../types';
 import AddToCollectionDialog from './AddToCollectionDialog.vue';
 import { useDictionaryStore } from '../stores/dictionaryStore';
 import { getReadableAnalysis } from '../utils/analysisMapping';
 import { formatTransliteration } from '../utils/transliterationFormatter';
 
 const props = defineProps<{
-  result: SearchResult;
+  // Accept generic Word to support both SearchResults and Collection items
+  result: Word | SearchResult;
   isSaved: boolean;
 }>();
 
