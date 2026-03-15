@@ -5,7 +5,7 @@
     @click="$emit('click')"
   >
     <div class="icon-container">
-      <component :is="iconComponent" :size="32" :stroke-width="1.5" />
+      <component :is="iconComponent" :size="24" :stroke-width="1.5" />
     </div>
     <div class="content">
       <h3 class="title">{{ topic.title }}</h3>
@@ -42,20 +42,14 @@ const iconComponent = computed(() => {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: $spacing-lg;
+  padding: $spacing-md;
   border-radius: $radius-lg;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  min-height: 160px;
+  min-height: 80px;
   position: relative;
   overflow: hidden;
   background-color: $color-bg-secondary;
-
-  /* Color variants matching tailwind-ish names from DB seeder but mapping to actual SCSS variables or colors */
-  // &.bg-red-100 { background-color: #FEE2E2; color: #991B1B; :deep(svg) { color: #DC2626; } }
-  // &.bg-blue-100 { background-color: #DBEAFE; color: #1E40AF; :deep(svg) { color: #2563EB; } }
-  // &.bg-green-100 { background-color: #DCFCE7; color: #166534; :deep(svg) { color: #16A34A; } }
-  // &.bg-yellow-100 { background-color: #FEF9C3; color: #854D0E; :deep(svg) { color: #CA8A04; } }
 
   &:hover {
     transform: translateY(-4px);
@@ -64,13 +58,13 @@ const iconComponent = computed(() => {
 }
 
 .icon-container {
-  margin-bottom: $spacing-md;
+  margin-bottom: $spacing-sm;
 }
 
 .title {
-  font-size: $font-size-lg;
+  font-size: $font-size-base;
   font-weight: $font-weight-bold;
-  margin-bottom: $spacing-xs;
+  margin-bottom: $spacing-sm;
 }
 
 .count {

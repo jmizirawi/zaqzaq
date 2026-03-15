@@ -81,8 +81,12 @@ function selectTopic(topic: Topic) {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: $spacing-lg;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: $spacing-md;
+
+  @media (max-width: 359px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .loading {
