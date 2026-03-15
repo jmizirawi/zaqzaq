@@ -9,7 +9,7 @@ export class DictionaryService {
             const words = await databaseService.searchDictionary(query);
             return words.map(word => ({
                 ...word,
-                relevance: 1
+                relevance: word.frequencyRank ?? 1
             }));
         } catch (error) {
             console.error('Search failed:', error);

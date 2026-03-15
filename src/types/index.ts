@@ -25,6 +25,7 @@ export interface Word {
     annotator?: string; // ANNOTATOR
 
     relevance?: number; // Optional relevance score for search results
+    frequencyRank?: number; // 0-100 frequency rank from CAMeL data (100 = most common)
 }
 
 export interface SearchResult extends Word {

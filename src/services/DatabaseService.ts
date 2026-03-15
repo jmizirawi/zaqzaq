@@ -226,6 +226,16 @@ export class DatabaseService {
         // Seed/Sync topics
         console.log('Syncing topics from JSON...');
         await this.syncTopics();
+
+        // Ensure word_frequencies table exists (may be empty if DB was
+        // copied before the frequency build script enriched it)
+        await this.db.execute(`
+            CREATE TABLE IF NOT EXISTS word_frequencies (
+                word_id   INTEGER PRIMARY KEY,
+                frequency INTEGER NOT NULL DEFAULT 0,
+                freq_rank INTEGER NOT NULL DEFAULT 0
+            )
+        `);
     }
 
     // Comprehensive Topic Seeding & Syncing
@@ -628,21 +638,35 @@ VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $1
 
         let orderByClause = '';
         if (isArabic) {
-            // Prioritize LEMMA_SEARCH for Arabic
+            // Priority tiers for Arabic:
+            // 1. Exact FORM match (what the user typed)
+            // 2. Exact LEMMA_SEARCH match
+            // 3. FORM starts with query
+            // 4. LEMMA_SEARCH starts with query
+            // 5. Contains match
+            // Within each tier: higher frequency wins, then shorter length
             orderByClause = `
                 ORDER BY 
+                CASE WHEN ${nFORM} = $2 THEN 0 ELSE 1 END,
                 CASE WHEN ${nLEMMA_SEARCH} = $2 THEN 0 ELSE 1 END,
+                CASE WHEN ${nFORM} LIKE $3 THEN 0 ELSE 1 END,
                 CASE WHEN ${nLEMMA_SEARCH} LIKE $3 THEN 0 ELSE 1 END,
                 CASE WHEN ${nLEMMA_SEARCH} LIKE $4 THEN 0 ELSE 1 END,
-                LENGTH(LEMMA_SEARCH) ASC
+                COALESCE(wf.freq_rank, 0) DESC,
+                LENGTH(FORM) ASC
                 `;
         } else {
-            // Prioritize GLOSS for English
+            // Priority tiers for English:
+            // 1. Exact GLOSS match
+            // 2. GLOSS starts with query
+            // 3. Contains match
+            // Within each tier: higher frequency wins, then shorter length
             orderByClause = `
                 ORDER BY 
                 CASE WHEN GLOSS = $2 THEN 0 ELSE 1 END,
                 CASE WHEN GLOSS LIKE $3 THEN 0 ELSE 1 END,
                 CASE WHEN GLOSS LIKE $4 THEN 0 ELSE 1 END,
+                COALESCE(wf.freq_rank, 0) DESC,
                 LENGTH(GLOSS) ASC
             `;
         }
@@ -666,7 +690,8 @@ VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $1
             SOURCE: string;
             ANNOTATOR: string;
         }>>(
-            `SELECT * FROM data 
+            `SELECT data.*, COALESCE(wf.freq_rank, 0) AS FREQ_RANK FROM data 
+       LEFT JOIN word_frequencies wf ON data.ID = wf.word_id
        WHERE ${nFORM} LIKE $1 
        OR ${nGLOSS} LIKE $1 
        OR ${nCAPHI} LIKE $1
@@ -704,7 +729,8 @@ VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $1
                 glossMsa: r.GLOSS_MSA || r.gloss_msa,
                 notes: r.NOTES || r.notes,
                 source: r.SOURCE || r.source,
-                annotator: r.ANNOTATOR || r.annotator
+                annotator: r.ANNOTATOR || r.annotator,
+                frequencyRank: r.FREQ_RANK ?? 0
             };
         });
     }
