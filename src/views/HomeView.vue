@@ -115,6 +115,8 @@ function handleClear() {
 }
 
 .search-section {
+  margin: 0 (-$spacing-md);
+  padding: $spacing-sm $spacing-md;
   margin-bottom: $spacing-md;
 }
 
@@ -122,10 +124,6 @@ function handleClear() {
   position: sticky;
   top: 0;
   z-index: 80;
-  padding: $spacing-sm 0;
-  margin: 0 (-$spacing-md);
-  padding-left: $spacing-md;
-  padding-right: $spacing-md;
 }
 
 .results-count {
