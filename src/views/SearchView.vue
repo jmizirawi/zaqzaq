@@ -86,7 +86,7 @@ watch(searchQuery, (newVal) => {
 });
 
 async function handleSearch() {
-  console.log('HomeView: handleSearch triggered with query:', searchQuery.value);
+  console.log('SearchView: handleSearch triggered with query:', searchQuery.value);
   // Immediate search on Enter key (bypasses debounce or races it safely)
   if (!searchQuery.value.trim()) {
     store.searchResults = [];
