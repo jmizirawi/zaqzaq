@@ -40,18 +40,16 @@ function handleLibraryClick() {
 @import '../styles/variables';
 
 .bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   background-color: $color-bg-primary;
   border-top: 1px solid $color-border;
-  padding-bottom: env(safe-area-inset-bottom);
+  padding-bottom: max(env(safe-area-inset-bottom), 20px);
   z-index: 100;
-  height: 56px;
+  height: calc(56px + max(env(safe-area-inset-bottom), 20px));
+  flex-shrink: 0;
+  width: 100%;
 }
 
 .nav-tab {
@@ -61,7 +59,7 @@ function handleLibraryClick() {
   justify-content: center;
   gap: 2px;
   flex: 1;
-  height: 100%;
+  height: 56px;
   color: $color-fg-secondary;
   text-decoration: none;
   transition: color 0.2s;

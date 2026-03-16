@@ -33,17 +33,23 @@ onMounted(async () => {
 @import './styles/mixins';
 
 .app-wrapper {
-  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .main-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: $spacing-md $spacing-md;
-  padding-bottom: calc(56px + env(safe-area-inset-bottom) + $spacing-md);
+  padding: $spacing-md;
   width: 100%;
   flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 </style>

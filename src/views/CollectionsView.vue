@@ -39,11 +39,13 @@ function handleSelectCollection(id: number) {
   gap: $spacing-lg;
   max-width: 800px;
   margin: 0 auto;
+  padding-bottom: $spacing-md;
 }
 
 .header {
   text-align: center;
   margin-bottom: $spacing-sm;
+  padding-top: env(safe-area-inset-top);
 }
 
 .title {

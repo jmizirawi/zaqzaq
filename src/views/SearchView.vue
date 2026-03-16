@@ -111,12 +111,13 @@ function handleClear() {
   display: flex;
   flex-direction: column;
   gap: $spacing-lg;
-  padding-bottom: $spacing-xxl;
+  padding-bottom: $spacing-md;
 }
 
 .search-section {
   margin: 0 (-$spacing-md);
   padding: $spacing-sm $spacing-md;
+  padding-top: calc(env(safe-area-inset-top) + #{$spacing-sm});
   margin-bottom: $spacing-md;
 }
 
@@ -124,6 +125,7 @@ function handleClear() {
   position: sticky;
   top: 0;
   z-index: 80;
+  background-color: $color-bg-primary;
 }
 
 .results-count {
