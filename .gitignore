@@ -26,3 +26,8 @@ dist-ssr
 # Keystore files
 *.jks
 *.keystore
+
+# Android build artifacts (auto-generated during tauri android dev/build)
+src-tauri/gen/android/app/build/
+src-tauri/gen/android/app/src/main/assets/
+src-tauri/gen/android/.gradle/
