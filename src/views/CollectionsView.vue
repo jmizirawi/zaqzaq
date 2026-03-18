@@ -1,9 +1,15 @@
 <script setup lang="ts">
+import { ref, watch } from 'vue';
 import { useDictionaryStore } from '../stores/dictionaryStore';
 import CollectionsTab from '../components/CollectionsTab.vue';
 import CollectionDetail from '../components/CollectionDetail.vue';
 
 const store = useDictionaryStore();
+const contentTransition = ref('slide-up');
+
+watch(() => store.activeCollectionId, (newVal) => {
+  contentTransition.value = newVal !== null ? 'slide-up' : 'slide-down';
+});
 
 function handleSelectCollection(id: number) {
   store.activeCollectionId = id;
@@ -12,20 +18,17 @@ function handleSelectCollection(id: number) {
 
 <template>
   <div class="library-view">
-    <div class="header" v-if="store.activeCollectionId === null">
-      <h1 class="title">Collections • مجموعات</h1>
-    </div>
-
-    <div class="content">
-      <CollectionsTab
-        v-if="store.activeCollectionId === null"
-        @select="handleSelectCollection"
-      />
-      <CollectionDetail
-        v-else
-        :collection-id="store.activeCollectionId"
-      />
-    </div>
+    <Transition :name="contentTransition" mode="out-in">
+      <div v-if="store.activeCollectionId === null" key="list">
+        <div class="header">
+          <h1 class="title">Collections • مجموعات</h1>
+        </div>
+        <CollectionsTab @select="handleSelectCollection" />
+      </div>
+      <div v-else key="detail">
+        <CollectionDetail :collection-id="store.activeCollectionId" />
+      </div>
+    </Transition>
   </div>
 </template>
 

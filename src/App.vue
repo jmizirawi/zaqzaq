@@ -1,11 +1,21 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
-import { RouterView } from 'vue-router';
+import { onMounted, ref } from 'vue';
+import { RouterView, useRouter } from 'vue-router';
 import { useDictionaryStore } from './stores/dictionaryStore';
 import TopBar from './components/TopBar.vue';
 import BottomNav from './components/BottomNav.vue';
 
 const store = useDictionaryStore();
+const router = useRouter();
+
+const TAB_ORDER: Record<string, number> = { '/': 0, '/library': 1 };
+const transitionName = ref('slide-left');
+
+router.beforeEach((to, from) => {
+  const toIdx = TAB_ORDER[to.path] ?? 0;
+  const fromIdx = TAB_ORDER[from.path] ?? 0;
+  transitionName.value = toIdx >= fromIdx ? 'slide-left' : 'slide-right';
+});
 
 onMounted(async () => {
   try {
@@ -22,7 +32,11 @@ onMounted(async () => {
   <div class="app-wrapper">
     <TopBar />
     <main class="main-content">
-      <RouterView />
+      <RouterView v-slot="{ Component, route }">
+        <Transition :name="transitionName" mode="out-in">
+          <component :is="Component" :key="route.path" />
+        </Transition>
+      </RouterView>
     </main>
     <BottomNav />
   </div>

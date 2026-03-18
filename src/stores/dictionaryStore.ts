@@ -14,7 +14,7 @@ export const useDictionaryStore = defineStore('dictionary', () => {
     const activeCollectionId = ref<number | null>(null);
 
     const isSearching = ref(false);
-    const isLoadingTopics = ref(false);
+    const isLoadingTopics = ref(true);
     const isInitialized = ref(false);
 
     // Actions

@@ -9,38 +9,42 @@
       />
     </div>
 
-    <!-- Loading State -->
-    <div v-if="store.isSearching && !store.activeTopic" class="loading-state">
-      <div class="spinner"></div>
-    </div>
+    <Transition :name="contentTransition" mode="out-in">
+      <!-- Loading State -->
+      <div v-if="store.isSearching && !store.activeTopic" key="loading" class="loading-state">
+        <div class="spinner"></div>
+      </div>
 
-    <!-- Search Results Mode -->
-    <div v-else-if="searchQuery" class="results-container">
-       <div v-if="store.searchResults.length > 0">
-          <h3 class="results-count">
-            {{ store.searchResults.length }} Results
-          </h3>
-          <ResultCard
-            v-for="result in store.searchResults"
-            :key="result.id"
-            :result="result"
-            :is-saved="store.isWordSaved(result.id)"
-          />
-       </div>
-       <div v-else-if="!store.isSearching" class="empty-state">
-          No results found
-       </div>
-    </div>
+      <!-- Search Results Mode -->
+      <div v-else-if="searchQuery" key="results" class="results-container">
+         <div v-if="store.searchResults.length > 0">
+            <h3 class="results-count">
+              {{ store.searchResults.length }} Results
+            </h3>
+            <ResultCard
+              v-for="(result, index) in store.searchResults"
+              :key="result.id"
+              :result="result"
+              :is-saved="store.isWordSaved(result.id)"
+              class="result-animated"
+              :style="{ '--card-index': index }"
+            />
+         </div>
+         <div v-else-if="!store.isSearching" class="empty-state">
+            No results found
+         </div>
+      </div>
 
-    <!-- Topic Detail Mode -->
-    <div v-else-if="store.activeTopic" class="topic-detail-container">
-       <TopicDetailView />
-    </div>
+      <!-- Topic Detail Mode -->
+      <div v-else-if="store.activeTopic" key="topic" class="topic-detail-container">
+         <TopicDetailView />
+      </div>
 
-    <!-- Discovery Mode (Default) -->
-    <div v-else class="discovery-container">
-      <TopicsGrid />
-    </div>
+      <!-- Discovery Mode (Default) -->
+      <div v-else key="discovery" class="discovery-container">
+        <TopicsGrid />
+      </div>
+    </Transition>
 
   </div>
 </template>
@@ -56,6 +60,11 @@ import { debounce } from '../utils/debounce';
 
 const store = useDictionaryStore();
 const searchQuery = ref('');
+const contentTransition = ref('slide-up');
+
+watch(() => store.activeTopic, (newVal) => {
+  contentTransition.value = newVal ? 'slide-up' : 'slide-down';
+});
 
 onMounted(async () => {
   // Ensure fresh state on mount logic if needed, but activeTopic persistence might be desired.
@@ -125,7 +134,6 @@ function handleClear() {
   position: sticky;
   top: 0;
   z-index: 80;
-  background-color: $color-bg-primary;
 }
 
 .results-count {
@@ -178,5 +186,21 @@ function handleClear() {
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-animated {
+  animation: fade-up 0.3s ease both;
+  animation-delay: calc(var(--card-index) * 40ms);
 }
 </style>
