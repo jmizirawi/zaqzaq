@@ -284,73 +284,6 @@
         - 725 # بَالك - Do you think?
         - 16197 # بِالمْشَرْمَحي - In a nutshell
         - 14157 # نُقْطَة عَالسَّطِر - That's all
-    - title: "Common Verbs"
-      icon: "Zap"
-      wordIds:
-        # Action & Motion
-        - 12390 # يرُوح - go
-        - 4966 # يِجِي - come
-        - 3047 # تَعَال - come
-        - 4967 # إِجَى - come
-        - 30794 # يِمْشِي - walk
-        - 12081 # يِرْكُض - run
-        - 35926 # يُوقَف - stand
-        - 4342 # يِجْلِس - sit
-        - 26440 # يُقْعُد - sit down
-        - 4165 # يجَعْمِز - sit (colloquial)
-        - 33812 # ينَام - sleep
-        - 29335 # يِلْعَب - play
-        # Consumption
-        - 434 # يَوكِل - eat
-        - 15934 # يِشْرَب - drink
-        # Doing & Exchanging
-        - 21805 # يِعْمَل - make;do
-        - 16467 # يِشْتِغِل - work
-        - 97 # يَوخِذ - take
-        - 32612 # يِنْطِي - give
-        - 21141 # يَعْطِي - give
-        - 4988 # يجِيب - bring
-        - 6329 # يحُطّ - put
-        - 16227 # يِشْتِرِي - buy
-        - 2788 # يبِيع - sell
-        - 23197 # يِفْتَح - open
-        - 14511 # يسَكِّر - close
-        # Communication
-        - 27008 # يقُول - say
-        - 27011 # قَال - say
-        - 6626 # يِحْكِي - talk
-        - 7576 # يخَبِّر - tell
-        - 13501 # يِسْأَل - ask
-        - 13505 # سَأَل - ask
-        - 4787 # يجَاوِب - answer
-        - 1750 # بَعَث - send
-        # Cognition & Senses
-        - 17206 # يشُوف - see
-        - 17208 # شَاف - see;look
-        - 23488 # يِتْفَرَّج - see/watch
-        - 19375 # يِتْطَلَّع - look
-        - 14953 # يِسْمَع - listen;hear
-        - 14955 # سِمِع - listen;hear
-        - 24529 # يفَكِّر - think
-        - 24531 # فَكَّر - think
-        - 19872 # يظُنّ - think
-        - 19873 # ظَنّ - think
-        - 20545 # يِعْرَف - know
-        - 20551 # عِرِف - know
-        - 24830 # يِفْهَم - understand
-        - 24839 # فِهِم - understand
-        - 21630 # يِتْعَلَّم - learn
-        - 21633 # تْعَلَّم - learn
-        # Feelings & Needs
-        - 964 # بِدّ - want
-        - 12420 # يرِيد - want
-        - 12426 # رَاد - want
-        - 7216 # يِحْتَاج - need
-        - 5076 # يحِبّ - love
-        - 27800 # يِكْرَه - hate
-        - 27803 # كِرِه - hate
-        - 20131 # يِعْجِب - like
-        - 20139 # عَجَب - like
     - title: "Time"
       icon: "Clock"
       wordIds:
@@ -525,6 +458,73 @@
         - 20478 # عَرْض - width
         - 21762 # عُمُق - depth
         - 35396 # وَزِن - weight
+    - title: "Common Verbs"
+      icon: "Zap"
+      wordIds:
+        # Action & Motion
+        - 12390 # يرُوح - go
+        - 4966 # يِجِي - come
+        - 3047 # تَعَال - come
+        - 4967 # إِجَى - come
+        - 30794 # يِمْشِي - walk
+        - 12081 # يِرْكُض - run
+        - 35926 # يُوقَف - stand
+        - 4342 # يِجْلِس - sit
+        - 26440 # يُقْعُد - sit down
+        - 4165 # يجَعْمِز - sit (colloquial)
+        - 33812 # ينَام - sleep
+        - 29335 # يِلْعَب - play
+        # Consumption
+        - 434 # يَوكِل - eat
+        - 15934 # يِشْرَب - drink
+        # Doing & Exchanging
+        - 21805 # يِعْمَل - make;do
+        - 16467 # يِشْتِغِل - work
+        - 97 # يَوخِذ - take
+        - 32612 # يِنْطِي - give
+        - 21141 # يَعْطِي - give
+        - 4988 # يجِيب - bring
+        - 6329 # يحُطّ - put
+        - 16227 # يِشْتِرِي - buy
+        - 2788 # يبِيع - sell
+        - 23197 # يِفْتَح - open
+        - 14511 # يسَكِّر - close
+        # Communication
+        - 27008 # يقُول - say
+        - 27011 # قَال - say
+        - 6626 # يِحْكِي - talk
+        - 7576 # يخَبِّر - tell
+        - 13501 # يِسْأَل - ask
+        - 13505 # سَأَل - ask
+        - 4787 # يجَاوِب - answer
+        - 1750 # بَعَث - send
+        # Cognition & Senses
+        - 17206 # يشُوف - see
+        - 17208 # شَاف - see;look
+        - 23488 # يِتْفَرَّج - see/watch
+        - 19375 # يِتْطَلَّع - look
+        - 14953 # يِسْمَع - listen;hear
+        - 14955 # سِمِع - listen;hear
+        - 24529 # يفَكِّر - think
+        - 24531 # فَكَّر - think
+        - 19872 # يظُنّ - think
+        - 19873 # ظَنّ - think
+        - 20545 # يِعْرَف - know
+        - 20551 # عِرِف - know
+        - 24830 # يِفْهَم - understand
+        - 24839 # فِهِم - understand
+        - 21630 # يِتْعَلَّم - learn
+        - 21633 # تْعَلَّم - learn
+        # Feelings & Needs
+        - 964 # بِدّ - want
+        - 12420 # يرِيد - want
+        - 12426 # رَاد - want
+        - 7216 # يِحْتَاج - need
+        - 5076 # يحِبّ - love
+        - 27800 # يِكْرَه - hate
+        - 27803 # كِرِه - hate
+        - 20131 # يِعْجِب - like
+        - 20139 # عَجَب - like
     - title: "Communication Verbs"
       icon: "MessageCircle"
       wordIds:
