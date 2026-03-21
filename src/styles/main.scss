@@ -6,6 +6,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
 button {
@@ -109,6 +110,10 @@ body {
 .slide-left-leave-to    { opacity: 0; transform: translateX(-28px); }
 .slide-right-enter-from { opacity: 0; transform: translateX(-28px); }
 .slide-right-leave-to   { opacity: 0; transform: translateX(28px); }
+
+.transition-wrapper {
+    position: relative;
+}
 
 .slide-up-enter-active,
 .slide-up-leave-active,

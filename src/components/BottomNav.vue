@@ -45,9 +45,8 @@ function handleLibraryClick() {
   align-items: flex-start;
   background-color: $color-bg-primary;
   border-top: 1px solid $color-border;
-  padding-bottom: max(env(safe-area-inset-bottom), 20px);
+  padding-bottom: max(env(safe-area-inset-bottom), var(--android-nav-inset, 0px));
   z-index: 100;
-  height: calc(56px + max(env(safe-area-inset-bottom), 20px));
   flex-shrink: 0;
   width: 100%;
 }
@@ -59,7 +58,7 @@ function handleLibraryClick() {
   justify-content: center;
   gap: 2px;
   flex: 1;
-  height: 56px;
+  height: 49px;
   color: $color-fg-secondary;
   text-decoration: none;
   transition: color 0.2s;
