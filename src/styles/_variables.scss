@@ -52,7 +52,7 @@ $color-fg-on-color: var(--fg-on-color);
 $color-border: var(--border);
 
 // Typography
-$font-family: 'Noto Sans Arabic', 'Noto Sans', sans-serif;
+$font-family: 'Noto Sans Arabic', -apple-system, BlinkMacSystemFont, 'Noto Sans', sans-serif;
 
 $font-size-xs: 0.5rem; // 8px
 $font-size-sm: 0.75rem; // 12px
