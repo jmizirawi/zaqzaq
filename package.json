@@ -1,17 +1,20 @@
 {
-  "name": "zaqzaq-palestinian-dictionary",
+  "name": "zaqzaq",
   "private": true,
-  "version": "0.1.0",
+  "version": "2.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "tauri": "tauri",
-    "android:dev": "adb reverse tcp:1420 tcp:1420 && adb reverse tcp:1421 tcp:1421 && tauri android dev",
+    "android:patch": "bash scripts/patch-android.sh",
+    "android:dev": "npm run android:patch && adb reverse tcp:1420 tcp:1420 && adb reverse tcp:1421 tcp:1421 && tauri android dev",
+    "android:build": "npm run android:patch && tauri android build",
     "test": "vitest"
   },
   "dependencies": {
+    "@fontsource/noto-sans-arabic": "^5.2.10",
     "@tauri-apps/api": "^2.10.1",
     "@tauri-apps/plugin-fs": "^2.4.5",
     "@tauri-apps/plugin-opener": "^2.5.3",
