@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, watch } from 'vue';
 import { RouterView, useRouter } from 'vue-router';
 import { useDictionaryStore } from './stores/dictionaryStore';
 import TopBar from './components/TopBar.vue';
@@ -10,6 +10,7 @@ const router = useRouter();
 
 const TAB_ORDER: Record<string, number> = { '/': 0, '/library': 1 };
 const transitionName = ref('slide-left');
+const mainContent = ref<HTMLElement | null>(null);
 
 router.beforeEach((to, from) => {
   const toIdx = TAB_ORDER[to.path] ?? 0;
@@ -17,7 +18,15 @@ router.beforeEach((to, from) => {
   transitionName.value = toIdx >= fromIdx ? 'slide-left' : 'slide-right';
 });
 
+watch([() => store.activeTopic, () => store.activeCollectionId], () => {
+  mainContent.value?.scrollTo({ top: 0 });
+});
+
 onMounted(async () => {
+  // WKWebView on iOS doesn't initialize env(safe-area-inset-*) correctly on first
+  // paint. Dispatching a resize event forces recalculation, same as what rotation does.
+  setTimeout(() => window.dispatchEvent(new Event('resize')), 0);
+
   try {
     console.log('App mounted, initializing services...');
     await store.initialize();
@@ -31,7 +40,7 @@ onMounted(async () => {
 <template>
   <div class="app-wrapper">
     <TopBar />
-    <main class="main-content">
+    <main ref="mainContent" class="main-content">
       <RouterView v-slot="{ Component, route }">
         <Transition :name="transitionName" mode="out-in">
           <component :is="Component" :key="route.path" />
