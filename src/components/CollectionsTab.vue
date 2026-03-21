@@ -100,9 +100,6 @@ defineEmits<{
       <h3 class="empty-title">
         No collections yet
       </h3>
-      <p class="empty-text">
-        Create collections to organize your saved words
-      </p>
     </div>
 
     <div v-else class="collections-grid">
@@ -187,6 +184,7 @@ defineEmits<{
 .new-collection-btn {
   @include btn-primary;
   border-radius: $radius-full;
+  margin-top: $spacing-lg;
 }
 
 .new-collection-form {
