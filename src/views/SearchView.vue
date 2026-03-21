@@ -9,6 +9,7 @@
       />
     </div>
 
+    <div class="transition-wrapper">
     <Transition :name="contentTransition" mode="out-in">
       <!-- Loading State -->
       <div v-if="store.isSearching && !store.activeTopic" key="loading" class="loading-state">
@@ -37,34 +38,39 @@
 
       <!-- Topic Detail Mode -->
       <div v-else-if="store.activeTopic" key="topic" class="topic-detail-container">
-         <TopicDetailView />
+        <TopicDetailView />
       </div>
 
       <!-- Discovery Mode (Default) -->
       <div v-else key="discovery" class="discovery-container">
+        <div class="source-credit">
+          <p>Powered by <a href="#" @click.prevent="openLink('https://sites.google.com/nyu.edu/palestine-lexicon')">Maknuune</a>—The Open Palestinian Arabic Lexicon</p>
+        </div>
         <TopicsGrid />
       </div>
     </Transition>
+    </div>
 
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, watch } from 'vue';
+import { ref, computed, onMounted, watch } from 'vue';
 import { useDictionaryStore } from '../stores/dictionaryStore';
 import SearchBar from '../components/SearchBar.vue';
 import ResultCard from '../components/ResultCard.vue';
 import TopicsGrid from '../components/TopicsGrid.vue';
 import TopicDetailView from '../components/TopicDetailView.vue';
 import { debounce } from '../utils/debounce';
+import { openUrl } from '@tauri-apps/plugin-opener';
 
 const store = useDictionaryStore();
-const searchQuery = ref('');
-const contentTransition = ref('slide-up');
 
-watch(() => store.activeTopic, (newVal) => {
-  contentTransition.value = newVal ? 'slide-up' : 'slide-down';
-});
+function openLink(url: string) {
+  openUrl(url);
+}
+const searchQuery = ref('');
+const contentTransition = computed(() => store.activeTopic ? 'slide-up' : 'slide-down');
 
 onMounted(async () => {
   // Ensure fresh state on mount logic if needed, but activeTopic persistence might be desired.
@@ -119,7 +125,7 @@ function handleClear() {
 .home-container {
   display: flex;
   flex-direction: column;
-  gap: $spacing-lg;
+  gap: $spacing-md;
   padding-bottom: $spacing-md;
 }
 
@@ -177,6 +183,17 @@ function handleClear() {
   color: $color-fg-primary;
   margin-bottom: $spacing-md;
   margin-left: $spacing-xs;
+}
+
+.source-credit {
+  text-align: center;
+  padding: 0;
+  color: $color-fg-secondary;
+  font-size: $font-size-sm;
+  a {
+    color: $color-fg-accent-primary;
+    text-decoration: none;
+  }
 }
 
 @keyframes spin {
