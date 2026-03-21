@@ -31,3 +31,6 @@ dist-ssr
 src-tauri/gen/android/app/build/
 src-tauri/gen/android/app/src/main/assets/
 src-tauri/gen/android/.gradle/
+
+# iOS bundled database (large binary — track separately or regenerate at build time)
+src-tauri/gen/apple/assets/resources/*.db
