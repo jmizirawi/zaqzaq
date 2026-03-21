@@ -22,9 +22,7 @@
           {{ formatTransliteration(result.transliteration) }}
         </p>
         
-        <h4 class="definition" dir="ltr">
-          {{ result.definition }} 
-        </h4>
+        <h4 class="definition" dir="ltr" v-html="formatDefinition(result.definition)"></h4>
 
         <div class="detail-section" v-if="result.exampleSentence">
             <p class="detail-label">Example</p>
@@ -146,6 +144,10 @@ async function handleBookmarkClick() {
   showCollectionDialog.value = true;
 }
 
+function formatDefinition(text: string): string {
+  return text.replace(/;/g, ';<wbr>');
+}
+
 async function handleSaveToCollections(collectionIds: number[]) {
   try {
     await store.saveWord(props.result, collectionIds);
@@ -238,6 +240,7 @@ async function handleSaveToCollections(collectionIds: number[]) {
   color: $color-fg-primary;
   margin-bottom: $spacing-md;
   line-height: 1.5;
+  overflow-wrap: break-word;
 }
 
 .transliteration {
