@@ -9,6 +9,15 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+html, body, #app {
+    height: var(--app-height, 100%);
+}
+
+html {
+    overflow: hidden;
+    overscroll-behavior: none;
+}
+
 button {
     background: none;
     border: none;
@@ -29,9 +38,9 @@ body {
     color: $color-fg-primary;
     line-height: 1.5;
     transition: background-color 0.3s, color 0.3s;
-    max-width: 800px;
-    padding: 0 $spacing-md;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 // Global Utility Classes
@@ -75,10 +84,11 @@ body {
 
 .dialog-overlay {
     position: fixed;
-    top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    // Pin the overlay to the visual viewport so dialogs stay visible when the keyboard is open
+    top: var(--visual-viewport-offset-top, 0px);
+    height: var(--visual-viewport-height, 100vh);
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
@@ -92,7 +102,7 @@ body {
     border-radius: $radius-lg;
     width: 90%;
     max-width: 400px;
-    max-height: calc(100vh - 32px);
+    max-height: calc(var(--visual-viewport-height, 100vh) - 32px);
     box-shadow: $shadow-lg;
     overflow: hidden;
     display: flex;

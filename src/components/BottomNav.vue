@@ -45,10 +45,11 @@ function handleLibraryClick() {
   align-items: flex-start;
   background-color: $color-bg-primary;
   border-top: 1px solid $color-border;
-  padding-bottom: max(env(safe-area-inset-bottom), var(--android-nav-inset, 0px));
+  padding-bottom: max(var(--safe-inset-bottom, 8px), var(--android-inset-bottom, 8px));
   z-index: 100;
-  flex-shrink: 0;
+  flex: 0 0 auto;
   width: 100%;
+  max-height: 80px;
 }
 
 .nav-tab {
@@ -58,7 +59,9 @@ function handleLibraryClick() {
   justify-content: center;
   gap: 2px;
   flex: 1;
-  height: 49px;
+  height: 56px;
+  min-height: 56px;
+  max-height: 56px;
   color: $color-fg-secondary;
   text-decoration: none;
   transition: color 0.2s;

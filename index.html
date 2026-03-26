@@ -10,6 +10,15 @@
 </head>
 
 <body>
+  <script>
+    // iOS WKWebView viewport height fix (WebKit Bug 191872).
+    // With viewport-fit=cover, the initial containing block height may exclude
+    // safe areas, making CSS height:100% too short. screen.height is always the
+    // true full-screen height in CSS pixels, so we use it to bypass the bug.
+    if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
+      document.documentElement.style.setProperty('--app-height', screen.height + 'px');
+    }
+  </script>
   <div id="app"></div>
   <script type="module" src="/src/main.ts"></script>
 </body>

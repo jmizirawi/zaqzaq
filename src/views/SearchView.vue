@@ -132,7 +132,7 @@ function handleClear() {
 .search-section {
   margin: 0 (-$spacing-md);
   padding: $spacing-sm $spacing-md;
-  padding-top: calc(env(safe-area-inset-top) + #{$spacing-sm});
+  padding-top: calc(max(env(safe-area-inset-top), var(--android-inset-top, 0px)) + #{$spacing-sm});
   margin-bottom: $spacing-md;
 }
 

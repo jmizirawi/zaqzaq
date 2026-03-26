@@ -46,7 +46,7 @@ function handleSelectCollection(id: number) {
 .header {
   text-align: center;
   margin-bottom: $spacing-sm;
-  padding-top: env(safe-area-inset-top);
+  padding-top: max(env(safe-area-inset-top), var(--android-inset-top, 0px));
 }
 
 .title {
