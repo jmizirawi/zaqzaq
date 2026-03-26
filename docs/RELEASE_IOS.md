@@ -46,20 +46,17 @@ npm run build              # Verify the frontend production build passes
 
 ## 3. Testing on a Simulator
 
+> For full dev environment setup (prerequisites, Rust targets, simulator basics), see [DEV_SETUP.md](DEV_SETUP.md).
+
 Unlike Android, the iOS simulator runs as a process on your Mac and shares the host's network stack. It can reach `localhost:1420` directly — **no port forwarding needed**.
 
 ### Step 1: Run the app on the simulator
 
 ```bash
-npm run tauri ios dev
+npm run dev:ios-sim
 ```
 
-Tauri will auto-select a booted simulator, or boot one if none is running. On first run, Rust compiles the `aarch64-apple-ios-sim` target — this takes several minutes but is cached on subsequent runs.
-
-> To target a specific simulator by name:
-> ```bash
-> npm run tauri ios dev -- 'iPhone 16'
-> ```
+This kills any stale Vite processes on ports 1420/1421 and launches on the iPhone 15 Pro simulator. On first run, Rust compiles the `aarch64-apple-ios-sim` target — this takes several minutes but is cached on subsequent runs.
 
 > To list available simulators:
 > ```bash
@@ -200,6 +197,8 @@ If this is your first submission, you'll also need:
 | Build fails: "Connection refused" (WebSocket panic) | You archived directly from Xcode instead of using the Tauri CLI. Always use `npm run tauri ios build -- --export-method app-store-connect` |
 | Export fails: "requires a provisioning profile" | Automatic signing was turned off and the export options lacked a profile. Turn **Automatically manage signing** back on in Xcode |
 | Xcode warning: "conflicting provisioning settings" | Automatic signing is on but Code Signing Identity was manually set in Build Settings. Reset it to `Apple Development` (Automatic Certificate Selectors) in Build Settings, or just leave Build Settings alone and only configure signing in the Signing & Capabilities tab |
+| `Port 1420 is already in use` | A stale Vite process is blocking the port. Use `npm run dev:ios-sim` (auto-kills stale processes), or manually: `lsof -i :1420 -t \| xargs kill` |
+| Physical device detected instead of simulator | Use `npm run dev:ios-sim` to force the simulator, or disconnect the phone |
 | Simulator missing | Run `xcode-select --install`, then restart the terminal |
 | Slow first build | Normal — Rust compiles the entire dependency tree on the first run |
 | `No such module 'Tauri'` | Run `npm run tauri ios dev` at least once to generate the Swift package files |

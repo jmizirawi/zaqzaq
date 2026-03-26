@@ -55,6 +55,8 @@ npm run build              # Verify the frontend production build passes
 
 ## 3. Testing on an Emulator
 
+> For full dev environment setup (prerequisites, environment variables, emulator creation), see [DEV_SETUP.md](DEV_SETUP.md).
+
 ### Step 1: Create an emulator (if you don't have one)
 
 1. Open **Android Studio → Tools → Device Manager**.

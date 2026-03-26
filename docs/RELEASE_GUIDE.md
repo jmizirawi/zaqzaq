@@ -1,5 +1,7 @@
 # Zaqzaq — Release Guide
 
+> **Looking to run the app locally?** See [DEV_SETUP.md](DEV_SETUP.md) for development environment setup.
+
 Platform-specific release guides:
 
 | Platform | Guide |
