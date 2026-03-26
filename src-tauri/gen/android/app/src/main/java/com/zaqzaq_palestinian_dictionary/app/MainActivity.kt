@@ -10,37 +10,53 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : TauriActivity() {
   private var webView: WebView? = null
-  private var bottomInsetPx: Int = 0
+  private var lastTop: Int = 0
+  private var lastBottom: Int = 0
+  private var lastLeft: Int = 0
+  private var lastRight: Int = 0
 
   override fun onCreate(savedInstanceState: Bundle?) {
     enableEdgeToEdge()
     super.onCreate(savedInstanceState)
 
-    // Read navigation bar inset and keep it updated (e.g. on rotation)
     ViewCompat.setOnApplyWindowInsetsListener(window.decorView) { view, insets ->
-      bottomInsetPx = insets.getInsets(WindowInsetsCompat.Type.navigationBars()).bottom
-      injectBottomInset()
+      val bars = insets.getInsets(
+        WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.displayCutout()
+      )
+      lastTop = bars.top
+      lastBottom = bars.bottom
+      lastLeft = bars.left
+      lastRight = bars.right
+      injectInsets()
       ViewCompat.onApplyWindowInsets(view, insets)
     }
   }
 
   override fun onWebViewCreate(webView: WebView) {
     this.webView = webView
-    // Delay to allow the page to finish loading before injecting
-    Handler(Looper.getMainLooper()).postDelayed({ injectBottomInset() }, 300)
+    Handler(Looper.getMainLooper()).postDelayed({ injectInsets() }, 300)
   }
 
   override fun onResume() {
     super.onResume()
-    injectBottomInset()
+    injectInsets()
   }
 
-  private fun injectBottomInset() {
+  private fun injectInsets() {
     val wv = webView ?: return
-    val density = resources.displayMetrics.density
-    val insetDp = bottomInsetPx / density
+    val d = resources.displayMetrics.density
+    val top = lastTop / d
+    val bottom = lastBottom / d
+    val left = lastLeft / d
+    val right = lastRight / d
     wv.evaluateJavascript(
-      "document.documentElement.style.setProperty('--android-nav-inset', '${insetDp}px');",
+      """
+      var s = document.documentElement.style;
+      s.setProperty('--android-inset-top', '${top}px');
+      s.setProperty('--android-inset-bottom', '${bottom}px');
+      s.setProperty('--android-inset-left', '${left}px');
+      s.setProperty('--android-inset-right', '${right}px');
+      """.trimIndent(),
       null
     )
   }
