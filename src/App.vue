@@ -18,14 +18,96 @@ router.beforeEach((to, from) => {
   transitionName.value = toIdx >= fromIdx ? 'slide-left' : 'slide-right';
 });
 
-watch([() => store.activeTopic, () => store.activeCollectionId], () => {
+/**
+ * Android back-button support.
+ * Sub-pages (topic detail, collection detail) are state-driven, not URL-driven,
+ * so the WebView has no history entry to pop. We push a sentinel entry when
+ * entering a sub-page and listen for popstate to clear the detail state.
+ */
+let handlingPopstate = false;
+
+watch(() => store.activeTopic, (newVal, oldVal) => {
   mainContent.value?.scrollTo({ top: 0 });
+  if (newVal && !oldVal && !handlingPopstate) {
+    history.pushState({ subpage: 'topic' }, '');
+  }
 });
 
+watch(() => store.activeCollectionId, (newVal, oldVal) => {
+  mainContent.value?.scrollTo({ top: 0 });
+  if (newVal != null && oldVal == null && !handlingPopstate) {
+    history.pushState({ subpage: 'collection' }, '');
+  }
+});
+
+window.addEventListener('popstate', () => {
+  handlingPopstate = true;
+  if (store.activeTopic) {
+    store.setActiveTopic(null);
+  } else if (store.activeCollectionId !== null) {
+    store.activeCollectionId = null;
+  }
+  handlingPopstate = false;
+});
+
+/**
+ * iOS WKWebView safe area fix.
+ * WKWebView may miscalculate env(safe-area-inset-*) and viewport height
+ * on initial paint with viewport-fit=cover (WebKit Bug 191872).
+ * This reads insets via a test element and injects them as CSS custom
+ * properties (--safe-inset-top/bottom), mirroring the Android native approach.
+ */
+function setupIOSSafeArea() {
+  if (!/iPhone|iPad|iPod/.test(navigator.userAgent)) return;
+
+  const root = document.documentElement;
+
+  const readAndApplyInsets = () => {
+    const el = document.createElement('div');
+    el.style.cssText =
+      'position:fixed;left:-9999px;visibility:hidden;' +
+      'padding-top:env(safe-area-inset-top,0px);' +
+      'padding-bottom:env(safe-area-inset-bottom,0px);';
+    document.body.appendChild(el);
+    const s = getComputedStyle(el);
+    const top = parseFloat(s.paddingTop) || 0;
+    const bottom = parseFloat(s.paddingBottom) || 0;
+    document.body.removeChild(el);
+
+    root.style.setProperty('--safe-inset-top', `${top}px`);
+    root.style.setProperty('--safe-inset-bottom', `${bottom}px`);
+  };
+
+  readAndApplyInsets();
+
+  window.addEventListener('resize', readAndApplyInsets);
+  window.visualViewport?.addEventListener('resize', readAndApplyInsets);
+}
+
+/**
+ * Track the visual viewport size so dialogs stay visible when the
+ * software keyboard is open. Sets --visual-viewport-height and
+ * --visual-viewport-offset-top as CSS custom properties.
+ */
+function setupVisualViewport() {
+  const vv = window.visualViewport;
+  if (!vv) return;
+
+  const root = document.documentElement;
+
+  const update = () => {
+    root.style.setProperty('--visual-viewport-height', `${vv.height}px`);
+    root.style.setProperty('--visual-viewport-offset-top', `${vv.offsetTop}px`);
+  };
+
+  update();
+  vv.addEventListener('resize', update);
+  vv.addEventListener('scroll', update);
+}
+
 onMounted(async () => {
-  // WKWebView on iOS doesn't initialize env(safe-area-inset-*) correctly on first
-  // paint. Dispatching a resize event forces recalculation, same as what rotation does.
-  setTimeout(() => window.dispatchEvent(new Event('resize')), 0);
+  setupIOSSafeArea();
+  setupVisualViewport();
 
   try {
     console.log('App mounted, initializing services...');
@@ -56,14 +138,11 @@ onMounted(async () => {
 @import './styles/mixins';
 
 .app-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  overscroll-behavior: none;
 }
 
 .main-content {
@@ -72,6 +151,7 @@ onMounted(async () => {
   padding: $spacing-md;
   width: 100%;
   flex: 1;
+  min-height: 0;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }

@@ -39,11 +39,7 @@ const detailTitle = computed(() => {
 });
 
 function goBack() {
-  if (route.path === '/' && store.activeTopic) {
-    store.setActiveTopic(null);
-  } else if (route.path === '/library' && store.activeCollectionId !== null) {
-    store.activeCollectionId = null;
-  }
+  history.back();
 }
 </script>
 
@@ -52,7 +48,7 @@ function goBack() {
 
 .top-bar {
   background-color: $color-bg-primary;
-  padding-top: env(safe-area-inset-top);
+  padding-top: max(env(safe-area-inset-top), var(--android-inset-top, 0px));
   position: sticky;
   top: 0;
   z-index: 90;
