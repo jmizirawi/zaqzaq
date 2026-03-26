@@ -5,11 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:desktop": "tauri dev",
+    "dev:android": "npm run android:patch && adb reverse tcp:1420 tcp:1420 && adb reverse tcp:1421 tcp:1421 && tauri android dev",
+    "dev:ios": "tauri ios dev",
+    "dev:ios-sim": "lsof -i :1420 -t | xargs kill 2>/dev/null; lsof -i :1421 -t | xargs kill 2>/dev/null; tauri ios dev 'iPhone 15 Pro'",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "tauri": "tauri",
     "android:patch": "bash scripts/patch-android.sh",
-    "android:dev": "npm run android:patch && adb reverse tcp:1420 tcp:1420 && adb reverse tcp:1421 tcp:1421 && tauri android dev",
+    "android:dev": "npm run dev:android",
     "android:build": "npm run android:patch && tauri android build",
     "test": "vitest"
   },
