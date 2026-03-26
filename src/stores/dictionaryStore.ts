@@ -20,9 +20,7 @@ export const useDictionaryStore = defineStore('dictionary', () => {
     // Actions
     async function initialize() {
         await databaseService.initialize();
-        await loadSavedWords();
-        await loadCollections();
-        await loadTopics();
+        await Promise.all([loadSavedWords(), loadCollections(), loadTopics()]);
         isInitialized.value = true;
     }
 

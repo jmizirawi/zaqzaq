@@ -55,7 +55,7 @@
           <button
             @click="handleSave"
             class="save-btn"
-            :disabled="selectedCollectionIds.length === 0"
+            :disabled="selectedCollectionIds.length === 0 && !initialCollectionIds?.length"
           >
             Save
           </button>
