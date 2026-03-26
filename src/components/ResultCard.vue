@@ -1,8 +1,8 @@
 <template>
-  <div class="result-card">
+  <div class="result-card" @click="showDetails = !showDetails">
     <div class="card-content">
       <div class="bookmark-container">
-        <button @click="handleBookmarkClick" class="bookmark-btn">
+        <button @click.stop="handleBookmarkClick" class="bookmark-btn">
           <BookmarkCheck v-if="isSaved" class="icon filled" :size="24" />
           <Bookmark v-else class="icon" :size="24" />
         </button>
@@ -31,9 +31,9 @@
             </p>
         </div>
 
-        <button @click="showDetails = !showDetails" class="details-toggle">
+        <span class="details-toggle">
           {{ showDetails ? 'Hide Details' : 'Show Details' }}
-        </button>
+        </span>
 
         <div v-if="showDetails" class="details-grid">
 
@@ -168,6 +168,7 @@ async function handleSaveToCollections(collectionIds: number[]) {
   position: relative;
   margin-bottom: $spacing-lg;
   direction: rtl;
+  cursor: pointer;
 
   &:hover {
     transform: translateY(-4px);
